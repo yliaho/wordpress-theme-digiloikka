@@ -1,4 +1,6 @@
-# Digiloikka – WordPress theme for Digitalents Helsinki
+# Digiloikka
+
+> WordPress theme for Digitalents Helsinki
 
 ## Install
 
