@@ -1,0 +1,4 @@
+vendor
+node_modules
+static/site.bundle.js
+static/main.css

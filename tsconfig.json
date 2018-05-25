@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "lib": ["dom", "es2015", "es5"],
+    "noImplicitAny": true,
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": ["node_modules", "static/src/types/*"]
+    }
+  }
+}

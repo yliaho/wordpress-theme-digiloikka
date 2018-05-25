@@ -1,0 +1,17 @@
+<header class="header">
+  <div class="logo-container">
+    {% include "components/site-logo.twig" with {
+      home_link: site.url,
+      logo_size_width: 64,
+      logo_size_height: 64
+    } %}
+  </div>
+  <div class="nav-container">
+    {% include "menu.twig" with {'menu': menu.get_items} %}
+  </div>
+  <div class="some-container">
+    Some stuff here
+  </div>
+</header>
+<!-- {{page_title}} -->
+<!-- <a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a> -->

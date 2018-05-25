@@ -1,0 +1,21 @@
+// css reset
+@import '~nanoreset';
+
+// config and variables
+@import './config.scss';
+@import './fonts.scss';
+// @import './colors.scss';
+
+// components
+@import './components/base.scss';
+@import './components/header.scss';
+
+html {
+  font-size: 15px;
+  overflow-y: auto;
+}
+
+.elementor-widget-button a.elementor-button,
+.elementor-widget-button .elementor-button {
+  background-color: yellow;
+}

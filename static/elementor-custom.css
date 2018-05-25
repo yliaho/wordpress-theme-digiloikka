@@ -1,0 +1,10 @@
+.elementor-column-gap-default
+  > .elementor-row
+  > .elementor-column
+  > .elementor-element-populated {
+  padding: 0;
+}
+
+.elementor-section.elementor-section-boxed > .elementor-container {
+  max-width: 1240px;
+}

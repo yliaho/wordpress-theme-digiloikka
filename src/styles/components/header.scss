@@ -1,0 +1,21 @@
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+
+  z-index: 200;
+
+  .logo-container {
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1em;
+    flex: 1;
+  }
+}
