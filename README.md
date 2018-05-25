@@ -5,6 +5,7 @@
 * Place the root folder to WordPress' `wp-content/themes`
 * Run `composer install` to install timber dependencies
 * Run `yarn` to install node_dependencies
+* `yarn run build` once to compile distribution
 * Activate the theme in WP Admin
 
 ## Development
