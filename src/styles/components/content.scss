@@ -1,0 +1,18 @@
+.main-content-grid {
+  display: grid;
+  grid-template-columns: 1fr minmax(min-content, $main-section-width) 1fr;
+  grid-template-rows: repeat(min-content);
+
+  .block {
+    grid-column-start: 2;
+  }
+
+  .full-width-block {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin: 4rem 0;
+    &.whitesmoke {
+      background-color: whitesmoke;
+    }
+  }
+}

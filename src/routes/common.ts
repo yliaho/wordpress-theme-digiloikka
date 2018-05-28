@@ -1,3 +1,8 @@
+/**
+ * Since the header position is absolute, we will calculate the main
+ * section's padding top based on the header's client height in order
+ * to not cover it behind the header.
+ */
 function calcMainSectionPadding() {
   const header = document.querySelector('header')
 

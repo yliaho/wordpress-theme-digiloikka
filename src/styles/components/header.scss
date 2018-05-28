@@ -3,13 +3,16 @@ header {
   left: 0;
   right: 0;
   top: 0;
-  padding: 1rem;
+  padding: 1rem 2rem;
   display: flex;
   align-items: center;
-
+  // background-color: white;
   z-index: 200;
 
   .logo-container {
+    g.logo-group {
+      fill: white;
+    }
   }
 
   .nav-container {

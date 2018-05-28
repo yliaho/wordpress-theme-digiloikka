@@ -4,14 +4,21 @@
 // config and variables
 @import './config.scss';
 @import './fonts.scss';
-// @import './colors.scss';
+@import './colors.scss';
+
+// pages
+@import './home.scss';
 
 // components
 @import './components/base.scss';
 @import './components/header.scss';
+@import './components/mainhero.scss';
+@import './components/content.scss';
+@import './components/button.scss';
+@import './components/teamblock.scss';
 
 html {
-  font-size: 15px;
+  font-size: 17px;
   overflow-y: auto;
 }
 

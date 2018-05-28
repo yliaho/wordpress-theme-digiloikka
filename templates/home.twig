@@ -1,0 +1,32 @@
+{% extends "base.twig" %}
+
+{% block hero %}
+{% include "components/mainhero.twig" with { text: post.get_field('hero_description') }%}
+{% endblock %}
+
+{% block content %}
+<div class="block team-blocks-grid">
+  {% for item in post.get_field('team_block') %}
+    {% include "components/teamblock.twig" with {
+      team_title: item.team_title,
+      team_thumbnail: item.team_thumbnail,
+      team_description: item.team_description
+    } %}
+  {% endfor %}
+</div>
+<div class="full-width-block whitesmoke">
+  <div class="read-more-teams-wrapper">
+    <div class="read-more-teams">
+      <h2>Lue Lisää Tiimeistämme</h2>
+      <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+      <div>
+        <button class="big">DIGITALENTS TIIMIT</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="block page-content">
+  {{post.content}}
+</div>
+{% endblock %}

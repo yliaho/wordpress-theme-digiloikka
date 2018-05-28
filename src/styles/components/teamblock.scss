@@ -1,0 +1,36 @@
+.team-blocks-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+
+.team-block {
+  display: flex;
+  height: 235px;
+  .team-thumbnail-container {
+    width: 200px;
+    height: 100%;
+    background-color: whitesmoke;
+    position: relative;
+    margin-right: 2rem;
+    div {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  .team-text-container {
+    flex: 1;
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+  }
+}

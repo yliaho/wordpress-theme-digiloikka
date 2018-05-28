@@ -1,0 +1,91 @@
+$hero-height: 100vh;
+.main-hero {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  height: 90vh;
+  overflow: hidden;
+
+  .hero-background-image {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.8;
+  }
+
+  .hero-text-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    .hero-text-container {
+      width: 720px;
+      color: white;
+      line-height: 1;
+      text-align: center;
+      h1 {
+        font-size: 58px;
+        font-weight: 800;
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 24px;
+        width: 520px;
+        margin: 0 auto;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .hero-stripe-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    // animation: stripe-fadein 2s ease-out 1s forwards;
+    // transform: translateY(-80px);
+    .hero-stripe {
+      background-color: $color-background-color;
+      position: absolute;
+      bottom: -400px;
+      left: 0;
+      right: 0;
+      height: 400px;
+
+      &.hero-stripe-1 {
+        transform: skewY(-14deg);
+      }
+      &.hero-stripe-2 {
+        transform: skewY(14deg);
+      }
+    }
+  }
+}
+
+.main-hero-spacer {
+  margin-top: $hero-height;
+}
+
+@keyframes stripe-fadein {
+  from {
+    transform: translateY(-80px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}

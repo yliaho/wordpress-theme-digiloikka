@@ -11,9 +11,13 @@
 			{% include "components/header.twig" with {page_title: block('page_title')} %}
 		{% endblock %}
 
+		{% block hero %}
+			
+		{% endblock %}
+
 		<section id="main-content" role="main" class="content-wrapper">
 			{% if title %}<h1>{{title}}</h1>{% endif %}
-			<div class="wrapper {{sidebar_class}}">
+			<div class="main-content-grid wrapper {{sidebar_class}}">
 				{% block content %}
 					Sorry, no content
 				{% endblock %}

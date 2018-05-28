@@ -1,0 +1,17 @@
+.read-more-teams-wrapper {
+  width: $main-section-width;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .read-more-teams {
+    text-align: center;
+    padding: 8rem 0;
+    h2 {
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 2rem;
+    }
+  }
+}
