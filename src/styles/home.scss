@@ -1,3 +1,37 @@
+.company-intro {
+  height: 700px;
+  .company-intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .company-intro-text {
+      line-height: 1.7;
+      h1 {
+        margin-bottom: 1.5rem;
+      }
+      .button-container {
+        margin-top: 2rem;
+        .company-intro-button {
+          background-color: #00924d;
+          color: white;
+          padding: 0.6rem 4rem;
+          vertical-align: text-top;
+          line-height: 1;
+        }
+      }
+    }
+  }
+
+  .company-intro-graphic-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      max-width: 66%;
+    }
+  }
+}
+
 .read-more-teams-wrapper {
   width: $main-section-width;
   margin: 0 auto;

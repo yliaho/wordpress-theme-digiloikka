@@ -1,0 +1,55 @@
+.stripe-block {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  &.black-to-white {
+    background-color: black;
+    color: white;
+
+    .stripe-block-stripe {
+      background-color: white;
+    }
+  }
+  &.white-to-black {
+    background-color: white;
+    color: black;
+
+    .stripe-block-stripe {
+      background-color: black;
+    }
+  }
+
+  .stripe-block-content-wrapper {
+    width: $main-section-width;
+    margin-bottom: 200px;
+    z-index: 3;
+  }
+
+  .stripe-block-stripe-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 200px;
+    bottom: 0;
+    z-index: 2;
+    .stripe-block-stripe {
+      background-color: $color-background-color;
+      position: absolute;
+      bottom: -100vw;
+      left: 0;
+      right: 0;
+      height: 100vw;
+
+      &.stripe-block-stripe-1 {
+        transform: skewY(-14deg);
+      }
+      &.stripe-block-stripe-2 {
+        transform: skewY(14deg);
+      }
+    }
+  }
+}

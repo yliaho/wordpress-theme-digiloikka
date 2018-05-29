@@ -12,14 +12,20 @@
 // components
 @import './components/base.scss';
 @import './components/header.scss';
+@import './components/stripeblock.scss';
 @import './components/mainhero.scss';
 @import './components/content.scss';
 @import './components/button.scss';
+@import './components/wysiwyg.scss';
 @import './components/teamblock.scss';
 
 html {
   font-size: 17px;
   overflow-y: auto;
+}
+
+a {
+  text-decoration: none;
 }
 
 .elementor-widget-button a.elementor-button,

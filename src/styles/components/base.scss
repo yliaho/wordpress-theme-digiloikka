@@ -1,0 +1,5 @@
+#main-content {
+  // some wp plugin is trying to give `#main-content` padding of 94px.
+  // Thus casting an !important here. Sorry.
+  padding-top: 0 !important;
+}
