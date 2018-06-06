@@ -1,0 +1,1 @@
+- Move `advanced-custom-fields-pro` to your wordpress installation's `wp-content/plugins` directory

@@ -23,7 +23,9 @@
     </div>
   {% endblock %}
 {% endembed %}
+<h1 class="block our-teams-header">MEIDÄN TIIMIMME</h1>
 <div class="block team-blocks-grid">
+
   {% for item in post.get_field('team_block') %}
     {% include "components/teamblock.twig" with {
       team_title: item.team_title,
