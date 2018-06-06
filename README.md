@@ -24,7 +24,7 @@
 
 ### Advanced Custom Fields and XML Import
 
-> This theme uses Advanced Custom Fields Pro extensively. In order for the theme to work properly, this needs to be installed
+> This theme uses Advanced Custom Fields Pro extensively. In order for the theme to work properly, this needs to be installed. You don't need to import the XML file, but it is recommended.
 
 - Open `/plugins` directory contained within this repo.
 - Copy & paste `/advanced-custom-fields-pro` to your wordpress installation's `wp-content/plugins`
