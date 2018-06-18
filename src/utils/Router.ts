@@ -2,7 +2,7 @@ import camelCase from './camelCase'
 /**
  * DOM-based Routing
  *
- * Based on {@link http://goo.gl/EUTi53|Markup-based Unobtrusive Comprehensive DOM-ready Execution} by Paul Irish
+ * Based on {@link http://goo.gl/EUTi53 | Markup-based Unobtrusive Comprehensive DOM-ready Execution} by Paul Irish
  *
  * The routing fires all common scripts, followed by the page specific scripts.
  * Add additional events for more control over timing e.g. a finalize event

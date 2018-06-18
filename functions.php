@@ -19,6 +19,14 @@ class ThemeSiteName extends Timber\Site {
 
 		add_action( 'wp_enqueue_scripts', [ $this, 'theme_scripts']);
 
+		// ACF Pro
+		add_filter('acf/settings/path', [ $this, 'my_acf_settings_path' ]);
+		add_filter('acf/settings/dir', [ $this, 'my_acf_settings_dir' ]);
+		add_filter('acf/settings/save_json', [$this, 'my_acf_json_save_point']);
+		include_once( get_stylesheet_directory() . '/plugins/advanced-custom-fields-pro/acf.php' );
+		// If you want to disable the ACF panel from WP Admin, uncomment the line below.
+		// add_filter('acf/settings/show_admin', '__return_false');
+
 		parent::__construct();
 	}
 
@@ -31,6 +39,24 @@ class ThemeSiteName extends Timber\Site {
 
 	function widget_styles() {
 		wp_enqueue_style( 'elementor-custom', get_template_directory_uri() . '/static/elementor-custom.css' );
+	}
+
+	function my_acf_settings_path() {
+		$path = get_template_directory_uri() . '/plugins/advanced-custom-fields-pro/';
+
+		return $path;
+	}
+
+	function my_acf_settings_dir( $dir ) {
+		$dir = get_template_directory_uri() . '/plugins/advanced-custom-fields-pro/';
+
+		return $dir;
+	}
+
+	function my_acf_json_save_point( $path ) {
+		$path = get_stylesheet_directory() . '/acf';
+
+		return $path;
 	}
 
 	function register_post_types() {

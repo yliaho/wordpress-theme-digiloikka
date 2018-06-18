@@ -24,8 +24,7 @@
 
 ### Advanced Custom Fields and XML Import
 
-> This theme uses Advanced Custom Fields Pro extensively. In order for the theme to work properly, this needs to be installed. You don't need to import the XML file, but it is recommended.
-
-- Open `/plugins` directory contained within this repo.
-- Copy & paste `/advanced-custom-fields-pro` to your wordpress installation's `wp-content/plugins`
-- Import `digitalents.wordpress.2018-06-06.xml` file using Wordpress admin panel by navigating to `Tools > Import`. You might need to install the WordPress import component from this page before you're able to import the XML.
+- This theme uses [Advanced Custom Fields PRO](https://www.advancedcustomfields.com/) extensively.
+- ACF is required and configured in `functions.php` from theme's `/plugins/` folder. No need to use WP Admin or upload plugins via FTP.
+- As you edit fields in the ACF control panel, each update activates a hook that saves the fields to a json in `/acf/` folder. This helps with version controlling the data types and reduces the amount of database calls. You can read more about local JSON reads with ACF [in their docs](https://www.advancedcustomfields.com/resources/local-json/)
+- Right now the method above doesn't cover the actual value in their respective fields. You need to manually create each page covered in the theme and ACF rules, and write the values yourself.
