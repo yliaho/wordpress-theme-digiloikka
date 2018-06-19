@@ -8,6 +8,7 @@ show_admin_bar( false );
 
 class ThemeSiteName extends Timber\Site {
 	function __construct() {
+		add_action('template_redirect', [ $this, 'restructure_template_hierarchy' ]);
 		add_theme_support( 'post-formats' );
 		add_theme_support( 'post-thumbnails' );
 		add_theme_support( 'menus' );
@@ -30,7 +31,14 @@ class ThemeSiteName extends Timber\Site {
 		parent::__construct();
 	}
 
+	function restructure_template_hierarch( $template ) {
+		var_dump('$template');
+		include( get_template_directory_uri() . '/templates/home.php');
+		exit;
+	}
+
 	function theme_scripts() {
+
 		wp_enqueue_style( 'themestyle', get_template_directory_uri() . '/static/main.css' );
 		wp_enqueue_script( 'themescript', get_template_directory_uri() . '/static/site.bundle.js', array(), true );
 
@@ -48,6 +56,7 @@ class ThemeSiteName extends Timber\Site {
 	}
 
 	function my_acf_settings_dir( $dir ) {
+
 		$dir = get_template_directory_uri() . '/plugins/advanced-custom-fields-pro/';
 
 		return $dir;

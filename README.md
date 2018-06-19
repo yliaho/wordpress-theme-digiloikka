@@ -19,10 +19,10 @@
 
 ### Timber, Twig, PHP
 
-- [Read how timber works](https://timber.github.io/docs/)
+- [Read how timber works](https://timber.github.io/docs/).
 - This project is a modified version [Timber's starter theme](https://github.com/timber/starter-theme).
 
-### Advanced Custom Fields and XML Import
+### Advanced Custom Fields
 
 - This theme uses [Advanced Custom Fields PRO](https://www.advancedcustomfields.com/) extensively.
 - ACF is required and configured in `functions.php` from theme's `/plugins/` folder. No need to use WP Admin or upload plugins via FTP.
