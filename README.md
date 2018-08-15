@@ -9,7 +9,7 @@ Run the `start.sh` script, or if you prefer manual installation:
 - Place the root folder to WordPress' `wp-content/themes`
 - cd to `wordpress-theme-digiloikka`
 - Run `composer install` to install timber dependencies
-- Run `yarn` to install node_dependencies
+- Run `yarn` to install node\*\*dependencies
 - `yarn run build` once to compile distribution
 - Activate the theme in WP Admin
 
@@ -19,13 +19,13 @@ Run the `start.sh` script, or if you prefer manual installation:
 
 #### Creating pages
 
-> This part is still under development. The goal is to make this process as dynamic as possible, without manually creating each page for the site to function properly with ACF. For now, here's instructions on how to create the _homepage_ for the site.
+> This part is still under development. The goal is to make this process as dynamic as possible, without manually creating each page for the site to function properly with ACF. For now, here's instructions on how to create the **homepage** for the site.
 
 - Make a new page. Leave the contents empty for now.
 - Set the page's template to `Homepage` and publish the page.
 - Navigate to Settings -> Reading (`/wp-admin/options-reading.php`)
-- Select _A static page_ from _Your homepage displays_ and select your newly created page from the _Homepage_ dropdown menu.
-- Hit the _Save Changes_ button
+- Select **A static page** from **Your homepage displays** and select your newly created page from the **Homepage** dropdown menu.
+- Hit the **Save Changes** button
 
 #### Syncing ACF
 
@@ -34,8 +34,8 @@ Run the `start.sh` script, or if you prefer manual installation:
 > In order to get the necessary field data for the project, we need to sync the local json file from `/acf` to the database.
 
 - Navigate to Custom Fields -> Field Groups
-- In the Field Groups page, select _Sync available_ tab
-- Select all of the field groups in the menu and hit _Apply_
+- In the Field Groups page, select **Sync available** tab
+- Select all of the field groups in the menu and hit **Apply**
 
 ### Javascript
 
