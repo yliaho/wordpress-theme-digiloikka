@@ -1,0 +1,24 @@
+{% extends "base.twig"  %} 
+
+
+{% block hero %}
+{% include "components/mainhero.twig" with { text: post.get_field('hero_description') }%}
+{% endblock %}
+
+{% block content  %}
+<body class="ict-body">
+<div class="ict-container">
+<h2>{{post.get_field("ict")}} </h2>
+<p>
+{{post.get_field("ict_intro")}}
+</p>
+</div>
+
+
+
+</body>
+
+{% endblock %}
+
+
+

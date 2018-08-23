@@ -1,0 +1,64 @@
+
+.footer{
+width:100%;
+height:50vh;
+border:1px solid black;
+position: relative;
+
+background-color: #282727;
+overflow: auto;
+margin:0;
+grid-row-start:2;
+grid-row-end:8;
+}
+
+
+.navfoot-container{
+padding:20px;
+position: absolute;
+left:40vh;
+top:10vh;
+width:50%;
+margin:0;
+}
+.navfoot-container li{
+    font-size:2.0rem;
+    color:white;
+}
+.navfoot-container a{
+    color:white;
+}
+
+
+
+@media only screen and (max-width: 600px){
+
+
+    .footer{
+        width:70%;
+        height:50vh;
+        border:1px solid black;
+        position: relative;
+        top:400vh;
+        background-color: #282727;
+        overflow: auto;
+        margin:0;
+        }
+        
+        
+        .navfoot-container{
+        padding:20px;
+        position: absolute;
+        left:10vh;
+        top:10vh;
+        width:50%;
+        margin:0;
+        }
+        .navfoot-container li{
+            font-size:2.0rem;
+            color:white;
+        }
+        .navfoot-container a{
+            color:white;
+        }
+}

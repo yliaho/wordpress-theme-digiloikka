@@ -1,18 +1,128 @@
+
 .main-content-grid {
   display: grid;
   grid-template-columns: 1fr minmax(min-content, $main-section-width) 1fr;
-  grid-template-rows: repeat(min-content);
+  grid-template-rows: (min-content);
+  /*doesent actually do anything? */
 
   .block {
-    grid-column-start: 2;
+    grid-column-start:2;
   }
 
   .full-width-block {
-    grid-column-start: 1;
+    height:70vh;
+   
+
+    grid-column-start: 1;                             
     grid-column-end: 4;
     margin: 4rem 0;
     &.whitesmoke {
-      background-color: whitesmoke;
+      background-color: black;
+    }
+    &.stripe1{
+      transform: skewY(-14deg);
     }
   }
+}
+.info{
+  color:white;
+}
+
+
+.partners{
+display:inline-block;
+list-style-type:none;
+margin:0;
+padding:0;
+position: relative;
+left:11%;
+top:120vh;
+width:70%
+
+}
+.part-block li{
+  float: left;
+  padding:20px;
+  width:25vh;
+  height:20vh;
+  margin:0 auto;
+}
+
+.address-box{
+  text-align: center;
+  position: relative;
+  top:1200px;
+  font-size:40px;
+ }
+ .map{
+   position: relative;
+   top:70vh;
+ }
+
+ 
+@media only screen and (max-width: 600px){
+
+  .main-content-grid {
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: (min-content);
+    width:50%;
+    /*doesent actually do anything? */
+  
+    .block {
+      grid-column-start:2;
+    }
+  
+    .full-width-block {
+      height:70vh;
+     
+  
+      grid-column-start: 1;                             
+      grid-column-end: 4;
+      margin: 4rem 0;
+      &.whitesmoke {
+        background-color: black;
+      }
+      &.stripe1{
+        transform: skewY(-14deg);
+      }
+    }
+  }
+  .info{
+    color:white;
+  }
+  
+  
+  .partners{
+  display:inline-block;
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  position: relative;
+  left:9%;
+  top:300vh;
+  width:70%
+  
+  }
+  .part-block li{
+    float: left;
+    padding:20px;
+    width:25vh;
+    height:20vh;
+    margin:0 auto;
+  }
+  
+  .address-box{
+    text-align: center;
+    position: relative;
+    top:330vh;
+    font-size:40px;
+   }
+   .map{
+     position: relative;
+     top:170vh;
+     width:100%;
+   }
+  
+
 }

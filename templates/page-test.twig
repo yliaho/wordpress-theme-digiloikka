@@ -1,0 +1,45 @@
+{% extends "base.twig" %}
+
+{% block hero %}
+{% include "components/mainhero.twig" with { text: post.get_field('hero_description') }%}
+{% endblock %}
+
+{% block content %}
+{% embed "components/stripeblock.twig" with { style: "black-to-white", class: "company-intro", wrapperclass: "company-intro-content" } %}
+  {% block stripecontent %}
+  <div id="section-one">
+    <div class="wysiwyg-text-container company-intro-text">
+      {{post.get_field('company_intro').text}}
+      
+      <div class="button-container">
+        <a 
+          class="button company-intro-button"
+          href="{{post.get_field('company_intro').call_to_action.button_url}}"
+        >
+          {{post.get_field('company_intro').call_to_action.button_text}}
+        </a>
+      </div>
+    </div>
+    </div>
+    <div class="company-intro-graphic-wrapper">
+      <img src="{{post.get_field('company_intro').background_image}}"></img>
+    </div>
+  {% endblock %}
+{% endembed %}
+<h1 class="block our-teams-header">Työpaikat</h1>
+<div class="block team-blocks-grid">
+
+  {% for item in post.get_field('team_block') %}
+    {% include "components/teamblock.twig" with {
+      team_title: item.team_title,
+      team_thumbnail: item.team_thumbnail,
+      team_description: item.team_description
+    } %}
+  {% endfor %}
+</div>
+
+
+<div class="block page-content">
+  {{post.content}}
+</div>
+{% endblock %}

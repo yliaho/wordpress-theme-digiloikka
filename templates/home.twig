@@ -5,25 +5,22 @@
 {% endblock %}
 
 {% block content %}
-{% embed "components/stripeblock.twig" with { style: "black-to-white", class: "company-intro", wrapperclass: "company-intro-content" } %}
-  {% block stripecontent %}
-    <div class="wysiwyg-text-container company-intro-text">
-      {{post.get_field('company_intro').text}}
-      <div class="button-container">
-        <a 
-          class="button company-intro-button"
-          href="{{post.get_field('company_intro').call_to_action.button_url}}"
-        >
-          {{post.get_field('company_intro').call_to_action.button_text}}
-        </a>
-      </div>
+
+  <div id="section-one">
+    
     </div>
+    <div class="testtest">
     <div class="company-intro-graphic-wrapper">
+    <div class="wysiwyg-text-container company-intro-text block ">
+      <p class="intro-text">
+      {{post.get_field('company_intro').text}}
+      </p>
+    
+    </div>
+    </div>
       <img src="{{post.get_field('company_intro').background_image}}"></img>
     </div>
-  {% endblock %}
-{% endembed %}
-<h1 class="block our-teams-header">MEIDÄN TIIMIMME</h1>
+
 <div class="block team-blocks-grid">
 
   {% for item in post.get_field('team_block') %}
@@ -34,19 +31,60 @@
     } %}
   {% endfor %}
 </div>
-<div class="full-width-block whitesmoke">
-  <div class="read-more-teams-wrapper">
-    <div class="read-more-teams">
-      <h2>Lue Lisää Tiimeistämme</h2>
-      <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-      <div>
-        <button class="big">{{post.get_field('my_pet')}}</button>
-      </div>
-    </div>
-  </div>
+<div class="stripefail">
+{% embed "components/stripeblock.twig" with { style: "black-to-white", class: "company-intro", wrapperclass: "company-intro-content" } %}
+  {% block stripecontent %}
+
+<p class="unskew">
+{{post.get_field('info').infotext}}
+
+
+</p>
+<div class="button-container">
+<a class="infobutton" href="{{post.get_field('info').buttons.buttonurl1}}">
+{{post.get_field("info").buttons.buttontext1}}
+</a>
+
+<a class="infobutton" href="{{post.get_field('info').buttons.buttonurl2}}">
+{{post.get_field("info").buttons.buttontext2}}
+</a>
+</div>
+  {% endblock %}
+{% endembed %}
+</div>
+ <div class="greystripefail">
+
+{% include "components/grey.twig" %}
+ {% block grey %}
+
+ 
+{% endblock %}
+</div>
+
+<div class="block leader-blocks-grid">
+
+  {% for item in post.get_field('leader_block') %}
+    {% include "components/leaderblock.twig" with {
+      leader_title: item.leader_title,
+      leader_thumbnail: item.leader_thumbnail,
+      leader_desc: item.leader_desc
+    } %}
+  {% endfor %}
+
 </div>
 
 <div class="block page-content">
+
+<div class="address-box">
+<p class="address">Lapinlahdenkatu 16 <br> 
+00180 Helsinki</p>
+</div>
+
+<div class="map">
   {{post.content}}
 </div>
+
+ <img src="{{image}}"
+
+
 {% endblock %}

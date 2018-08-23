@@ -1,12 +1,13 @@
 {% block html_head_container %}
-
+	
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 	{% include 'html-header.twig' %}
 	{% block head %}
 	{% endblock %}
 	</head>
 {% endblock %}
 
-	<body class="{{body_class}}" data-template="base.twig">
+	<body  data-template="base.twig">
 		{% block header %}
 			{% include "components/header.twig" with {page_title: block('page_title')} %}
 		{% endblock %}
@@ -30,7 +31,7 @@
 		</section>
 
 		{% block footer %}
-			<footer id="footer">
+			<footer class="footer">
 				{% include 'footer.twig' %}
 			</footer>
 			{{ function('wp_footer') }}

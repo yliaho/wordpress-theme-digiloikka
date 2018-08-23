@@ -38,3 +38,57 @@
     }
   }
 }
+@media only screen and (max-width: 600px){
+  .team-blocks-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    position: absolute;
+    top:220vh;
+    padding-left:50px;
+  }
+  
+  .team-block {
+    display: block;
+    height: 235px;
+    .team-thumbnail-container {
+      width: 100px;
+      height: 50%;
+      background-color: whitesmoke;
+      position: relative;
+      margin-right: 2rem;
+      float:left;
+      div {
+      
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+  
+    .team-text-container {
+      flex: 1;
+     
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        position: relative;;
+        right:2vh;
+       
+      }
+  
+      p {
+        line-height: 1.7;
+        position: relative;
+       
+       
+      }
+    }
+  }
+}

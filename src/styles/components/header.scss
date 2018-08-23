@@ -1,6 +1,10 @@
+
+
+
+
 header {
   position: fixed;
-  left: 0;
+  left: 50vh;
   right: 0;
   top: 0;
   padding: 1rem 2rem;
@@ -8,17 +12,99 @@ header {
   align-items: center;
   // background-color: white;
   z-index: 200;
-
+  
   .logo-container {
+    position: relative;
+    bottom:37px;
     g.logo-group {
       fill: white;
     }
   }
 
   .nav-container {
-    display: flex;
-    justify-content: flex-end;
+    position: fixed;
+    margin:auto;
+    top:0;
     padding-right: 1em;
-    flex: 1;
+    text-align:center;
+    width:50%;
+    height:60px;
+    
+   
   }
+  .nav-container li{
+    display:inline;
+    padding:10px;
+    bottom:10px;
+    
+  }
+
+  .nav-container a{
+    color:white;
+    position: relative;
+    bottom:-15px;
+  }
+}
+.navbar{
+  width:100px;
+  height:100px;
+  background-color:white;
+}
+
+
+@media only screen and (max-width: 600px){
+
+
+
+
+
+  header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    // background-color: white;
+    z-index: 200;
+    
+    .logo-container {
+      position: relative;
+      bottom:37px;
+      g.logo-group {
+        fill: white;
+      }
+    }
+  
+    .nav-container {
+      position: fixed;
+      margin:auto;
+      top:0;
+      padding-right: 1em;
+      text-align:center;
+      width:50%;
+      height:60px;
+      
+     
+    }
+    .nav-container li{
+      display:inline;
+      padding:10px;
+      bottom:10px;
+      
+    }
+  
+    .nav-container a{
+      color:white;
+      position: relative;
+      bottom:-15px;
+    }
+  }
+  .navbar{
+    width:100px;
+    height:100px;
+    background-color:white;
+  }
+  
 }

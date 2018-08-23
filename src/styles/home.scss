@@ -1,9 +1,10 @@
 .company-intro {
   height: 700px;
+
   .company-intro-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-
+    grid-template-columns: 1fr ;
+   
     .company-intro-text {
       line-height: 1.7;
       h1 {
@@ -22,13 +23,17 @@
     }
   }
 
+
+
   .company-intro-graphic-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+  
     img {
       max-width: 66%;
     }
+    
   }
 }
 
@@ -37,6 +42,8 @@
   font-size: 2.5rem;
   font-weight: 800;
   padding: 6rem 0;
+  position: relative;
+  top:40vh;
 }
 
 .read-more-teams-wrapper {
@@ -53,6 +60,37 @@
       text-transform: uppercase;
       font-weight: 800;
       font-size: 2rem;
+      color:white;
     }
   }
+}
+.partners{
+  background-color: white;
+  width:100%;
+  height:50vh;
+ 
+}
+.testtest{
+  padding-top:100px;
+  padding-bottom:100px;
+}
+body{
+  height:100%;
+  width:100%;
+}
+
+
+@media only screen and (max-width: 600px){
+  .testtest{
+    padding-top:100px;
+    padding-bottom:100px;
+    width:400px;
+    padding-left:50px;
+   
+  }
+
+  body{
+    width:600px;
+  }
+
 }
