@@ -5,7 +5,7 @@ export default function accordion(){
     
     for (i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function() {
-            console.log("asasd")
+            
             /* Toggle between adding and removing the "active" class,
             to highlight the button that controls the panel */
             this.classList.toggle("active");
