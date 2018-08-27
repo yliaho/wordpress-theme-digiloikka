@@ -46,7 +46,6 @@ class Digiloikka extends Timber\Site {
 	function theme_scripts() {
 		wp_enqueue_style( 'themestyle', get_template_directory_uri() . '/static/main.css' );
 		wp_enqueue_script( 'themescript', get_template_directory_uri() . '/static/site.bundle.js', array(), true );
-
 		add_action( 'elementor/frontend/after_enqueue_styles', [ $this, 'widget_styles' ] );
 	}
 

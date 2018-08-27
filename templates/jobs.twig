@@ -1,0 +1,43 @@
+{% extends "base.twig"  %} 
+
+
+{% block hero %}
+{% include "components/mainhero.twig" with { text: post.get_field('hero_description') }%}
+{% endblock %}
+
+{% block content  %}
+
+<body class="ict-body">
+<div class="ict-container">
+<h2>{{post.get_field("jobs")}} </h2>
+<p>
+{{post.get_field("jobs_intro")}}
+
+</p>
+
+{% for item in post.get_field("jobs_list") %}
+<button class="accordion">{{item.job_title}}</button>
+     <div class="panel">
+     
+     
+        <p>{{item.job_desc}}</p>
+         </div>
+{% endfor %}
+
+
+
+
+
+<!--
+<div class="job-block">
+</div>
+<div class="job-block1">
+</div>
+-->
+
+</body>
+
+{% endblock %}
+
+
+

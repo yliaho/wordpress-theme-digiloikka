@@ -71,9 +71,7 @@
     
   }
 
-  .ict{
-    background-color: black;
-  }
+  
 
   @media only screen and (max-width: 600px){
 
@@ -81,7 +79,7 @@
       grid-column-start: 1;
       grid-column-end: 4;
       position: relative;
-      top:250vh;
+      top:400vh;
       z-index: -10;
       width:102%;
     }
@@ -94,10 +92,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height:330vh;
+      height:400vh;
       transform: skewY(7deg);
       width:50%;
-      top:130px;
+      top:630px;
       z-index: 4;
       background-color: lightgray;
       &.black-to-white {
@@ -132,8 +130,8 @@
       transform: skewY(-7deg);
       width:50%;
       left:50%;
-      top:130px;
-      height:330vh;
+      top:630px;
+      height:400vh;
       background-color: lightgray;
      z-index: 4;
       &.black-to-white {

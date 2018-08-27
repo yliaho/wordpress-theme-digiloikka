@@ -42,10 +42,11 @@
   .team-blocks-grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 2rem;
+    grid-gap: 3rem;
     position: absolute;
     top:220vh;
     padding-left:50px;
+    
   }
   
   .team-block {

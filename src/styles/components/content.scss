@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: 1fr minmax(min-content, $main-section-width) 1fr;
   grid-template-rows: (min-content);
+  
   /*doesent actually do anything? */
 
   .block {
@@ -101,7 +102,7 @@ width:70%
   position: relative;
   left:9%;
   top:300vh;
-  width:70%
+  width:100%;
   
   }
   .part-block li{

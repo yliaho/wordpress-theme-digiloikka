@@ -1,5 +1,7 @@
 {% if menu %}
-	<ul>
+<nav id="site-navigation" class="main-navigation">
+<button class="menu-toggle">Menu</button> 
+	<ul class="menu-list">
 	{% for item in menu %}
 		<li class="{{ item.classes | join(' ') }}">
 			<a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
@@ -7,4 +9,5 @@
 		</li>
 	{% endfor %}
 	</ul>
+	</nav>
 {% endif %}
