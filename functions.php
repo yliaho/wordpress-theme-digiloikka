@@ -10,10 +10,7 @@ class Digiloikka extends Timber\Site {
 	function __construct() {
 		add_theme_support( 'post-formats' );
 		add_theme_support( 'post-thumbnails' );
-		add_image_size("proff", 400, 260, true);
-		add_image_size("proff1", 480, 650, true);
 		add_theme_support( 'menus' );
-		register_nav_menu("navbar", "Nav Bar");
 		add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 		add_filter( 'timber_context', array( $this, 'add_to_context' ) );
 		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
@@ -33,15 +30,6 @@ class Digiloikka extends Timber\Site {
 
 		parent::__construct();
 	}
-
-	function diginav(){  
-		add_theme_support("title-tag"); //this displays the page title on the tab
-	   
-		
-		add_action("init", "diginav");
-	}
-	
-	
 
 	function theme_scripts() {
 		wp_enqueue_style( 'themestyle', get_template_directory_uri() . '/static/main.css' );
@@ -93,7 +81,7 @@ class Digiloikka extends Timber\Site {
 		$context['foo'] = 'bar';
 		$context['stuff'] = 'I am a value set in your functions.php file';
 		$context['notes'] = 'These values are available everytime you call Timber::get_context();';
-		$context['menu'] = new TimberMenu("nav");
+		$context['menu'] = new TimberMenu();
 		$context['site'] = $this;
 
 		return $context;

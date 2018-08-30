@@ -1,59 +1,11 @@
-
-.stripefail{
-  grid-column-start: 1;
-  grid-column-end: 4;
-  position: relative;
-  top:200px;
-  width:100%;
-}
-
-
 .stripe-block {
   grid-column-start: 1;
   grid-column-end: 4;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height:40vh;
-  transform: skewY(7deg);
-  width:50%;
-  top:130px;
-  &.black-to-white {
-    background-color: black;
-    color: white;
-
-    .stripe-block-stripe {
-      background-color: white;
-    }
-  }
-
-
-  .stripe-block-content-wrapper {
-    width: 100px;
-    margin-bottom: 200px;
-    z-index: 3;
-    position: relative;
-    top:25%;
-  }
-
- 
-  
-}
-.stripe-block1 {
-  grid-column-start: 1;
-  grid-column-end: 7;
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  transform: skewY(-7deg);
-  width:50%;
-  left:50%;
-  top:130px;
-  height:40vh;
- z-index: -4;
   &.black-to-white {
     background-color: black;
     color: white;
@@ -62,147 +14,42 @@
       background-color: white;
     }
   }
- 
+  &.white-to-black {
+    background-color: white;
+    color: black;
 
-  
-
-  
-}
-
-.unskew{
-  transform: skewY(-7deg);
-  width:1000px;
-  z-index:1;
-  position: relative;
-}
-
-
-
-.button-container{
- transform: skewY(-7deg);
- 
-  display:grid;
-  grid-template-columns: 1fr 1fr;
- position: relative;
- left:50%;
-}
-
-.infobutton{
-  width:120px;
-  height:50px;
-  background-color: gray;
-  position: relative;
-  left:10%;
-  padding:15px;
-  color:white;
-  
-}
-
-
-@media only screen and (max-width: 600px){
-
-  .stripefail{
-    grid-column-start: 1;
-    grid-column-end: 4;
-    position: relative;
-    top:170vh;
-    width:100%;
-  }
-  
-  
-  .stripe-block {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height:90vh;
-    transform: skewY(7deg);
-    width:50%;
-    top:130px;
-    &.black-to-white {
+    .stripe-block-stripe {
       background-color: black;
-      color: white;
-  
-      .stripe-block-stripe {
-        background-color: white;
+    }
+  }
+
+  .stripe-block-content-wrapper {
+    width: $main-section-width;
+    margin-bottom: 200px;
+    z-index: 3;
+  }
+
+  .stripe-block-stripe-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 200px;
+    bottom: 0;
+    z-index: 2;
+    .stripe-block-stripe {
+      background-color: $color-background-color;
+      position: absolute;
+      bottom: -100vw;
+      left: 0;
+      right: 0;
+      height: 100vw;
+
+      &.stripe-block-stripe-1 {
+        transform: skewY(-14deg);
+      }
+      &.stripe-block-stripe-2 {
+        transform: skewY(14deg);
       }
     }
-  
-  
-    .stripe-block-content-wrapper {
-      width: 100px;
-      margin-bottom: 200px;
-      z-index: 3;
-      position: relative;
-      top:25%;
-    }
-  
-   
-    
   }
-  .stripe-block1 {
-    grid-column-start: 1;
-    grid-column-end: 7;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    transform: skewY(-7deg);
-    width:50%;
-    left:50%;
-    top:130px;
-    height:90vh;
-   z-index: -4;
-    &.black-to-white {
-      background-color: black;
-      color: white;
-  
-      .stripe-block-stripe {
-        background-color: white;
-      }
-    }
-   
-  
-    
-  
-    
-  }
-  
-  .unskew{
-    transform: skewY(-7deg);
-    width:100%;
-    z-index:1;
-    position: relative;
-    left:70px;
-    text-align: center;
-    bottom:25px;
-  }
-  
-  
-  
-  .button-container{
-   transform: skewY(-7deg);
-   
-    display:grid;
-    grid-template-columns: 1fr;
-   position: relative;
-   left:70%;
-   text-align: center;
-  }
-  
-  .infobutton{
-    width:120px;
-    height:50px;
-    background-color: gray;
-    position: relative;
-    left:10%;
-    padding:15px;
-    color:white;
-    
-  }
-
-
 }
