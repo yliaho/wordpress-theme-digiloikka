@@ -1,3 +1,47 @@
+.stripeblock-start {
+  position: relative;
+  overflow: hidden;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  padding: 200px 0;
+
+  .stripe-block-stripe-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 200px;
+    bottom: 0;
+    z-index: 2;
+
+    .stripe-block-stripe {
+      position: absolute;
+      bottom: -100vw;
+      left: 0;
+      right: 0;
+      height: 100vw;
+
+      &.stripe-block-stripe-1 {
+        transform: skewY(-14deg);
+      }
+      &.stripe-block-stripe-2 {
+        transform: skewY(14deg);
+      }
+    }
+  }
+
+  &.black-to-white {
+    .stripe-block-stripe {
+      background-color: black;
+    }
+  }
+
+  &.gray-to-white {
+    .stripe-block-stripe {
+      background-color: gray;
+    }
+  }
+}
+
 .stripe-block {
   grid-column-start: 1;
   grid-column-end: 4;
@@ -13,6 +57,11 @@
     .stripe-block-stripe {
       background-color: white;
     }
+  }
+
+  &.gray-to-white {
+    background-color: gray;
+    color: black;
   }
   &.white-to-black {
     background-color: white;

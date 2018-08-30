@@ -5,7 +5,7 @@ $hero-height: 100vh;
   left: 0;
   right: 0;
   background-color: black;
-  height: calc(100vh + 200px);
+  height: 100vh;
   overflow: hidden;
 
   .hero-background-image {
@@ -36,7 +36,9 @@ $hero-height: 100vh;
       color: white;
       line-height: 1;
       text-align: center;
-      h1 {
+      h1,
+      h2,
+      h3 {
         font-size: 58px;
         font-weight: 800;
       }
@@ -44,8 +46,6 @@ $hero-height: 100vh;
       p {
         font-weight: 500;
         font-size: 24px;
-        width: 520px;
-        margin: 0 auto;
         margin-top: 1rem;
       }
     }
