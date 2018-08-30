@@ -31,19 +31,10 @@
       } %}
     {% endfor %}
   </div>
-  {% embed "components/skewedcontainer.twig" with { style: "black-to-white", class: "company-intro", wrapperclass: "company-intro-content" } %}
+  {% embed "components/stripeblock-start.twig" with { style: "gray-to-white" }%}{% endembed %}
+  {% embed "components/stripeblock.twig" with { style: "gray-to-white", class: "company-intro", wrapperclass: "company-intro-content" } %}
     {% block stripecontent %}
-      <div class="wysiwyg-text-container company-intro-text">
-        {{post.get_field('company_intro').text}}
-        <div class="button-container">
-          <a class="button company-intro-button" href="{{post.get_field('company_intro').call_to_action.button_url}}">
-            {{post.get_field('company_intro').call_to_action.button_text}}
-          </a>
-        </div>
-      </div>
-      <div class="company-intro-graphic-wrapper">
-        <img src="{{post.get_field('company_intro').background_image}}"></img>
-      </div>
+      <h1>Moi</h1>
     {% endblock %}
   {% endembed %}
   <div class="full-width-block whitesmoke">
