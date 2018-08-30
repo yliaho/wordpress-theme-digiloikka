@@ -15,7 +15,7 @@ echo
 yarn
 clear
 
-which yarn
+which composer
 if [ "$?" -ne 0 ]; then
   echo "Composer not found. Exiting"
   exit 1
