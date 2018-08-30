@@ -6,7 +6,7 @@ Timber::$dirname = ['templates', 'views'];
 
 show_admin_bar( false );
 
-class ThemeSiteName extends Timber\Site {
+class Digiloikka extends Timber\Site {
 	function __construct() {
 		add_theme_support( 'post-formats' );
 		add_theme_support( 'post-thumbnails' );
@@ -101,4 +101,4 @@ class ThemeSiteName extends Timber\Site {
 
 }
 
-new ThemeSiteName();
+new Digiloikka();
