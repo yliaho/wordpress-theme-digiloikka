@@ -1,6 +1,6 @@
 {
     "key": "group_5b7d62f6c08c2",
-    "title": "ICT",
+    "title": "Departments",
     "fields": [
         {
             "key": "field_5b7d6313a90e1",
@@ -58,5 +58,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1535362293
+    "modified": 1535376663
 }

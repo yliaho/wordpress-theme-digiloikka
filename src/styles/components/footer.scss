@@ -6,7 +6,7 @@ border:1px solid black;
 position: relative;
 
 background-color: #282727;
-overflow: auto;
+overflow: hidden;
 margin:0;
 grid-row-start:2;
 grid-row-end:3;
@@ -18,7 +18,7 @@ grid-row-end:3;
     position: relative;
     top:220vh;
     background-color: #282727;
-    overflow: auto;
+    overflow: hidden;
     margin:0;
     grid-row-start:2;
     grid-row-end:3;
@@ -42,16 +42,15 @@ margin:0;
 }
 
 
-
 @media only screen and (max-width: 600px){
 
 
     .footer{
-        width:70%;
+        width:100%;
         height:50vh;
         border:1px solid black;
         position: relative;
-        top:400vh;
+       
         background-color: #282727;
         overflow: auto;
         margin:0;

@@ -12,8 +12,13 @@
 <h2>{{post.get_field("jobs")}} </h2>
 <p>
 {{post.get_field("jobs_intro")}}
-
+</div>
 </p>
+<div class="job-block"></div>
+<div class="job-block1"></div>
+<div class="grey-bg"></div>
+
+<div class="acc-con">
 
 {% for item in post.get_field("jobs_list") %}
 <button class="accordion">{{item.job_title}}</button>
@@ -23,17 +28,12 @@
         <p>{{item.job_desc}}</p>
          </div>
 {% endfor %}
-
-
-
-
-
-<!--
-<div class="job-block">
 </div>
-<div class="job-block1">
-</div>
--->
+
+
+
+
+
 
 </body>
 

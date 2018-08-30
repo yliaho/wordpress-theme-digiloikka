@@ -1,7 +1,7 @@
 Copyright {{"now"|date('Y')}}
 
   <div class="navfoot-container">
-    {% include "menu.twig" with {'menu': menu.get_items} %}
+    {% include "footermenu.twig" with {'menu': menu.get_items} %}
     {% include "components/site-logo.twig" with {
       home_link: site.url,
       logo_size_width: 58,

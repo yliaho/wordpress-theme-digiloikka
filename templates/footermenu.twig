@@ -1,7 +1,7 @@
 {% if menu %}
-<nav id="site-navigation" class="main-navigation">
-<button class="menu-toggle">Menu</button> 
-	<ul class="menu-list">
+<nav  class="footer-navigation">
+
+	<ul >
 	{% for item in menu %}
 		<li class="{{ item.classes | join(' ') }}">
 			<a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>

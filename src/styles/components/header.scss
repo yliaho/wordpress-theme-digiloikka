@@ -26,26 +26,23 @@ header {
 
   
 }
-
+.menu-item{
+    
+}
 
 @media only screen and (max-width: 600px){
 
 
 
 
-
+ 
   
-  /*  .nav-container {
-      position: fixed;
-      margin:auto;
-      top:0;
-      padding-right: 1em;
-      text-align:center;
-      width:50%;
-      height:60px;
+    .nav-container {
+     position: relative;
+     right:200px;
       
      
-    } */
+    } 
    
    
   }
