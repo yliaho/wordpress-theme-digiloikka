@@ -1,0 +1,15 @@
+<div id="{{jobTitle|sanitize}}" class="job-accordion-container">
+  <button class="job-accordion-expando">
+    {{jobTitle}}
+    <span class="expando-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewbox="0 0 93 61">
+        <path fill="#000" d="M9.758 60.293C5.39 56.173 2.052 51.311.065 45.97L46.5.045 92.935 45.97c-1.987 5.34-5.326 10.203-9.693 14.323L46.5 23.955 9.758 60.293z" fill-rule="evenodd"/>
+      </svg>
+    </span>
+  </button>
+  <div class="job-description">
+    {% block jobDescription %}
+      {# description here #}
+    {% endblock %}
+  </div>
+</div>
