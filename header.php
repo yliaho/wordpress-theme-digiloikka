@@ -9,6 +9,7 @@
 
 $GLOBALS['timberContext'] = Timber::get_context();
 
-
+$nav = Timber::wp_nav_menu( array( 'theme_location' => 'navbar', 'container_class' => 'navbar' ) ); 
 ob_start();
 
+wp_nav_menu( array( 'theme_location' => 'navbar', 'container_class' => 'navbar' ) ); 

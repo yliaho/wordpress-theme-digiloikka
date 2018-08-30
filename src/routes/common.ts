@@ -1,5 +1,3 @@
-import navi from '../components/mobileNav'
-import accordion from "../components/accordion"
 /**
  * Since the header position is absolute, we will calculate the main
  * section's padding top based on the header's client height in order
@@ -24,11 +22,7 @@ function calcMainSectionPadding() {
 export const common: Route = {
   init() {
     calcMainSectionPadding()
-    navi()
-    accordion()
   },
 
   finalize() {}
 }
-
-

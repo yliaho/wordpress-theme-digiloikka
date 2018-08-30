@@ -71,7 +71,9 @@
     
   }
 
-  
+  .ict{
+    background-color: black;
+  }
 
   @media only screen and (max-width: 600px){
 
@@ -79,7 +81,7 @@
       grid-column-start: 1;
       grid-column-end: 4;
       position: relative;
-      top:400vh;
+      top:250vh;
       z-index: -10;
       width:102%;
     }
@@ -92,10 +94,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height:400vh;
+      height:330vh;
       transform: skewY(7deg);
       width:50%;
-      top:630px;
+      top:130px;
       z-index: 4;
       background-color: lightgray;
       &.black-to-white {
@@ -130,8 +132,8 @@
       transform: skewY(-7deg);
       width:50%;
       left:50%;
-      top:630px;
-      height:400vh;
+      top:130px;
+      height:330vh;
       background-color: lightgray;
      z-index: 4;
       &.black-to-white {

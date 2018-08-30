@@ -29,21 +29,12 @@
 				</aside>
 			{% endif %}
 		</section>
-{% if fn('is_front_page') %}
-		{% block footer1 %}
-       <footer class="footer1">
-				{% include 'footer.twig' %}
-			</footer>
-			{{ function('wp_footer') }}
-		{% endblock %}
 
-		{% else %}
-{% block footer %}
+		{% block footer %}
 			<footer class="footer">
 				{% include 'footer.twig' %}
 			</footer>
 			{{ function('wp_footer') }}
 		{% endblock %}
-		{% endif %}
 	</body>
 </html>

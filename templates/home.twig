@@ -25,7 +25,6 @@
 
   {% for item in post.get_field('team_block') %}
     {% include "components/teamblock.twig" with {
-      team_url: item.team_url,
       team_title: item.team_title,
       team_thumbnail: item.team_thumbnail,
       team_description: item.team_description

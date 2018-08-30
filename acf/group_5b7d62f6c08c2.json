@@ -4,8 +4,8 @@
     "fields": [
         {
             "key": "field_5b7d6313a90e1",
-            "label": "Heading",
-            "name": "Heading",
+            "label": "ict",
+            "name": "ict",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -23,8 +23,8 @@
         },
         {
             "key": "field_5b7e67db096c4",
-            "label": "Dep intro",
-            "name": "Dep_intro",
+            "label": "ICT intro",
+            "name": "ict_intro",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -58,5 +58,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1535362293
+    "modified": 1535012384
 }

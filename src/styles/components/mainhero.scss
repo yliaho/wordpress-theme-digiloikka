@@ -60,7 +60,7 @@ $hero-height: 100vh;
 @media only screen and (max-width: 600px){
   $hero-height: 100vh;
   .main-hero {
-    width:100%;
+    width:70%;
     position: relative;
     top: 0;
     left: 0;
@@ -80,7 +80,7 @@ $hero-height: 100vh;
       background-size: cover;
       opacity: 0.4;
       background-attachment: fixed;
-      width: 100%;
+      
     }
   
     .hero-text-wrapper {
@@ -95,7 +95,6 @@ $hero-height: 100vh;
       align-items: center;
       z-index: 3;
       margin-top: -200px;
-      width:100%;
       .hero-text-container {
         width: 720px;
         color: white;

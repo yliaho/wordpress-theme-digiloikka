@@ -60,25 +60,6 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5b7fb68e63408",
-                    "label": "team url",
-                    "name": "team_url",
-                    "type": "page_link",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "post_type": [],
-                    "taxonomy": [],
-                    "allow_null": 0,
-                    "allow_archives": 1,
-                    "multiple": 0
-                },
-                {
                     "key": "field_5b0bcf1054a5f",
                     "label": "Team Thumbnail",
                     "name": "team_thumbnail",
@@ -532,5 +513,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1535096806
+    "modified": 1534838520
 }

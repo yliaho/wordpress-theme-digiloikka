@@ -21,10 +21,34 @@ header {
     }
   }
 
-  
+  .nav-container {
+    position: fixed;
+    margin:auto;
+    top:0;
+    padding-right: 1em;
+    text-align:center;
+    width:50%;
+    height:60px;
+    
+   
+  }
+  .nav-container li{
+    display:inline;
+    padding:10px;
+    bottom:10px;
+    
+  }
 
-
-  
+  .nav-container a{
+    color:white;
+    position: relative;
+    bottom:-15px;
+  }
+}
+.navbar{
+  width:100px;
+  height:100px;
+  background-color:white;
 }
 
 
@@ -34,8 +58,26 @@ header {
 
 
 
+  header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    // background-color: white;
+    z-index: 200;
+    
+    .logo-container {
+      position: relative;
+      bottom:37px;
+      g.logo-group {
+        fill: white;
+      }
+    }
   
-  /*  .nav-container {
+    .nav-container {
       position: fixed;
       margin:auto;
       top:0;
@@ -45,144 +87,24 @@ header {
       height:60px;
       
      
-    } */
-   
-   
-  }
- 
+    }
+    .nav-container li{
+      display:inline;
+      padding:10px;
+      bottom:10px;
+      
+    }
   
-
-
-/* Navigation Menu */
-.main-navigation {
-    margin-top: 24px;
-    margin-top: 1.714285714rem;
-    text-align: center;
-    position: relative;
-    right:150px;
+    .nav-container a{
+      color:white;
+      position: relative;
+      bottom:-15px;
+    }
+  }
+  .navbar{
+    width:100px;
+    height:100px;
+    background-color:white;
+  }
+  
 }
-.main-navigation li {
-    margin-top: 24px;
-    margin-top: 1.714285714rem;
-    font-size: 12px;
-    font-size: 0.857142857rem;
-    line-height: 1.42857143;
-}
-.main-navigation a {
-    color: #5e5e5e;
-}
-.main-navigation a:hover,
-.main-navigation a:focus {
-    color: #21759b;
-}
-.main-navigation ul.nav-menu,
-.main-navigation div.nav-menu > ul {
-    display: none;
-}
- 
-.main-navigation ul.nav-menu.toggled-on,
-.menu-toggle {
-    display: inline-block;
-}
-.main-navigation button{
-  background-color:darkgray;
-  width:100px;
-  height:40px;
- 
-}
- 
-// CSS to use on mobile devices
- 
-@media screen and (min-width: 600px) {
- 
-.main-navigation ul.nav-menu,
-    .main-navigation div.nav-menu > ul {
-        border-bottom: 1px solid #ededed;
-        border-top: 1px solid #ededed;
-        display: inline-block !important;
-        text-align: left;
-        width: 100%;
-    }
-    
-    .main-navigation ul {
-        margin: 0;
-        text-indent: 0;
-    }
-    .main-navigation li a,
-    .main-navigation li {
-        display: inline-block;
-        text-decoration: none;
-    }
-    .main-navigation li a {
-        border-bottom: 0;
-        color: #6a6a6a;
-        line-height: 3.692307692;
-        text-transform: uppercase;
-        white-space: nowrap;
-    }
-    .main-navigation li a:hover,
-    .main-navigation li a:focus {
-        color: #000;
-    }
-    .main-navigation li {
-        margin: 0 40px 0 0;
-        margin: 0 2.857142857rem 0 0;
-        position: relative;
-    }
-    .main-navigation li ul {
-        margin: 0;
-        padding: 0;
-        position: absolute;
-        top: 100%;
-        z-index: 1;
-        height: 1px;
-        width: 1px;
-        overflow: hidden;
-        clip: rect(1px, 1px, 1px, 1px);
-    }
-    .main-navigation li ul ul {
-        top: 0;
-        left: 100%;
-    }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li:focus > ul,
-    .main-navigation .focus > ul {
-        border-left: 0;
-        clip: inherit;
-        overflow: inherit;
-        height: inherit;
-        width: inherit;
-    }
-    .main-navigation li ul li a {
-        background: #efefef;
-        border-bottom: 1px solid #ededed;
-        display: block;
-        font-size: 11px;
-        font-size: 0.785714286rem;
-        line-height: 2.181818182;
-        padding: 8px 10px;
-        padding: 0.571428571rem 0.714285714rem;
-        width: 180px;
-        width: 12.85714286rem;
-        white-space: normal;
-    }
-    .main-navigation li ul li a:hover,
-    .main-navigation li ul li a:focus {
-        background: #e3e3e3;
-        color: #444;
-    }
-    .main-navigation .current-menu-item > a,
-    .main-navigation .current-menu-ancestor > a,
-    .main-navigation .current_page_item > a,
-    .main-navigation .current_page_ancestor > a {
-        color: #636363;
-        font-weight: bold;
-    }
-    .menu-toggle {
-        display: none;
-        
-        
-    }
-   
-     
-    }
