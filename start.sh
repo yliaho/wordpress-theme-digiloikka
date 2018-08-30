@@ -31,4 +31,5 @@ echo "========================================================"
 echo -e "${GREEN}Building distribution...${NC}"
 echo "========================================================"
 echo
-clear
+yarn run build
+echo -e "${GREEN}All done!"
