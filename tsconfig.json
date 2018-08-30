@@ -5,6 +5,7 @@
     "noImplicitAny": true,
     "strict": true,
     "baseUrl": ".",
+    "strictNullChecks": false,
     "paths": {
       "*": ["node_modules", "static/src/types/*"]
     }
