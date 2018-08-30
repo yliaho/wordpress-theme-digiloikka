@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block content %}
+{#
   {% embed "components/stripeblock.twig" with { style: "black-to-white", class: "company-intro", wrapperclass: "company-intro-content" } %}
     {% block stripecontent %}
       <div class="wysiwyg-text-container company-intro-text">
@@ -19,7 +20,9 @@
         <img src="{{post.get_field('company_intro').background_image}}"></img>
       </div>
     {% endblock %}
-  {% endembed %}
+  {% endembed %} #}  
+
+  {# start of teamblock #}
   <h1 class="block our-teams-header">MEIDÄN TIIMIMME</h1>
   <div class="block team-blocks-grid">
 
@@ -30,13 +33,55 @@
         team_description: item.team_description
       } %}
     {% endfor %}
+    <div class="team-btn-con block">
+  <button class="team-btn">Tahdotko mukaan tiimiin? Hae tästä!</button>
   </div>
+  </div>
+  {# end of teamblock #}
+
+  {# osaamo stripeblock #}
   {% embed "components/stripeblock-start.twig" with { style: "gray-to-white" }%}{% endembed %}
-  {% embed "components/stripeblock.twig" with { style: "gray-to-white", class: "company-intro", wrapperclass: "company-intro-content" } %}
+  {% embed "components/stripeblock.twig" with { style: "gray-to-white", class: "company-intro"} %}
     {% block stripecontent %}
-      <h1>Moi</h1>
+   
+     {{post.get_field("info").infotext}}
+  
+     <div class="button-container">
+<a class="infobutton" href="{{post.get_field('info').buttons.buttonurl1}}">
+{{post.get_field("info").buttons.buttontext1}}
+</a>
+
+<a class="infobutton" href="{{post.get_field('info').buttons.buttonurl2}}">
+{{post.get_field("info").buttons.buttontext2}}
+</a>
+</div>
     {% endblock %}
   {% endembed %}
+{# end of osaamo stripeblock #}
+
+    {#  Leader stripeblock  #}
+   {% embed "components/stripeblock-start.twig" with { style: "gray-to-white" }%}{% endembed %}
+  {% embed "components/stripeblock.twig" with { style: "gray-to-lightgray", class: "leader-block"} %}
+{% block stripecontent %}
+
+<div class="block leader-blocks-grid">
+
+  {% for item in post.get_field('leader_block') %}
+    {% include "components/leaderblock.twig" with {
+      leader_title: item.leader_title,
+      leader_thumbnail: item.leader_thumbnail,
+      leader_desc: item.leader_desc
+    } %}
+  {% endfor %}
+
+</div>
+
+
+   {% endblock %}
+  {% endembed %}
+{# end of leaderblock #}
+
+{#   whitesmoke block
   <div class="full-width-block whitesmoke">
     <div class="read-more-teams-wrapper">
       <div class="read-more-teams">
@@ -48,8 +93,18 @@
       </div>
     </div>
   </div>
+  #}
+  <div class="address">
+<p> Lapinlahdenkatu 16 <br>
+      00180 HELSINKI
+ </p>
+  </div>
 
   <div class="block page-content">
     {{post.content}}
+  </div>
+
+  <div class="partners">
+{{post.get_field("partners").partner_text}}
   </div>
 {% endblock %}
