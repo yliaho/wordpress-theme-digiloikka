@@ -1,4 +1,4 @@
-import JobAccordion from '../components/jobAccordion'
+import JobAccordion from '../components/JobAccordion'
 
 /**
  * @param selector The selector used to query all job HTMLElements

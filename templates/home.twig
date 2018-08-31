@@ -94,17 +94,25 @@
     </div>
   </div>
   #}
+  {# address box #}
   <div class="address">
 <p> Lapinlahdenkatu 16 <br>
       00180 HELSINKI
  </p>
   </div>
-
+  {# address box end #}
+   {# map start #}
   <div class="block page-content">
     {{post.content}}
   </div>
-
+ {# map end #}
+ {# partners start #}
   <div class="partners">
 {{post.get_field("partners").partner_text}}
+  
+  <div class="partners-images">
+  <img src="{{image}}">
+</div>
   </div>
+  {# partners end #}
 {% endblock %}

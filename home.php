@@ -9,11 +9,11 @@ $templates = ['home.twig'];
 Timber::render($templates, $context);
 
 
-$images = get_field('partners');
-$size = 'medium'; // (thumbnail, medium, large, full or custom size)
+$images = get_field('partner_logo');
+$size = 'thumbnail'; // (thumbnail, medium, large, full or custom size)
 
 if( $images ): ?>
-<div class="partners">
+
     <ul class="part-block">
         <?php foreach( $images as $image ): ?>
             <li>
@@ -21,5 +21,5 @@ if( $images ): ?>
             </li>
         <?php endforeach; ?>
     </ul>
-</div>
-<?php endif; ?>
+
+<?php endif; ?> 

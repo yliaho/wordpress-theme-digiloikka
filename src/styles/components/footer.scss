@@ -1,0 +1,25 @@
+.navfoot-container{
+    padding:20px;
+    position: absolute;
+    
+    margin:0;
+    }
+    .navfoot-container li{
+        font-size:2.0rem;
+        color:white;
+    }
+    .navfoot-container a{
+        color:white;
+    }
+    .footer{
+        width:100%;
+        height:500px;
+        border:1px solid black;
+        position: relative;
+        
+        background-color: #282727;
+        overflow: hidden;
+        margin:0;
+        grid-row-start:2;
+        grid-row-end:3;
+        }
