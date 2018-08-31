@@ -2,17 +2,31 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
+  @include breakpoint(xs){
+    grid-template-columns: 1fr;
+    grid-gap: 3rem;
+  }
 }
 
 .team-block {
   display: flex;
   height: 235px;
+  @include breakpoint(xs){
+   margin-right:10px;
+   margin-left:10px;
+   display:block;
+  }
   .team-thumbnail-container {
     width: 10rem;
     height: 10rem;
     background-color: whitesmoke;
     position: relative;
     margin-right: 2rem;
+    @include breakpoint(xs){
+      width:7rem;
+      height:7rem;
+      float:left;
+    }
     div {
       position: absolute;
       top: 0;
@@ -21,20 +35,29 @@
       right: 0;
       background-position: center;
       background-size: cover;
+      
     }
   }
 
   .team-text-container {
     flex: 1;
+   
     h3 {
       font-size: 1.5rem;
       font-weight: 800;
       text-transform: uppercase;
       margin-bottom: 1rem;
+      @include breakpoint(xs){
+        position: relative;
+      }
     }
 
     p {
       line-height: 1.7;
+      @include breakpoint(xs){
+        line-height:1.3;
+        position: relative;
+      }
     }
   }
 }
@@ -48,5 +71,8 @@
     font-size:1.5rem;
     position: relative;
     right:50%;
+    @include breakpoint(xs){
+      right:0;
+    }
   }
 }

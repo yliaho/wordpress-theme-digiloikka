@@ -40,19 +40,29 @@ $hero-height: 100vh;
       line-height: 1;
       text-align: center;
       @include breakpoint(xs){
-        color:black;
+       
       }
       h1,
       h2,
       h3 {
         font-size: 58px;
         font-weight: 800;
+        @include breakpoint(xs){
+          font-size:40px;
+          font-weight:600;
+        }
       }
 
       p {
         font-weight: 500;
         font-size: 24px;
         margin-top: 1rem;
+        @include breakpoint(xs){
+          font-weight: 300;
+          font-size:16px;
+          margin-right:4px;
+          margin-left:4px;
+        }
       }
     }
   }

@@ -1,10 +1,20 @@
+@import "breakpoints";
+
 .main-content-grid {
   display: grid;
   grid-template-columns: 1fr minmax(min-content, $main-section-width) 1fr;
   grid-template-rows: repeat(min-content);
+  @include breakpoint(xs){
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows: auto;
+  }
 
   .block {
     grid-column-start: 2;
+    @include breakpoint(xs){
+      grid-column-start:1;
+    }
   }
 
   .full-width-block {
