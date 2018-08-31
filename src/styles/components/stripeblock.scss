@@ -1,3 +1,5 @@
+@import "breakpoints";
+
 .stripeblock-start {
   position: relative;
   overflow: hidden;
@@ -5,6 +7,9 @@
   grid-column-end: 4;
   padding:200px  0;
   padding-top:100px;
+  @include breakpoint(xs){
+    padding-top:10px;
+  }
 
   .stripe-block-stripe-container {
     position: absolute;
@@ -53,6 +58,9 @@
   align-items: center;
   overflow: hidden;
   height:30vh;
+  @include breakpoint(xs){
+    height:45vh;
+  }
   &.black-to-white {
     background-color: black;
     color: white;
@@ -86,6 +94,12 @@
     width: $main-section-width;
     margin-bottom: 45px;
     z-index: 3;
+    @include breakpoint(xs){
+      font-size:0.9rem;
+      margin-right:8px;
+      margin-left:8px;
+      text-align:center;
+    }
   }
 
   .stripe-block-stripe-container {
@@ -102,6 +116,7 @@
       left: 0;
       right: 0;
       height: 100vw;
+      @include breakpoint(xs){}
 
       &.stripe-block-stripe-1 {
         transform: skewY(-6deg);
@@ -125,6 +140,9 @@
  margin:auto;
  justify-self: center;
  padding-top:20px;
+ @include breakpoint(xs){
+   left:0;
+ }
  }
  .infobutton{
   width:120px;
@@ -134,5 +152,7 @@
  margin-right:40px;
   padding:15px;
   color:white;
-  
+  @include breakpoint(xs){
+    margin-right:10px;
+  }
 }

@@ -1,8 +1,13 @@
+@import "breakpoints";
+
 .navfoot-container{
     padding:20px;
     position: absolute;
     left:30%;
     margin:0;
+    @include breakpoint(xs){
+    left:0%;
+    }
     }
     .navfoot-container li{
         font-size:2.0rem;
@@ -29,6 +34,9 @@
             left:80%;
             font-family:Arial, Helvetica, sans-serif;
             top:70%;
+            @include breakpoint(xs){
+            left:50%;
+            }
         .fa{
             color:white;
             font-size:2.5rem;
