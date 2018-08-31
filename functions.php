@@ -18,7 +18,7 @@ class Digiloikka extends Timber\Site {
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
 
 		add_action( 'wp_enqueue_scripts', [ $this, 'theme_scripts']);
-
+	
 		// ACF Pro
 		add_filter('acf/settings/path', [ $this, 'my_acf_settings_path' ]);
 		add_filter('acf/settings/dir', [ $this, 'my_acf_settings_dir' ]);
@@ -30,6 +30,7 @@ class Digiloikka extends Timber\Site {
 
 		parent::__construct();
 	}
+	
 
 	function theme_scripts() {
 		wp_enqueue_style( 'themestyle', get_template_directory_uri() . '/static/main.css' );
@@ -37,6 +38,7 @@ class Digiloikka extends Timber\Site {
 
 		add_action( 'elementor/frontend/after_enqueue_styles', [ $this, 'widget_styles' ] );
 	}
+		
 
 	function widget_styles() {
 
@@ -101,4 +103,10 @@ class Digiloikka extends Timber\Site {
 
 }
 
+
+
+function enqueue_load_fa() {
+wp_enqueue_style( 'load-fa', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_load_fa' );
 new Digiloikka();
