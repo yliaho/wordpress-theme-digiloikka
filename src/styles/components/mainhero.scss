@@ -1,3 +1,6 @@
+@import "breakpoints";
+
+
 $hero-height: 100vh;
 .main-hero {
   position: relative;
@@ -36,6 +39,9 @@ $hero-height: 100vh;
       color: white;
       line-height: 1;
       text-align: center;
+      @include breakpoint(xs){
+        color:black;
+      }
       h1,
       h2,
       h3 {

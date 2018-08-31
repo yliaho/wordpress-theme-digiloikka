@@ -35,7 +35,7 @@ class Digiloikka extends Timber\Site {
 	function theme_scripts() {
 		wp_enqueue_style( 'themestyle', get_template_directory_uri() . '/static/main.css' );
 		wp_enqueue_script( 'themescript', get_template_directory_uri() . '/static/site.bundle.js', array(), true );
-
+		wp_enqueue_style( 'load-fa', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
 		add_action( 'elementor/frontend/after_enqueue_styles', [ $this, 'widget_styles' ] );
 	}
 		
@@ -105,8 +105,5 @@ class Digiloikka extends Timber\Site {
 
 
 
-function enqueue_load_fa() {
-wp_enqueue_style( 'load-fa', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
-}
-add_action( 'wp_enqueue_scripts', 'enqueue_load_fa' );
+
 new Digiloikka();
