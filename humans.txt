@@ -1,10 +1,11 @@
 ## Team
 
-Your name or company
-http://yoursite.org
-@you_on_twitter
+Digitalents Helsinki
+http://digitalents.munstadi.fi/
+@DigitalentsHKI
 
 
 ## Site
 
 Software: Built with [Timber](http://upstatement.com/timber) by Upstatement
+Programmed and designed by Digitalents Helsinki
