@@ -20,12 +20,7 @@ const config = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js']
   },
-  stats: {
-    assets: false,
-    entrypoints: false,
-    children: false,
-    maxModules: 3
-  },
+  stats: 'minimal',
   module: {
     rules: [
       { test: /\.tsx?$/, loader: 'ts-loader' },
@@ -48,7 +43,7 @@ const config = {
   },
   plugins: [
     new WebpackBar({
-      profile: true
+      profile: false
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css'
