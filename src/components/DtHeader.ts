@@ -45,10 +45,8 @@ export default class DtHeader {
       if (lastState === this.hasBackground) return
 
       if (this.hasBackground) {
-        console.log('what')
         this.fadeInBg()
       } else {
-        console.log('hei')
         this.fadeOutBg()
       }
     })
