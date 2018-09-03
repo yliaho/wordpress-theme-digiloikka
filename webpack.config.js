@@ -24,7 +24,10 @@ module.exports = {
         test: /\.(ttf|otf|woff|woff2)$/,
         use: [
           {
-            loader: 'url-loader'
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]'
+            }
           }
         ]
       },

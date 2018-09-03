@@ -2,4 +2,7 @@ vendor
 node_modules
 static/site.bundle.js
 static/main.css
+static/*.woff
+static/*.woff2
+static/*.otf
 notes.md
