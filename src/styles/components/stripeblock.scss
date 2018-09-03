@@ -1,14 +1,14 @@
-@import "breakpoints";
+@import 'breakpoints';
 
 .stripeblock-start {
   position: relative;
   overflow: hidden;
   grid-column-start: 1;
   grid-column-end: 4;
-  padding:200px  0;
-  padding-top:100px;
-  @include breakpoint(xs){
-    padding-top:10px;
+  padding: 200px 0;
+  padding-top: 100px;
+  @include breakpoint(xs) {
+    padding-top: 10px;
   }
 
   .stripe-block-stripe-container {
@@ -18,7 +18,7 @@
     top: 200px;
     bottom: 0;
     z-index: 2;
-    height:-50vh;
+    height: -50vh;
 
     .stripe-block-stripe {
       position: absolute;
@@ -49,18 +49,62 @@
   }
 }
 
-.stripe-block {
+.stripeblock-end {
+  position: relative;
+  overflow: hidden;
   grid-column-start: 1;
   grid-column-end: 4;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  height:30vh;
-  @include breakpoint(xs){
-    height:45vh;
+  padding: 100px 0;
+  @include breakpoint(xs) {
+    padding-top: 10px;
   }
+
+  .stripe-block-stripe-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 200px;
+    bottom: 0;
+    z-index: 2;
+    height: -50vh;
+
+    .stripe-block-stripe {
+      position: absolute;
+      bottom: -100vw;
+      left: 0;
+      right: 0;
+      height: 100vw;
+
+      &.stripe-block-stripe-1 {
+        transform: skewY(-6deg);
+      }
+      &.stripe-block-stripe-2 {
+        transform: skewY(6deg);
+      }
+    }
+  }
+
+  &.black-to-white {
+    .stripe-block-stripe {
+      background-color: black;
+    }
+  }
+
+  &.gray-to-white {
+    .stripe-block-stripe {
+      background-color: #202020;
+    }
+  }
+
+  &.lightgray-to-gray {
+    background-color: #1d1d1d;
+    .stripe-block-stripe {
+      background-color: #cdcdcd;
+    }
+  }
+}
+
+.stripe-block {
   &.black-to-white {
     background-color: black;
     color: white;
@@ -74,31 +118,45 @@
     background-color: #202020;
     color: white;
   }
-  
+
   &.white-to-black {
     background-color: white;
     color: black;
-   
+
     .stripe-block-stripe {
       background-color: black;
     }
   }
-  &.gray-to-lightgray{
-    background-color:lightgray;
-    .stripe-block-stripe{
-      background-color:lightgray;
+  &.gray-to-lightgray {
+    background-color: lightgray;
+    .stripe-block-stripe {
+      background-color: lightgray;
     }
+  }
+}
+
+.stripe-block {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 30vh;
+  @include breakpoint(xs) {
+    height: 45vh;
   }
 
   .stripe-block-content-wrapper {
     width: $main-section-width;
     margin-bottom: 45px;
     z-index: 3;
-    @include breakpoint(xs){
-      font-size:0.9rem;
-      margin-right:8px;
-      margin-left:8px;
-      text-align:center;
+    @include breakpoint(xs) {
+      font-size: 0.9rem;
+      margin-right: 8px;
+      margin-left: 8px;
+      text-align: center;
     }
   }
 
@@ -116,7 +174,8 @@
       left: 0;
       right: 0;
       height: 100vw;
-      @include breakpoint(xs){}
+      @include breakpoint(xs) {
+      }
 
       &.stripe-block-stripe-1 {
         transform: skewY(-6deg);
@@ -127,32 +186,30 @@
     }
   }
 }
-.leader-block{
-  height:auto;
-  background-color:lightgray;
-  
-
+.leader-block {
+  height: auto;
+  background-color: lightgray;
 }
-.button-container{
+.button-container {
   display: block;
   position: relative;
-  left:40%;
- margin:auto;
- justify-self: center;
- padding-top:20px;
- @include breakpoint(xs){
-   left:0;
- }
- }
- .infobutton{
-  width:120px;
-  height:50px;
+  left: 40%;
+  margin: auto;
+  justify-self: center;
+  padding-top: 20px;
+  @include breakpoint(xs) {
+    left: 0;
+  }
+}
+.infobutton {
+  width: 120px;
+  height: 50px;
   background-color: gray;
   position: relative;
- margin-right:40px;
-  padding:15px;
-  color:white;
-  @include breakpoint(xs){
-    margin-right:10px;
+  margin-right: 40px;
+  padding: 15px;
+  color: white;
+  @include breakpoint(xs) {
+    margin-right: 10px;
   }
 }
