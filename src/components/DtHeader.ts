@@ -13,7 +13,13 @@ export default class DtHeader {
     const options: IntersectionObserverInit = {
       root: null,
       rootMargin: '0px',
-      threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1]
+      threshold: []
+    }
+
+    if (Array.isArray(options.threshold)) {
+      for (let i = 0; i <= 1; i += 0.01) {
+        options.threshold.push(i)
+      }
     }
 
     this.observer = new IntersectionObserver(
@@ -36,7 +42,7 @@ export default class DtHeader {
 
   private observerCallback(
     entries: IntersectionObserverEntry[],
-    observer: IntersectionObserver
+    _observer: IntersectionObserver
   ) {
     entries.forEach(({ boundingClientRect }) => {
       let lastState = this.hasBackground
