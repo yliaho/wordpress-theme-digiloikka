@@ -3,7 +3,7 @@
     "sourceMap": true,
     "target": "es5",
     "lib": ["dom", "es2015", "es5"],
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "strict": true,
     "baseUrl": ".",
     "strictNullChecks": false,
