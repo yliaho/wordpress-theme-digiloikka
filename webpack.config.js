@@ -23,7 +23,8 @@ const config = {
   stats: {
     assets: false,
     entrypoints: false,
-    children: false
+    children: false,
+    maxModules: 3
   },
   module: {
     rules: [
