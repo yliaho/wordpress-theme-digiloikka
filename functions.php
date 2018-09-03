@@ -64,7 +64,6 @@ class Digiloikka extends Timber\Site {
 	}
 
 	function my_acf_json_load_point( $path ) {
-		unset($paths[0]);
 
 		$paths[] = get_stylesheet_directory() . '/acf';
 
