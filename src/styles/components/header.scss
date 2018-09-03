@@ -1,4 +1,4 @@
-@import "breakpoints";
+@import 'breakpoints';
 
 header {
   position: fixed;
@@ -8,10 +8,9 @@ header {
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
-  // background-color: white;
   z-index: 200;
-  @include breakpoint(xs){
-    display:none;
+  @include breakpoint(xs) {
+    display: none;
   }
 
   .logo-container {
@@ -25,6 +24,5 @@ header {
     justify-content: flex-end;
     padding-right: 1em;
     flex: 1;
-
   }
 }
