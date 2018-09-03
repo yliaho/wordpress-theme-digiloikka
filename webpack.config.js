@@ -10,7 +10,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
  * @type webpack.Configuration
  */
 const config = {
-  mode: 'production',
+  mode: 'development',
   devtool: 'cheap-eval-source-map',
   entry: './src/entry.ts',
   output: {
