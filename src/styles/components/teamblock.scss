@@ -20,6 +20,10 @@
     margin-left: 20px;
     display: block;
   }
+  @include breakpoint(md) {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
   .team-thumbnail-container {
     width: 10rem;
     height: 10rem;
