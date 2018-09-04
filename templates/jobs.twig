@@ -2,17 +2,27 @@
 {% set more_body_class = 'jobs' %}
 
 {% block hero %}
-  {% include "components/mainhero.twig" with { text: post.get_field('hero_description') }%}
+    {% include "components/mainhero.twig" with { text: post.get_field('hero_description') }%}
 {% endblock %}
 
 {% block content %}
-  <section class="job-listing block">
-    {% for job in post.get_field('jobs_list') %}
-      {% embed "components/job-accordion.twig" with { jobTitle: job.job_title } %}
-        {% block jobDescription %}
-          {{job.job_desc}}
-        {% endblock %}
-      {% endembed %}
-    {% endfor %}
-  </section>
-{% endblock %}
+
+    <body class="department-body">
+        <div class="department-container">
+            <h2>{{post.get_field("jobs")}}
+            </h2>
+            <p>
+                {{post.get_field("jobs_intro")}}
+            </p>
+        </div>
+
+        <section class="job-listing block">
+            {% for job in post.get_field('jobs_list') %}
+                {% embed "components/job-accordion.twig" with { jobTitle: job.job_title } %}
+                    {% block jobDescription %}
+                        {{job.job_desc}}
+                    {% endblock %}
+                {% endembed %}
+            {% endfor %}
+        </section>
+    {% endblock %}
