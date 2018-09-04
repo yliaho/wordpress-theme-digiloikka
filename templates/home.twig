@@ -35,7 +35,11 @@
             } %}
         {% endfor %}
         <div class="team-btn-con block">
-            <button class="team-btn">Tahdotko mukaan tiimiin? Hae tästä!</button>
+            <button class="team-btn">
+                <a class="team-btn-a" href="{{post.get_field('team_button').team_button_link}}">
+                    {{post.get_field("team_button").team_button_text}}
+                </a>
+            </button>
         </div>
     </div>
     {# end of teamblock #}

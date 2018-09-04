@@ -67,6 +67,9 @@
     font-size: 1.5rem;
     position: relative;
     right: 50%;
+    .team-btn-a {
+      color: white;
+    }
     @include breakpoint(xs) {
       right: 0;
     }
