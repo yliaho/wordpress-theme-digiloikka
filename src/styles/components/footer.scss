@@ -37,6 +37,9 @@
   @include breakpoint(xs) {
     left: 50%;
   }
+  @include breakpoint(sm) {
+    left: 70%;
+  }
   .fa {
     color: white;
     font-size: 2.5rem;
