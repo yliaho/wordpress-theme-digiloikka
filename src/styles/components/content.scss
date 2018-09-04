@@ -26,11 +26,11 @@
       margin: 0;
     }
     &.whitesmoke {
-      background-color: whitesmoke;
+      background-color: $color-lightgray;
     }
 
     &.gray {
-      background-color: #1d1d1d;
+      background-color: $color-darkgray;
       color: white;
     }
   }

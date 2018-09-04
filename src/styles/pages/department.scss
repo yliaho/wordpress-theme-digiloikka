@@ -13,7 +13,7 @@
 }
 .department-body {
   height: 20%;
-  background-color: whitesmoke;
+  background-color: $color-lightgray;
 }
 .button-con {
   display: grid;
@@ -33,7 +33,7 @@
   width: 12vh;
   height: 5vh;
   font-size: 1.1rem;
-  background-color: darkgray;
+  background-color: $color-darkgray;
   @include breakpoint(xs) {
     width: 15vh;
     height: 8vh;
