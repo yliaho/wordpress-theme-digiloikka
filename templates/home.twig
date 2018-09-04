@@ -1,11 +1,11 @@
 {% extends "base.twig" %}
 
 {% block hero %}
-  {% include "components/mainhero.twig" with { text: post.get_field('hero_description') }%}
+    {% include "components/mainhero.twig" with { text: post.get_field('hero_description') }%}
 {% endblock %}
 
 {% block content %}
-  {#
+    {#
   {% embed "components/stripeblock.twig" with { style: "black-to-white", class: "company-intro", wrapperclass: "company-intro-content" } %}
     {% block stripecontent %}
       <div class="wysiwyg-text-container company-intro-text">
@@ -22,66 +22,67 @@
     {% endblock %}
   {% endembed %} #}
 
-  {# start of teamblock #}
-  <h1 class="block our-teams-header">MEIDÄN TIIMIMME</h1>
-  <div class="block team-blocks-grid">
+    {# start of teamblock #}
+    <h1 class="block our-teams-header">MEIDÄN TIIMIMME</h1>
+    <div class="block team-blocks-grid">
 
-    {% for item in post.get_field('team_block') %}
-      {% include "components/teamblock.twig" with {
-        team_title : item.team_title,
-        team_thumbnail: item.team_thumbnail,
-        team_description: item.team_description
-      } %}
-    {% endfor %}
-    <div class="team-btn-con block">
-      <button class="team-btn">Tahdotko mukaan tiimiin? Hae tästä!</button>
-    </div>
-  </div>
-  {# end of teamblock #}
-
-  {# osaamo stripeblock #}
-  {% embed "components/stripeblock-start.twig" with { style: "gray-to-white" }%}{% endembed %}
-
-  <div class="full-width-block gray no-margin">
-    <div class="full-width-block-wrapper osaamo">
-      {{post.get_field("info").infotext}}
-
-      <div class="button-container">
-        <a class="infobutton" href="{{post.get_field('info').buttons.buttonurl1}}">
-          {{post.get_field("info").buttons.buttontext1}}
-        </a>
-
-        <a class="infobutton" href="{{post.get_field('info').buttons.buttonurl2}}">
-          {{post.get_field("info").buttons.buttontext2}}
-        </a>
-      </div>
-    </div>
-
-  </div>
-  {% embed "components/stripeblock-end.twig" with { style: "lightgray-to-gray" } %}{% endembed %}
-  {# end of osaamo stripeblock #}
-
-  {#  Leader stripeblock  #}
-  {% embed "components/stripeblock.twig" with { style: "gray-to-lightgray", class: "leader-block"} %}
-    {% block stripecontent %}
-
-      <div class="block leader-blocks-grid">
-
-        {% for item in post.get_field('leader_block') %}
-          {% include "components/leaderblock.twig" with {
-            leader_title : item.leader_title,
-            leader_thumbnail: item.leader_thumbnail,
-            leader_desc: item.leader_desc
-          } %}
+        {% for item in post.get_field('team_block') %}
+            {% include "components/teamblock.twig" with {
+                team_title : item.team_title,
+                team_thumbnail: item.team_thumbnail,
+                team_description: item.team_description,
+                team_url: item.team_url
+            } %}
         {% endfor %}
+        <div class="team-btn-con block">
+            <button class="team-btn">Tahdotko mukaan tiimiin? Hae tästä!</button>
+        </div>
+    </div>
+    {# end of teamblock #}
 
-      </div>
+    {# osaamo stripeblock #}
+    {% embed "components/stripeblock-start.twig" with { style: "gray-to-white" }%}{% endembed %}
 
-    {% endblock %}
-  {% endembed %}
-  {# end of leaderblock #}
+    <div class="full-width-block gray no-margin">
+        <div class="full-width-block-wrapper osaamo">
+            {{post.get_field("info").infotext}}
 
-  {#   whitesmoke block
+            <div class="button-container">
+                <a class="infobutton" href="{{post.get_field('info').buttons.buttonurl1}}">
+                    {{post.get_field("info").buttons.buttontext1}}
+                </a>
+
+                <a class="infobutton" href="{{post.get_field('info').buttons.buttonurl2}}">
+                    {{post.get_field("info").buttons.buttontext2}}
+                </a>
+            </div>
+        </div>
+
+    </div>
+    {% embed "components/stripeblock-end.twig" with { style: "lightgray-to-gray" } %}{% endembed %}
+    {# end of osaamo stripeblock #}
+
+    {#  Leader stripeblock  #}
+    {% embed "components/stripeblock.twig" with { style: "gray-to-lightgray", class: "leader-block"} %}
+        {% block stripecontent %}
+
+            <div class="block leader-blocks-grid">
+
+                {% for item in post.get_field('leader_block') %}
+                    {% include "components/leaderblock.twig" with {
+                        leader_title : item.leader_title,
+                        leader_thumbnail: item.leader_thumbnail,
+                        leader_desc: item.leader_desc
+                    } %}
+                {% endfor %}
+
+            </div>
+
+        {% endblock %}
+    {% endembed %}
+    {# end of leaderblock #}
+
+    {#   whitesmoke block
   <div class="full-width-block whitesmoke">
     <div class="read-more-teams-wrapper">
       <div class="read-more-teams">
@@ -94,30 +95,30 @@
     </div>
   </div>
   #}
-  {# address box #}
-  <div class="address">
-    <p>
-      Lapinlahdenkatu 16
-      <br>
-      00180 HELSINKI
-    </p>
-  </div>
-  {# address box end #}
-  {# map start #}
-  <div class="block page-content">
-    {{post.content}}
-  </div>
-  {# map end #}
-  {# partners start #}
-  <div class="partners">
-    {{post.get_field("partners").partner_text}}
-
-    <div class="partners-images">
-
-      {% for image in post.get_field('partner_logo') %}
-        <img class="partner-logo" src="{{image.url}}">
-      {% endfor %}
+    {# address box #}
+    <div class="address">
+        <p>
+            Lapinlahdenkatu 16
+            <br>
+            00180 HELSINKI
+        </p>
     </div>
-  </div>
-  {# partners end #}
+    {# address box end #}
+    {# map start #}
+    <div class="block page-content">
+        {{post.content}}
+    </div>
+    {# map end #}
+    {# partners start #}
+    <div class="partners">
+        {{post.get_field("partners").partner_text}}
+
+        <div class="partners-images">
+
+            {% for image in post.get_field('partner_logo') %}
+                <img class="partner-logo" src="{{image.url}}">
+            {% endfor %}
+        </div>
+    </div>
+    {# partners end #}
 {% endblock %}

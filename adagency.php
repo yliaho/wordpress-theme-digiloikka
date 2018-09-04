@@ -1,7 +1,6 @@
 <?php
 /**
  * Template Name: Ad agency
- * Description: A Page Template with a darker design.
  */
 
 
