@@ -38,13 +38,13 @@
 
   &.black-to-white {
     .stripe-block-stripe {
-      background-color: black;
+      background-color: $color-black;
     }
   }
 
   &.gray-to-white {
     .stripe-block-stripe {
-      background-color: #202020;
+      background-color: $color-darkgray;
     }
   }
 }
@@ -86,51 +86,51 @@
 
   &.black-to-white {
     .stripe-block-stripe {
-      background-color: black;
+      background-color: $color-darkgray;
     }
   }
 
   &.gray-to-white {
     .stripe-block-stripe {
-      background-color: #202020;
+      background-color: $color-darkgray;
     }
   }
 
   &.lightgray-to-gray {
-    background-color: green;
+    background-color: $color-darkgray;
     .stripe-block-stripe {
-      background-color: lightgray;
+      background-color: $color-lightgray;
     }
   }
 }
 
 .stripe-block {
   &.black-to-white {
-    background-color: black;
-    color: white;
+    background-color: $color-darkgray;
+    color: $color-background-color;
 
     .stripe-block-stripe {
-      background-color: white;
+      background-color: $color-background-color;
     }
   }
 
   &.gray-to-white {
-    background-color: #202020;
-    color: white;
+    background-color: $color-darkgray;
+    color: $color-background-color;
   }
 
   &.white-to-black {
-    background-color: white;
-    color: black;
+    background-color: $color-background-color;
+    color: $color-black;
 
     .stripe-block-stripe {
-      background-color: black;
+      background-color: $color-darkgray;
     }
   }
   &.gray-to-lightgray {
-    background-color: lightgray;
+    background-color: $color-lightgray;
     .stripe-block-stripe {
-      background-color: lightgray;
+      background-color: $color-lightgray;
     }
   }
 }
@@ -188,7 +188,7 @@
 }
 .leader-block {
   height: auto;
-  background-color: lightgray;
+  background-color: $color-lightgray;
 }
 .button-container {
   display: block;
@@ -200,6 +200,9 @@
   left: 2%;
   @include breakpoint(xs) {
     left: 10%;
+  }
+  @include breakpoint(md) {
+    left: 4%;
   }
 }
 .infobutton {

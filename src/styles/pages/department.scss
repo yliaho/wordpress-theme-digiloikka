@@ -36,11 +36,9 @@
     grid-template-columns: 1fr;
     display: flex;
   }
+
   @include breakpoint(md) {
-    text-align: center;
-  }
-  @include breakpoint(sm) {
-    margin-right: 14%;
+    margin-left: -12%;
   }
 }
 .dep-button {
