@@ -20,6 +20,7 @@ const config = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js']
   },
+  cache: false, // webpack's being a little fuck again
   stats: 'minimal',
   module: {
     rules: [
