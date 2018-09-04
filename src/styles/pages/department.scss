@@ -10,6 +10,14 @@
     margin-left: 20px;
     margin-right: 20px;
   }
+  @include breakpoint(md) {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  @include breakpoint(sm) {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
 }
 .department-body {
   height: 20%;
@@ -21,12 +29,18 @@
   grid-template-columns: 1fr 1fr;
   width: 20%;
   grid-gap: 25px;
-  align-items: center;
-  margin: auto;
+  justify-self: center;
+
   padding-bottom: 40px;
   @include breakpoint(xs) {
     grid-template-columns: 1fr;
     display: flex;
+  }
+  @include breakpoint(md) {
+    text-align: center;
+  }
+  @include breakpoint(sm) {
+    margin-right: 14%;
   }
 }
 .dep-button {
@@ -35,10 +49,13 @@
   font-size: 1.1rem;
   background-color: $color-darkgray;
   @include breakpoint(xs) {
-    width: 15vh;
+    width: 16vh;
     height: 8vh;
     margin: 20px;
     position: relative;
     right: 100%;
+  }
+  @include breakpoint(md) {
+    text-align: center;
   }
 }

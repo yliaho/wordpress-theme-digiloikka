@@ -99,7 +99,7 @@
   &.lightgray-to-gray {
     background-color: green;
     .stripe-block-stripe {
-      background-color: #cdcdcd;
+      background-color: lightgray;
     }
   }
 }
@@ -193,12 +193,13 @@
 .button-container {
   display: block;
   position: relative;
-  left: 40%;
+  width: 100%;
   margin: auto;
   justify-self: center;
   padding-top: 20px;
+  left: 2%;
   @include breakpoint(xs) {
-    left: 0;
+    left: 10%;
   }
 }
 .infobutton {
@@ -209,8 +210,8 @@
   margin-right: 40px;
   padding: 15px;
   color: white;
+
   @include breakpoint(xs) {
     margin-right: 10%;
-    left: 10%;
   }
 }

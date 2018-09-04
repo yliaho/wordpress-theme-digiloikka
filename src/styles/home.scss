@@ -72,6 +72,9 @@
   @include breakpoint(xs) {
     grid-column-start: 1;
   }
+  @include breakpoint(sm) {
+    font-size: 2.2rem;
+  }
 }
 .partners {
   /*container for Partner logos */
@@ -85,12 +88,18 @@
     grid-column-start: 1;
     padding-bottom: 120px;
   }
+  @include breakpoint(md) {
+  }
 }
 .partners-images {
   grid-column-start: 4;
   grid-row-start: 3;
   width: 100%;
   height: 100px;
+  @include breakpoint(sm) {
+    /*last logo keeps hiding behind the footer, had to increase height */
+    height: 220px;
+  }
 }
 .part-block li {
   float: left;
