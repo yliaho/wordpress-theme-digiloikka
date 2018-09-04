@@ -6,3 +6,5 @@ static/*.woff
 static/*.woff2
 static/*.otf
 notes.md
+package-lock.json
+yarn-error.log

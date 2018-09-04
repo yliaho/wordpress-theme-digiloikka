@@ -27,7 +27,7 @@
   .team-thumbnail-container {
     width: 10rem;
     height: 10rem;
-    background-color: whitesmoke;
+    background-color: $color-lightgray;
     position: relative;
     margin-right: 2rem;
     @include breakpoint(xs) {
@@ -82,7 +82,7 @@
   .team-btn {
     width: 100%;
     height: 100px;
-    background-color: #202020;
+    background-color: $color-darkgray;
     font-size: 1.5rem;
     position: relative;
     right: 50%;
