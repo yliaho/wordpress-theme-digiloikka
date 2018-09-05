@@ -35,6 +35,7 @@
   @include breakpoint(xs) {
     grid-template-columns: 1fr;
     display: flex;
+    grid-column-start: 1;
   }
 
   @include breakpoint(md) {

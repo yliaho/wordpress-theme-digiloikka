@@ -4,9 +4,6 @@
       @content;
     }
   } @else if $class == sm {
-    @media (min-width: 768px) {
-      @content;
-    }
     @media (max-width: 1024px) {
       @content;
     }
