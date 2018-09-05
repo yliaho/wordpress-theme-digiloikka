@@ -41,11 +41,14 @@
     margin-left: -12%;
   }
 }
+
 .dep-button {
-  width: 12vh;
-  height: 5vh;
-  font-size: 1.1rem;
+  width: 120px;
+  height: 40px;
+  text-align: center;
   background-color: $color-darkgray;
+  color: white;
+  padding: 10px;
   @include breakpoint(xs) {
     width: 16vh;
     height: 8vh;

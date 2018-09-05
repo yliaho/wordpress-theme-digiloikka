@@ -13,9 +13,10 @@
                 {{post.get_field("department_intro")}}
             </p>
         </div>
+
         <div class="button-con">
-            <button class="dep-button">Ota yhteyttä</button>
-            <button onclick="location.href='http://localhost/wordpress1/index.php/tyopaikat/'" class="dep-button">Työpaikat</button>
+            <a class="dep-button" href="{{post.get_field('department_buttons').department_button_link0}}">{{post.get_field("department_buttons").department_button_text0}}</a>
+            <a class="dep-button" href="{{post.get_field('department_buttons').department_button_link1}}">{{post.get_field("department_buttons").department_button_text1}}</a>
         </div>
 
     </body>

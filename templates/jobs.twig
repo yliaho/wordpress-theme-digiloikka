@@ -15,7 +15,7 @@
                 {{post.get_field("jobs_intro")}}
             </p>
         </div>
-
+        <!-- {% embed "components/stripeblock.twig" with { style: "gray-to-lightgray", class: "leader-block"} %} {% block stripecontent %} -->
         <section class="job-listing block">
             {% for job in post.get_field('jobs_list') %}
                 {% embed "components/job-accordion.twig" with { jobTitle: job.job_title } %}
@@ -25,4 +25,5 @@
                 {% endembed %}
             {% endfor %}
         </section>
+        <!-- {% endblock %} {% endembed %} -->
     {% endblock %}
