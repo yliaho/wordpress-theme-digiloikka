@@ -47,6 +47,11 @@
       background-color: $color-darkgray;
     }
   }
+  &.lightgray-to-lightgray {
+    .stripe-block-stripe {
+      background-color: $color-lightgray;
+    }
+  }
 }
 
 .stripeblock-end {
@@ -183,12 +188,19 @@
       &.stripe-block-stripe-2 {
         transform: skewY(6deg);
       }
+      &.stripe-block-stripe-3 {
+        transform: skewY(0deg);
+      }
     }
   }
 }
 .leader-block {
   height: auto;
   background-color: $color-lightgray;
+}
+.job-block {
+  background-color: $color-lightgray;
+  height: auto;
 }
 .button-container {
   display: block;

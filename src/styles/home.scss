@@ -141,9 +141,12 @@
   height: 150px;
   background-color: black;
   transform: rotate(45deg);
-
+  align-items: center;
+  text-align: center;
   grid-row-start: 1;
   grid-column-start: 3;
+  margin: auto;
+  font-size: 3.5rem;
   @include breakpoint(xs) {
     grid-column-start: 1;
     grid-row-start: 1;
@@ -151,6 +154,19 @@
   @include breakpoint(sm) {
     grid-column-start: 3;
   }
+}
+.cubecon {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+
+  transform: translate(-50%, -50%);
+  /* or 3d alternative if you will add animations (smoother transitions) */
+  transform: rotate(-45deg);
+
+  /* Other styling stuff */
+
+  color: white;
 }
 .cube2 {
   width: 150px;
