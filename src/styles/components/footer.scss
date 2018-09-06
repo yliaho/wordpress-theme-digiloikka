@@ -1,27 +1,28 @@
 @import 'breakpoints';
-
 .navfoot-container {
   padding: 20px;
-
   left: 30%;
   margin: 0;
+  padding-left: 200px;
   @include breakpoint(xs) {
     left: 0%;
   }
 }
+
 .navfoot-container li {
   font-size: 2rem;
   color: white;
 }
+
 .navfoot-container a {
   color: white;
 }
+
 .footer {
   width: 100%;
   height: 500px;
   border: 1px solid black;
   position: relative;
-
   background-color: #282727;
   overflow: hidden;
   margin: 0;

@@ -42,7 +42,7 @@
     },
     {
       "key": "field_5b7fcf54cbc79",
-      "label": "Jobs List",
+      "label": "jobs list",
       "name": "jobs_list",
       "type": "repeater",
       "instructions": "",
@@ -56,12 +56,12 @@
       "collapsed": "",
       "min": 0,
       "max": 0,
-      "layout": "block",
+      "layout": "table",
       "button_label": "",
       "sub_fields": [
         {
           "key": "field_5b7fcfa0cbc7a",
-          "label": "Job Title",
+          "label": "job title",
           "name": "job_title",
           "type": "text",
           "instructions": "",
@@ -80,9 +80,9 @@
         },
         {
           "key": "field_5b7fd923b6e09",
-          "label": "Job Description",
+          "label": "job desc",
           "name": "job_desc",
-          "type": "wysiwyg",
+          "type": "textarea",
           "instructions": "",
           "required": 0,
           "conditional_logic": 0,
@@ -92,10 +92,33 @@
             "id": ""
           },
           "default_value": "",
-          "tabs": "all",
-          "toolbar": "full",
-          "media_upload": 1,
-          "delay": 0
+          "placeholder": "",
+          "maxlength": "",
+          "rows": "",
+          "new_lines": ""
+        },
+        {
+          "key": "field_5b911c6a021aa",
+          "label": "Hide/show",
+          "name": "hideshow",
+          "type": "checkbox",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "choices": {
+            "Hide": "Hide"
+          },
+          "allow_custom": 0,
+          "save_custom": 0,
+          "default_value": [],
+          "layout": "vertical",
+          "toggle": 0,
+          "return_format": "label"
         }
       ]
     }
@@ -117,5 +140,5 @@
   "hide_on_screen": "",
   "active": 1,
   "description": "",
-  "modified": 1535630115
+  "modified": 1536237463
 }

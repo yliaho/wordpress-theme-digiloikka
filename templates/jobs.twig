@@ -20,15 +20,18 @@
             {% block stripecontent %}
                 <section class="job-listing block">
                     {% for job in post.get_field('jobs_list') %}
-                        {% embed "components/job-accordion.twig" with { jobTitle: job.job_title } %}
-                            {# accordion#}
-                            {% block jobDescription %}
-                                {# job desc block #}
-                                {{job.job_desc}}
-                            {% endblock %}
-                            {# job desc block end#}
-                        {% endembed %}
-                        {# accordion end #}
+
+                        {% if job.hideshow[0] != "Hide" %}
+                            {% embed "components/job-accordion.twig" with { jobTitle: job.job_title } %}
+                                {# accordion#}
+                                {% block jobDescription %}
+                                    {# job desc block #}
+                                    {{job.job_desc}}
+                                {% endblock %}
+                                {# job desc block end#}
+                            {% endembed %}
+                            {# accordion end #}
+                        {% endif %}
                     {% endfor %}
                 </section>
             {% endblock %}

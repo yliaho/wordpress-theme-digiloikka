@@ -1,5 +1,4 @@
 @import 'breakpoints';
-
 .stripeblock-start {
   position: relative;
   overflow: hidden;
@@ -10,7 +9,6 @@
   @include breakpoint(xs) {
     padding-top: 10px;
   }
-
   .stripe-block-stripe-container {
     position: absolute;
     left: 0;
@@ -19,14 +17,12 @@
     bottom: 0;
     z-index: 2;
     height: -50vh;
-
     .stripe-block-stripe {
       position: absolute;
       bottom: -100vw;
       left: 0;
       right: 0;
       height: 100vw;
-
       &.stripe-block-stripe-1 {
         transform: skewY(-6deg);
       }
@@ -35,13 +31,11 @@
       }
     }
   }
-
   &.black-to-white {
     .stripe-block-stripe {
       background-color: $color-black;
     }
   }
-
   &.gray-to-white {
     .stripe-block-stripe {
       background-color: $color-darkgray;
@@ -63,7 +57,6 @@
   @include breakpoint(xs) {
     padding-top: 10px;
   }
-
   .stripe-block-stripe-container {
     position: absolute;
     left: 0;
@@ -72,14 +65,12 @@
     bottom: 0;
     z-index: 2;
     height: -50vh;
-
     .stripe-block-stripe {
       position: absolute;
       bottom: -100vw;
       left: 0;
       right: 0;
-      height: 100vw;
-
+      height: 101vw;
       &.stripe-block-stripe-1 {
         transform: skewY(-6deg);
       }
@@ -88,19 +79,16 @@
       }
     }
   }
-
   &.black-to-white {
     .stripe-block-stripe {
       background-color: $color-darkgray;
     }
   }
-
   &.gray-to-white {
     .stripe-block-stripe {
       background-color: $color-darkgray;
     }
   }
-
   &.lightgray-to-gray {
     background-color: $color-darkgray;
     .stripe-block-stripe {
@@ -113,21 +101,17 @@
   &.black-to-white {
     background-color: $color-darkgray;
     color: $color-background-color;
-
     .stripe-block-stripe {
       background-color: $color-background-color;
     }
   }
-
   &.gray-to-white {
     background-color: $color-darkgray;
     color: $color-background-color;
   }
-
   &.white-to-black {
     background-color: $color-background-color;
     color: $color-black;
-
     .stripe-block-stripe {
       background-color: $color-darkgray;
     }
@@ -152,7 +136,6 @@
   @include breakpoint(xs) {
     height: 45vh;
   }
-
   .stripe-block-content-wrapper {
     width: $main-section-width;
     margin-bottom: 45px;
@@ -164,7 +147,6 @@
       text-align: center;
     }
   }
-
   .stripe-block-stripe-container {
     position: absolute;
     left: 0;
@@ -181,7 +163,6 @@
       height: 100vw;
       @include breakpoint(xs) {
       }
-
       &.stripe-block-stripe-1 {
         transform: skewY(-6deg);
       }
@@ -194,14 +175,17 @@
     }
   }
 }
+
 .leader-block {
   height: auto;
   background-color: $color-lightgray;
 }
+
 .job-block {
   background-color: $color-lightgray;
   height: auto;
 }
+
 .button-container {
   display: block;
   position: relative;
@@ -217,6 +201,7 @@
     left: 4%;
   }
 }
+
 .infobutton {
   width: 120px;
   height: 50px;
@@ -225,7 +210,6 @@
   margin-right: 40px;
   padding: 15px;
   color: white;
-
   @include breakpoint(xs) {
     margin-right: 10%;
   }
