@@ -1,5 +1,4 @@
 @import 'breakpoints';
-
 $hero-height: 100vh;
 .main-hero {
   position: relative;
@@ -9,7 +8,6 @@ $hero-height: 100vh;
   background-color: $color-black;
   height: 100vh;
   overflow: hidden;
-
   .hero-background-image {
     position: absolute;
     z-index: 1;
@@ -20,8 +18,8 @@ $hero-height: 100vh;
     background-position: center;
     background-size: cover;
     opacity: 0.5;
+    background-attachment: fixed;
   }
-
   .hero-text-wrapper {
     position: absolute;
     top: 0;
@@ -50,7 +48,6 @@ $hero-height: 100vh;
           font-weight: 600;
         }
       }
-
       p {
         font-weight: 500;
         font-size: 24px;
@@ -64,15 +61,13 @@ $hero-height: 100vh;
       }
     }
   }
-
   .hero-stripe-container {
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 2;
-    // animation: stripe-fadein 2s ease-out 1s forwards;
+    z-index: 2; // animation: stripe-fadein 2s ease-out 1s forwards;
     // transform: translateY(-80px);
     .hero-stripe {
       background-color: $color-black;
@@ -81,7 +76,6 @@ $hero-height: 100vh;
       left: 0;
       right: 0;
       height: 100vw;
-
       &.hero-stripe-1 {
         transform: skewY(-14deg);
       }

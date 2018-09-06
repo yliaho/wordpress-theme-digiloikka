@@ -7,8 +7,11 @@
 {% block content %}
     <body class="department-body">
         <div class="department-container">
-            <h2>{{post.get_field("Heading")}}
-            </h2>
+
+            <h3>
+                <b>{{post.get_field("Heading")}}</b>
+            </h3>
+
             <p>
                 {{post.get_field("department_intro")}}
             </p>
