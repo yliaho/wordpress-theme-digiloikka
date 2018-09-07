@@ -4,8 +4,6 @@
   padding-top: 30px;
   padding-left: 300px;
   margin: 0;
-  width: 30%;
-  height: 100px;
   @include breakpoint(xs) {
     padding-left: 10px;
   }
@@ -30,8 +28,6 @@
 
 .footer {
   width: 100%;
-  height: 350px;
-  border: 1px solid black;
   background-color: #282727;
   overflow: hidden;
   margin: 0;
@@ -50,8 +46,8 @@
     padding-left: 540px;
   }
   @include breakpoint(xs) {
-    padding-left: 180px;
-    padding-top: 110px;
+    padding-left: 30px;
+    padding-top: 40px;
   }
   .fa {
     color: white;
