@@ -1,5 +1,4 @@
 @import 'breakpoints';
-
 .main-content-grid {
   display: grid;
   grid-template-columns: 1fr minmax(min-content, $main-section-width) 1fr;
@@ -9,26 +8,22 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
-
   .block {
     grid-column-start: 2;
     @include breakpoint(xs) {
       grid-column-start: 1;
     }
   }
-
   .full-width-block {
     grid-column-start: 1;
     grid-column-end: 4;
     margin: 4rem 0;
-
     &.no-margin {
       margin: 0;
     }
     &.whitesmoke {
       background-color: $color-lightgray;
     }
-
     &.gray {
       background-color: $color-darkgray;
       color: white;

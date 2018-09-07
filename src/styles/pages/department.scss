@@ -3,25 +3,24 @@
   grid-template-columns: 1fr;
   grid-column-start: 2;
   padding-top: 100px;
-  @include breakpoint(xs) {
-    padding-top: 50px;
-    padding-bottom: 50px;
+  @include breakpoint(md) {
     margin-left: 20px;
     margin-right: 20px;
-  }
-  @include breakpoint(md) {
-    margin-left: 40px;
-    margin-right: 40px;
   }
   @include breakpoint(sm) {
     margin-left: 30px;
     margin-right: 30px;
   }
-}
-
-.department-body {
-  height: 20%;
-  background-color: $color-lightgray;
+  @include breakpoint(xs) {
+    padding-top: 40px;
+    padding-bottom: 0px;
+    margin: 0;
+    grid-column-start: 1;
+    width: 80%;
+    justify-self: center;
+  }
+  p {
+  }
 }
 
 .button-con {
@@ -36,11 +35,13 @@
   margin-left: -5%;
   @include breakpoint(xs) {
     grid-template-columns: 1fr;
-    display: flex;
     grid-column-start: 1;
+    width: 80%;
+    padding-top: 20px;
+    justify-items: center;
+    grid-gap: 10px;
   }
   @include breakpoint(md) {
-    margin-left: -12%;
   }
 }
 
@@ -52,11 +53,13 @@
   color: white;
   padding: 10px;
   @include breakpoint(xs) {
-    width: 16vh;
-    height: 8vh;
-    margin: 20px;
+    width: 25vh;
+    height: 5vh;
+    margin: 0px;
     position: relative;
-    right: 100%;
+    padding: 7px;
+    font-size: 1rem;
+    vertical-align: middle;
   }
   @include breakpoint(md) {
     text-align: center;
