@@ -37,18 +37,17 @@
   }
   @include breakpoint(md) {
   }
-}
-
-.infobutton {
-  width: 120px;
-  height: 50px;
-  background-color: gray;
-  margin-right: 40px;
-  padding: 15px;
-  color: white;
-  @include breakpoint(xs) {
-    margin-right: 0px;
-    width: 140px;
-    z-index: 1;
+  .infobutton {
+    width: 120px;
+    height: 50px;
+    background-color: gray;
+    margin-right: 40px;
+    padding: 15px;
+    color: white;
+    @include breakpoint(xs) {
+      margin-right: 0px;
+      width: 140px;
+      z-index: 1;
+    }
   }
 }
