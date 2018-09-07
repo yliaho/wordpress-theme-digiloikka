@@ -104,7 +104,7 @@
         <div class="partners-images">
 
             {% for image in post.get_field('partner_logo') %}
-                <img class="partner-logo" src="{{image.url}}">
+                <div class="partner-logo" style="background-image:url('{{image.url}}');"></div>
             {% endfor %}
         </div>
     </div>
