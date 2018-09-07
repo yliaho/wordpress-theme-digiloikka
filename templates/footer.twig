@@ -2,9 +2,10 @@ Copyright
 {{"now"|date('Y')}}
 
 <div class="navfoot-container">
-    {% include "menu.twig" with {
-        'menu' : menu.get_items
+    {% include "nav-menu.twig" with {
+        'footer_menu' : footer_menu.get_items
     } %}
+
     <div class="stadi-logo"></div>
 </div>
 <div class="social-icons">
