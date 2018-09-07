@@ -41,25 +41,24 @@
   }
   @include breakpoint(md) {
   }
-}
-
-.dep-button {
-  width: 120px;
-  height: 40px;
-  text-align: center;
-  background-color: $color-darkgray;
-  color: white;
-  padding: 10px;
-  @include breakpoint(xs) {
-    width: 25vh;
-    height: 5vh;
-    margin: 0px;
-    position: relative;
-    padding: 7px;
-    font-size: 1rem;
-    vertical-align: middle;
-  }
-  @include breakpoint(md) {
+  .dep-button {
+    width: 120px;
+    height: 40px;
     text-align: center;
+    background-color: $color-darkgray;
+    color: white;
+    padding: 10px;
+    @include breakpoint(xs) {
+      width: 25vh;
+      height: 5vh;
+      margin: 0px;
+      position: relative;
+      padding: 7px;
+      font-size: 1rem;
+      vertical-align: middle;
+    }
+    @include breakpoint(md) {
+      text-align: center;
+    }
   }
 }
