@@ -14,6 +14,9 @@
   width: 320px;
   height: 445px;
   justify-self: center;
+  @include breakpoint(xs) {
+    height: 345px;
+  }
 }
 
 .leader-thumb-container {

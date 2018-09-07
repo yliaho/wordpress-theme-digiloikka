@@ -6,8 +6,6 @@
   text-align: center;
   @include breakpoint(xs) {
     width: 90%;
-    margin-right: 8px;
-    margin-left: 8px;
     text-align: center;
   }
   @include breakpoint(sm) {
@@ -16,5 +14,41 @@
   }
   @include breakpoint(md) {
     width: 70%;
+  }
+}
+
+.button-container {
+  display: block;
+  width: 100%;
+  margin: auto;
+  justify-self: center;
+  padding-top: 20px;
+  @include breakpoint(xs) {
+    padding: 20px;
+    width: 100%;
+    margin: 0;
+    height: 100px;
+    display: grid;
+    grid-column: 1fr 1fr;
+    grid-gap: 1.5rem;
+    justify-content: center;
+  }
+  @include breakpoint(sm) {
+  }
+  @include breakpoint(md) {
+  }
+}
+
+.infobutton {
+  width: 120px;
+  height: 50px;
+  background-color: gray;
+  margin-right: 40px;
+  padding: 15px;
+  color: white;
+  @include breakpoint(xs) {
+    margin-right: 0px;
+    width: 140px;
+    z-index: 1;
   }
 }
