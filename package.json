@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@types/animejs": "^2.0.0",
+    "@types/mapbox-gl": "^0.48.0",
     "@types/webpack": "^4.4.11",
     "css-loader": "^0.28.11",
     "file-loader": "^2.0.0",
