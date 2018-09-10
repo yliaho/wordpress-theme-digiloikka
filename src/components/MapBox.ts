@@ -65,32 +65,5 @@ export default class MapBox extends mapbox.Map {
         } as any
       })
     })
-    // this.addLayer({
-    //   id: 'digitalents',
-    //   type: 'symbol',
-    //   source: {
-    //     type: 'geojson',
-    //     data: {
-    //       type: 'FeatureCollection',
-    //       features: [
-    //         {
-    //           type: 'Feature',
-    //           properties: {
-    //             description: 'moi',
-    //             icon: 'star'
-    //           },
-    //           geometry: {
-    //             type: 'Point',
-    //             coordinates: this.initialCoordinates
-    //           }
-    //         }
-    //       ] as any
-    //     }
-    //   },
-    //   layout: {
-    //     'icon-image': '{icon}-36',
-    //     'icon-allow-overlap': true
-    //   }
-    // })
   }
 }
