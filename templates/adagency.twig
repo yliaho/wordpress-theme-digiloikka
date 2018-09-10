@@ -22,13 +22,23 @@
     {% embed "components/stripeblock.twig" with { style: "gray-to-lightgray", class: "job-block "} %}
         {% block stripecontent %}
             <div class="cube-grid">
-                <div class="cube1 cube"></div>
+                <div class="cube1 cube">
+                    <div class="cubevid">{{post.get_field("ad_videos").video1}}</div>
+                </div>
                 <div class="cube2 cube"></div>
-                <div class="cube3 cube"></div>
+                <div class="cube3 cube">
+                    <div class="cubevid">{{post.get_field("ad_videos").video2}}</div>
+                </div>
                 <div class="cube4 cube"></div>
-                <div class="cube5 cube"></div>
-                <div class="cube6 cube"></div>
-                <div class="cube7 cube"></div>
+                <div class="cube5 cube">
+                    <div class="cubevid"></div>
+                </div>
+                <div class="cube6 cube">
+                    <div class="cubevid"></div>
+                </div>
+                <div class="cube7 cube">
+                    <div class="cubevid"></div>
+                </div>
                 <div class="cube8 cube"></div>
 
             </div>

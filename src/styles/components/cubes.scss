@@ -24,6 +24,7 @@
   width: 150px;
   height: 150px;
   transform: rotate(45deg);
+  overflow: hidden;
   &.cube1 {
     background-color: gray;
     grid-row-start: 1;
@@ -115,6 +116,13 @@
       grid-column-start: 2;
       grid-column-start: 4;
     }
+  }
+  .cubevid {
+    width: 100%;
+    height: 100%;
+    background: url('https://www.policymed.com/wp-content/uploads/2013/04/6a00e5520572bb8834017c3875ac22970b.jpg');
+    background-size: cover;
+    transform: rotate(-45deg) scale(1.4);
   }
 }
 
