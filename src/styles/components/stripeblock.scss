@@ -84,6 +84,7 @@
   }
   &.lightgray-to-gray {
     background-color: $color-darkgray;
+    z-index: -1;
     .stripe-block-stripe {
       background-color: $color-lightgray;
     }

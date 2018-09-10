@@ -15,7 +15,6 @@
   @include breakpoint(md) {
     width: 70%;
   }
-
   .button-container {
     display: block;
     width: 100%;
@@ -32,23 +31,20 @@
       grid-gap: 1.5rem;
       justify-content: center;
     }
-
     .infobutton {
       display: inline-block;
       min-width: 140px;
       background-color: rgba(white, 0.3);
       padding: 0.58rem 0 0.58rem 0;
       color: white;
-
       &:not(:last-of-type) {
         margin-right: 2rem;
+        @include breakpoint(xs) {
+          margin-right: 0rem;
+          width: 140px;
+          z-index: 1;
+        }
       }
-      @include breakpoint(xs) {
-        margin-right: 0px;
-        width: 140px;
-        z-index: 1;
-      }
-
       &:hover {
         background-color: rgba(white, 0.5);
       }
