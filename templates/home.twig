@@ -91,9 +91,13 @@
   </div>
   {# address box end #}
   {# map start #}
-  <div class="block page-content">
-    {{post.content}}
-  </div>
+  {% include 'components/mapbox.twig' with {
+    containerId: 'map',
+    map: {
+      markerUrl: post.get_field('map').map_marker_image,
+      coordinates: post.get_field('map').map_coordinates
+    }
+  }%}
   {# map end #}
   {# partners start #}
   <div class="block partners">
