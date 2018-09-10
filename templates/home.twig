@@ -56,11 +56,9 @@
 
       <div class="block leader-blocks-grid">
 
-        {% for item in post.get_field('leader_block') %}
+        {% for leader in post.get_field('leader_block') %}
           {% include "components/leaderblock.twig" with {
-            leader_title : item.leader_title,
-            leader_thumbnail: item.leader_thumbnail,
-            leader_desc: item.leader_desc
+            leader : leader
           } %}
         {% endfor %}
 
@@ -99,13 +97,15 @@
   {# map end #}
   {# partners start #}
   <div class="block partners">
-    {{post.get_field("partners").partner_text}}
+    <div class="block-container">
+      {{post.get_field("partners").partner_text}}
 
-    <div class="partners-images">
+      <div class="partners-images">
 
-      {% for image in post.get_field('partner_logo') %}
-        <div class="partner-logo" style="background-image:url('{{image.url}}');"></div>
-      {% endfor %}
+        {% for image in post.get_field('partner_logo') %}
+          <div class="partner-logo" style="background-image:url('{{image.url}}');"></div>
+        {% endfor %}
+      </div>
     </div>
   </div>
   {# partners end #}

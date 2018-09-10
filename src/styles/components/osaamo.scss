@@ -15,39 +15,43 @@
   @include breakpoint(md) {
     width: 70%;
   }
-}
 
-.button-container {
-  display: block;
-  width: 100%;
-  margin: auto;
-  justify-self: center;
-  padding-top: 20px;
-  @include breakpoint(xs) {
-    padding: 20px;
+  .button-container {
+    display: block;
     width: 100%;
-    margin: 0;
-    height: 100px;
-    display: grid;
-    grid-column: 1fr 1fr;
-    grid-gap: 1.5rem;
-    justify-content: center;
-  }
-  @include breakpoint(sm) {
-  }
-  @include breakpoint(md) {
-  }
-  .infobutton {
-    width: 120px;
-    height: 50px;
-    background-color: gray;
-    margin: 40px;
-    padding: 15px;
-    color: white;
+    justify-self: center;
+    padding-top: 20px;
+    margin-top: 1rem;
     @include breakpoint(xs) {
-      margin-right: 0px;
-      width: 140px;
-      z-index: 1;
+      padding: 20px;
+      width: 100%;
+      margin: 0;
+      height: 100px;
+      display: grid;
+      grid-column: 1fr 1fr;
+      grid-gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .infobutton {
+      display: inline-block;
+      min-width: 140px;
+      background-color: rgba(white, 0.3);
+      padding: 0.58rem 0 0.58rem 0;
+      color: white;
+
+      &:not(:last-of-type) {
+        margin-right: 2rem;
+      }
+      @include breakpoint(xs) {
+        margin-right: 0px;
+        width: 140px;
+        z-index: 1;
+      }
+
+      &:hover {
+        background-color: rgba(white, 0.5);
+      }
     }
   }
 }

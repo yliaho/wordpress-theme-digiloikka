@@ -310,27 +310,8 @@
       "button_label": "",
       "sub_fields": [
         {
-          "key": "field_5b755e4ff5d88",
-          "label": "Leader title",
-          "name": "leader_title",
-          "type": "text",
-          "instructions": "",
-          "required": 0,
-          "conditional_logic": 0,
-          "wrapper": {
-            "width": "",
-            "class": "",
-            "id": ""
-          },
-          "default_value": "",
-          "placeholder": "",
-          "prepend": "",
-          "append": "",
-          "maxlength": ""
-        },
-        {
           "key": "field_5b755e68f5d89",
-          "label": "leader thumbnail",
+          "label": "Thumbnail Image",
           "name": "leader_thumbnail",
           "type": "image",
           "instructions": "",
@@ -353,10 +334,10 @@
           "mime_types": ""
         },
         {
-          "key": "field_5b755e7cf5d8a",
-          "label": "leader desc",
-          "name": "leader_desc",
-          "type": "textarea",
+          "key": "field_5b755e4ff5d88",
+          "label": "Full Name",
+          "name": "leader_title",
+          "type": "text",
           "instructions": "",
           "required": 0,
           "conditional_logic": 0,
@@ -367,13 +348,13 @@
           },
           "default_value": "",
           "placeholder": "",
-          "maxlength": "",
-          "rows": "",
-          "new_lines": ""
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
         },
         {
           "key": "field_5b757a411ef8b",
-          "label": "bg_image",
+          "label": "Background Image",
           "name": "bg_image",
           "type": "image",
           "instructions": "",
@@ -394,6 +375,64 @@
           "max_height": "",
           "max_size": "",
           "mime_types": ""
+        },
+        {
+          "key": "field_5b961fb3f696d",
+          "label": "Email",
+          "name": "email",
+          "type": "email",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": ""
+        },
+        {
+          "key": "field_5b961fc6f696e",
+          "label": "Job Title",
+          "name": "job_title",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5b961fd7f696f",
+          "label": "Phone Number",
+          "name": "phone_number",
+          "type": "number",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "min": "",
+          "max": "",
+          "step": ""
         }
       ]
     },
@@ -606,5 +645,5 @@
   "hide_on_screen": "",
   "active": 1,
   "description": "",
-  "modified": 1536047715
+  "modified": 1536565438
 }
