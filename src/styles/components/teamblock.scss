@@ -10,6 +10,7 @@
 
 .team-block {
   display: flex;
+  vertical-align: middle;
   @include breakpoint(xs) {
     margin-right: 10px;
     margin-left: 10px;
@@ -23,19 +24,24 @@
   @include breakpoint(md) {
     margin-right: 20px;
     margin-left: 20px;
+    display: block;
   }
   .team-thumbnail-container {
     width: 10rem;
     height: 10rem;
     background-color: $color-lightgray;
     position: relative;
-    margin-right: 2rem;
+    margin-right: 1rem;
+    margin-bottom: 0.2rem;
     @include breakpoint(xs) {
       width: 7rem;
       height: 7rem;
       float: left;
     }
     @include breakpoint(sm) {
+      float: left;
+    }
+    @include breakpoint(md) {
       float: left;
     }
     div {
@@ -50,11 +56,14 @@
   }
   .team-text-container {
     flex: 1;
+    .team-link {
+      text-decoration: none;
+      color: black;
+    }
     h3 {
       font-size: 1.5rem;
       font-weight: 800;
       text-transform: uppercase;
-      margin-bottom: 1rem;
       @include breakpoint(xs) {
         position: relative;
       }

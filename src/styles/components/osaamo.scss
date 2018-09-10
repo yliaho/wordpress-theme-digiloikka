@@ -41,7 +41,7 @@
     width: 120px;
     height: 50px;
     background-color: gray;
-    margin-right: 40px;
+    margin: 40px;
     padding: 15px;
     color: white;
     @include breakpoint(xs) {

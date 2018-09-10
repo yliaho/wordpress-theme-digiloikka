@@ -11,6 +11,7 @@
     display: grid;
     grid-template-columns: 1fr min-content;
     grid-template-rows: min-content min-content;
+    padding-left: 10px;
     li {
       font-size: 2rem;
       color: white;
