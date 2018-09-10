@@ -4,7 +4,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 auto;
   @include breakpoint(xs) {
     grid-template-columns: 1fr;
   }
@@ -12,36 +11,32 @@
 
 .leader-box {
   width: 320px;
-  height: 445px;
+
   justify-self: center;
   @include breakpoint(xs) {
     height: 345px;
   }
-}
 
-.leader-thumb-container {
-  height: 30%;
-  position: relative;
-  left: 22%;
-  width: 20%;
-  padding-bottom: 200px;
-  .leader-thumbnail {
-    width: 10rem;
-    height: 10rem;
-    display: block;
-    margin: 0;
-    background-size: cover;
+  .leader-thumb-container {
+    margin-bottom: 2rem;
+    .leader-thumbnail {
+      width: 10rem;
+      height: 10rem;
+      display: block;
+      margin: 0 auto;
+      background-size: cover;
+    }
   }
-}
 
-.leader-text {
-  text-align: center;
-  h3 {
-    font-size: 1.5rem;
-    font-weight: 800;
-    text-transform: uppercase;
-  }
-  @include breakpoint(sm) {
-    font-size: 1.2rem;
+  .leader-text {
+    text-align: center;
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    @include breakpoint(sm) {
+      font-size: 1.2rem;
+    }
   }
 }

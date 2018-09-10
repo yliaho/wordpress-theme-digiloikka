@@ -15,6 +15,10 @@
     @media (max-width: 1200px) {
       @content;
     }
+  } @else if $class == mainsection {
+    @media (max-width: $main-section-width) {
+      @content;
+    }
   } @else {
     @warn "Breakpoint mixin supports: xs, sm, md, lg";
   }

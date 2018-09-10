@@ -135,9 +135,7 @@
     z-index: 3;
     @include breakpoint(xs) {
       font-size: 0.9rem;
-      margin-right: 12px;
-      margin-left: 12px;
-      text-align: center;
+      padding: 1rem;
     }
   }
   .stripe-block-stripe-container {

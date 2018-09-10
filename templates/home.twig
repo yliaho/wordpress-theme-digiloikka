@@ -99,13 +99,15 @@
   {# map end #}
   {# partners start #}
   <div class="block partners">
-    {{post.get_field("partners").partner_text}}
+    <div class="block-container">
+      {{post.get_field("partners").partner_text}}
 
-    <div class="partners-images">
+      <div class="partners-images">
 
-      {% for image in post.get_field('partner_logo') %}
-        <div class="partner-logo" style="background-image:url('{{image.url}}');"></div>
-      {% endfor %}
+        {% for image in post.get_field('partner_logo') %}
+          <div class="partner-logo" style="background-image:url('{{image.url}}');"></div>
+        {% endfor %}
+      </div>
     </div>
   </div>
   {# partners end #}
