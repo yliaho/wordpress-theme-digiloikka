@@ -56,11 +56,9 @@
 
       <div class="block leader-blocks-grid">
 
-        {% for item in post.get_field('leader_block') %}
+        {% for leader in post.get_field('leader_block') %}
           {% include "components/leaderblock.twig" with {
-            leader_title : item.leader_title,
-            leader_thumbnail: item.leader_thumbnail,
-            leader_desc: item.leader_desc
+            leader : leader
           } %}
         {% endfor %}
 
