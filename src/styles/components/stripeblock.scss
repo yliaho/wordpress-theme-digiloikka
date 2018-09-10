@@ -6,6 +6,17 @@
   grid-column-end: 4;
   padding: 100px 0;
   padding-top: 100px;
+  /*These remove the 1px gap between stripeblocks in tablet view. Might not be needed
+    @include breakpoint(lg) {
+        padding-top: 101px;
+    }
+    @include breakpoint(md) {
+        padding-top: 103px;
+    }
+    @include breakpoint(sm) {
+        padding-top: 101px;
+    }
+    */
   .stripe-block-stripe-container {
     position: absolute;
     left: 0;
