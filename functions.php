@@ -33,9 +33,14 @@ class Digiloikka extends Timber\Site {
 	
 
 	function theme_scripts() {
+		// main stuff
 		wp_enqueue_style( 'themestyle', get_template_directory_uri() . '/static/main.css' );
 		wp_enqueue_script( 'themescript', get_template_directory_uri() . '/static/site.bundle.js', array(), true );
+
+		// font-awesome 
 		wp_enqueue_style( 'load-fa', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
+
+		// elementor
 		add_action( 'elementor/frontend/after_enqueue_styles', [ $this, 'widget_styles' ] );
 	}
 		
