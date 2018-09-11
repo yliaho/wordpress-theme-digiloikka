@@ -104,6 +104,7 @@
     display: inline-block;
     background-size: contain;
     background-position: center;
+    margin: 8px;
     @include breakpoint(md) {
       flex: 33.33%;
       max-width: 33.33%;
