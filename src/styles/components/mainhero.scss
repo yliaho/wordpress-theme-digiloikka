@@ -8,6 +8,9 @@ $hero-height: 100vh;
   background-color: $color-black;
   height: 100vh;
   overflow: hidden;
+  @include breakpoint(xs) {
+    height: 90%;
+  }
   .hero-background-image {
     position: absolute;
     z-index: 1;

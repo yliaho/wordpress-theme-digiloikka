@@ -56,6 +56,9 @@
     background-color: $color-darkgray;
     color: white;
     padding: 10px;
+    &:hover {
+      background-color: rgba($color-darkgray, 0.8);
+    }
     @include breakpoint(xs) {
       width: 25vh;
       height: 5vh;

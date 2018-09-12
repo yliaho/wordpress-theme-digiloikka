@@ -1,7 +1,7 @@
 .team-blocks-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem;
+  grid-gap: 3rem;
   @include breakpoint(xs) {
     grid-template-columns: 1fr;
     grid-gap: 3rem;
@@ -96,6 +96,9 @@
     font-size: 1.5rem;
     position: relative;
     right: 50%;
+    &:hover {
+      background-color: rgba($color-darkgray, 0.8);
+    }
     .team-btn-a {
       color: white;
     }
