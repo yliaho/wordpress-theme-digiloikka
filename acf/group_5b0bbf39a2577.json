@@ -180,7 +180,7 @@
     },
     {
       "key": "field_5b0d0479446b1",
-      "label": "Company Intro4",
+      "label": "Company Intro1",
       "name": "company_intro",
       "type": "group",
       "instructions": "",
@@ -585,28 +585,9 @@
     },
     {
       "key": "field_5b7684b62daae",
-      "label": "partner text",
-      "name": "partner_text",
-      "type": "text",
-      "instructions": "",
-      "required": 0,
-      "conditional_logic": 0,
-      "wrapper": {
-        "width": "",
-        "class": "",
-        "id": ""
-      },
-      "default_value": "",
-      "placeholder": "",
-      "prepend": "",
-      "append": "",
-      "maxlength": ""
-    },
-    {
-      "key": "field_5b88e8df9e19e",
-      "label": "Partner logo",
+      "label": "partner logo",
       "name": "partner_logo",
-      "type": "gallery",
+      "type": "repeater",
       "instructions": "",
       "required": 0,
       "conditional_logic": 0,
@@ -615,17 +596,53 @@
         "class": "",
         "id": ""
       },
-      "min": "",
-      "max": "",
-      "insert": "append",
-      "library": "all",
-      "min_width": "",
-      "min_height": "",
-      "min_size": "",
-      "max_width": "",
-      "max_height": "",
-      "max_size": "",
-      "mime_types": ""
+      "collapsed": "",
+      "min": 0,
+      "max": 0,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [
+        {
+          "key": "field_5b9f6bc9a9e3f",
+          "label": "Partner image",
+          "name": "partner_image",
+          "type": "image",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "url",
+          "preview_size": "thumbnail",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": ""
+        },
+        {
+          "key": "field_5b9f6be3a9e40",
+          "label": "partner link",
+          "name": "partner_link",
+          "type": "url",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": ""
+        }
+      ]
     },
     {
       "key": "field_5b96397dfb310",
@@ -705,5 +722,5 @@
   "hide_on_screen": "",
   "active": 1,
   "description": "",
-  "modified": 1536571920
+  "modified": 1537180572
 }

@@ -102,12 +102,16 @@
     {# partners start #}
     <div class="block partners">
         <div class="block-container">
-            {{post.get_field("partners").partner_text}}
+            {#  {{post.get_field("partners").partner_text}} #}
 
             <div class="partners-images">
 
                 {% for image in post.get_field('partner_logo') %}
-                    <div class="partner-logo" style="background-image:url('{{image.url}}');"></div>
+                    {% include "components/partnersblock.twig" with {
+                        partner_image : item.partner_image,
+                        partner_link: image.partner_link
+                    } %}
+
                 {% endfor %}
             </div>
         </div>
