@@ -1,22 +1,28 @@
 <div class="navfoot-container">
-  {% include "nav-menu.twig" with {
+    {% include "nav-menu.twig" with {
         'footer_menu' : footer_menu.get_items
     } %}
 
-  <div class="social-icons">
-    <a href="https://www.facebook.com/digitalentshelsinki/">
-      <i class="fa fa-facebook"></i>
-    </a>
-    <a href="https://twitter.com/digitalentshki?lang=en">
-      <i class="fa fa-twitter"></i>
-    </a>
-    <a href="https://www.instagram.com/digitalentshelsinki/?hl=en">
-      <i class="fa fa-instagram"></i>
-    </a>
-  </div>
-  <div class="copy">
-    <span>Copyright ©</span>
-    <span>{{"now"|date('Y')}}</span>
-    <span>Digitalents Helsinki</span>
-  </div>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/digitalentshelsinki/">
+            <i class="fa fa-facebook"></i>
+        </a>
+        <a href="https://twitter.com/digitalentshki?lang=en">
+            <i class="fa fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/digitalentshelsinki/?hl=en">
+            <i class="fa fa-instagram"></i>
+        </a>
+    </div>
+    <div class="stadi-con">
+
+        <img class="stadi-logo" src="{{stadi_logo}}"/>
+       
+  
+    </div>
+    <div class="copy">
+        <span>Copyright ©</span>
+        <span>{{"now"|date('Y')}}</span>
+        <span>Digitalents Helsinki</span>
+    </div>
 </div>

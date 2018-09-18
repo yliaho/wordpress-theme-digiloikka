@@ -20,11 +20,13 @@ class Digiloikka extends Timber\Site {
 		add_action( 'wp_enqueue_scripts', [ $this, 'theme_scripts']);
 	
 		// ACF Pro
+		
 		add_filter('acf/settings/path', [ $this, 'my_acf_settings_path' ]);
 		add_filter('acf/settings/dir', [ $this, 'my_acf_settings_dir' ]);
 		add_filter('acf/settings/save_json', [ $this, 'my_acf_json_save_point' ]);
 		add_filter('acf/settings/load_json', [ $this, 'my_acf_json_load_point' ]);
 		include_once( get_stylesheet_directory() . '/plugins/advanced-custom-fields-pro/acf.php' );
+		acf_add_options_page();
 		// If you want to disable the ACF panel from WP Admin, uncomment the line below.
 		// add_filter('acf/settings/show_admin', '__return_false');
 
@@ -107,7 +109,6 @@ class Digiloikka extends Timber\Site {
 	}
 
 }
-
 
 
 

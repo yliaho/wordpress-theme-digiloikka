@@ -3,26 +3,24 @@
   background-color: #282727;
   overflow: hidden;
   padding: $page-padding;
-
   .navfoot-container {
     max-width: $main-section-width;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr min-content;
     grid-template-rows: min-content min-content min-content;
-
     li {
       font-size: 1.7rem;
       color: white;
     }
-
     a {
       color: white;
     }
-
     .social-icons {
       display: flex;
       align-items: flex-end;
+      grid-column-start: 2;
+      grid-row-end: 3;
       a {
         padding-top: 1rem;
         min-width: 50px;
@@ -34,17 +32,14 @@
           color: white;
           font-size: 1.7rem;
         }
-
         @include breakpoint(xs) {
           padding-bottom: 1rem;
         }
       }
-
       @include breakpoint(xs) {
         grid-row-start: 2;
       }
     }
-
     .copy {
       margin-top: 2rem;
       text-align: center;
@@ -55,11 +50,16 @@
         grid-row-start: 3;
       }
     }
-
-    .stadi-logo {
-      display: block;
-      height: 150px;
-      width: 150px;
+    .stadi-con {
+      width: 130px;
+      height: 70px;
+      padding-top: 40px;
+      grid-row-end: 3;
+      .stadi-logo {
+        background-size: cover;
+        height: auto;
+        width: 100%;
+      }
     }
   }
 }
