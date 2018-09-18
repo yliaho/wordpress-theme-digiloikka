@@ -11,21 +11,6 @@
 .team-block {
   display: flex;
   vertical-align: middle;
-  @include breakpoint(xs) {
-    margin-right: 10px;
-    margin-left: 10px;
-    display: block;
-  }
-  @include breakpoint(sm) {
-    margin-right: 20px;
-    margin-left: 20px;
-    display: block;
-  }
-  @include breakpoint(md) {
-    margin-right: 20px;
-    margin-left: 20px;
-    display: block;
-  }
   .team-thumbnail-container {
     width: 10rem;
     height: 10rem;

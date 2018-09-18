@@ -1,14 +1,11 @@
 // css reset
 @import '~nanoreset';
-
 // config and variables
 @import './config.scss';
 @import './fonts.scss';
 @import './colors.scss';
-
 // pages
 @import './home.scss';
-
 // components
 @import './components/base.scss';
 @import './components/header.scss';
@@ -21,7 +18,7 @@
 @import './components/leaderblock.scss';
 @import './components/job-accordion.scss';
 @import './components/footer.scss';
-@import './components/breakpoints.scss';
+@import './breakpoints.scss';
 @import './components/osaamo.scss';
 @import './pages/department.scss';
 @import './components/cubes.scss';

@@ -110,12 +110,13 @@
     }
     @include breakpoint(md) {
       flex: 33.33%;
-      max-width: 33.33%;
+      max-width: 100%;
     }
     @include breakpoint(xs) {
       display: block;
       flex: 50%;
-      max-width: 50%;
+      max-width: 100%;
+      margin: 0;
     }
   }
 }

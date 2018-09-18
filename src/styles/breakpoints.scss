@@ -4,19 +4,15 @@
       @content;
     }
   } @else if $class==sm {
-    @media (max-width: 1024px) {
+    @media (max-width: 768px) {
       @content;
     }
   } @else if $class==md {
-    @media (max-width: 992px) {
+    @media (max-width: 1024px) {
       @content;
     }
   } @else if $class==lg {
     @media (max-width: 1200px) {
-      @content;
-    }
-  } @else if $class == mainsection {
-    @media (max-width: $main-section-width) {
       @content;
     }
   } @else {
