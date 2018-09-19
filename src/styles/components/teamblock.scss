@@ -9,8 +9,6 @@
 }
 
 .team-block {
-  display: flex;
-  vertical-align: middle;
   @include breakpoint(xs) {
     margin: 5%;
   }
@@ -20,11 +18,14 @@
     background-color: $color-lightgray;
     position: relative;
     margin-right: 1rem;
+    margin-left: 1rem;
     margin-bottom: 0.2rem;
+    align-items: center;
+    margin-bottom: 1rem;
     @include breakpoint(xs) {
-      width: 7rem;
-      height: 7rem;
-      float: left;
+      width: 90%;
+      height: 10rem;
+      align-content: center;
     }
     @include breakpoint(sm) {
       float: left;
@@ -41,10 +42,6 @@
       background-position: center;
       background-size: cover;
     }
-    h3 {
-      position: relative;
-      top: 30%;
-    }
   }
   .team-text-container {
     flex: 1;
@@ -57,9 +54,8 @@
       font-weight: 800;
       text-transform: uppercase;
       @include breakpoint(xs) {
-        position: relative;
-        bottom: 10%;
-        right: 80%;
+        margin: 2rem;
+        text-align: center;
       }
       @include breakpoint(sm) {
         position: relative;
