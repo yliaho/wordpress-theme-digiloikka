@@ -37,9 +37,10 @@
   padding-top: 70px;
   padding-bottom: 40px;
   margin-left: -5%;
-  @include breakpoint(sm) {
-    margin-left: -16%;
-  }
+  /* @include breakpoint(sm) {
+        /* cause of dissapearance 
+        margin-left: -16%;
+    } */
   @include breakpoint(xs) {
     grid-template-columns: 1fr;
     grid-column-start: 1;
@@ -60,6 +61,7 @@
       background-color: rgba($color-darkgray, 0.8);
     }
     @include breakpoint(xs) {
+      /* no effect on buttons on tablet */
       width: 25vh;
       height: 5vh;
       margin: 0px;
