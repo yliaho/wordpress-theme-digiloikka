@@ -92,31 +92,37 @@
 }
 
 .partners-images {
-  width: 100%;
-  height: auto;
+  width: 50%;
+  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: row;
   justify-content: center;
-  .partner-logo {
-    width: 220px;
-    height: 150px;
-    display: inline-block;
-    background-size: contain;
-    background-position: center;
-    margin: 8px;
+  align-items: center;
+  a {
+    margin-bottom: 2rem;
+    &:not(:last-of-type) {
+      margin-right: 2rem;
+    }
     &:hover {
-      opacity: 0.7;
+      opacity: 0.8;
     }
-    @include breakpoint(md) {
-      flex: 33.33%;
-      max-width: 100%;
+    .partner-logo {
+      max-height: 100px;
+      display: inline-block;
+      background-size: contain;
+      background-position: center;
     }
-    @include breakpoint(xs) {
-      display: block;
-      flex: 50%;
-      max-width: 100%;
-      margin: 0;
+  }
+
+  @include breakpoint(md) {
+    width: 100%;
+    a {
+      .partner-logo {
+        display: block;
+        flex: 1;
+        margin: 0;
+      }
     }
   }
 }
