@@ -34,17 +34,21 @@ $hero-height: 100vh;
     align-items: center;
     z-index: 3;
     .hero-text-container {
+      display: inline-block;
       width: 720px;
       color: white;
       line-height: 1;
       text-align: center;
+      opacity: 0;
+      animation: herotext_fadein 0.3s ease-out 0.1s forwards;
       @include breakpoint(xs) {
       }
       h1,
       h2,
       h3 {
-        font-size: 58px;
+        font-size: 2.2rem;
         font-weight: 800;
+        margin-block-end: 2rem;
         @include breakpoint(xs) {
           font-size: 40px;
           font-weight: 600;
@@ -52,8 +56,10 @@ $hero-height: 100vh;
       }
       p {
         font-weight: 500;
-        font-size: 24px;
-        margin-top: 1rem;
+        font-size: 1.1rem;
+        margin-block-start: 1rem;
+        margin-block-end: 1rem;
+        line-height: 1.4;
         @include breakpoint(xs) {
           font-weight: 300;
           font-size: 16px;
@@ -98,5 +104,17 @@ $hero-height: 100vh;
   }
   to {
     transform: translateY(0px);
+  }
+}
+
+@keyframes herotext_fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

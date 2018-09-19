@@ -35,7 +35,7 @@
   text-align: center;
   font-size: 2.5rem;
   font-weight: 800;
-  padding: 6rem 0;
+  padding: 4rem 0;
   @include breakpoint(xs) {
     font-size: 2rem;
     padding: 3rem 0;
@@ -76,6 +76,7 @@
 
 #map {
   height: 500px;
+  margin-top: 0 !important;
 }
 
 .partners {
