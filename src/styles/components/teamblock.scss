@@ -52,7 +52,9 @@
     h3 {
       font-size: 1.5rem;
       font-weight: 800;
+      line-height: 1;
       text-transform: uppercase;
+      margin-block-end: 0.5rem;
       @include breakpoint(xs) {
         margin: 2rem;
         text-align: center;
@@ -62,7 +64,7 @@
       }
     }
     p {
-      line-height: 1.7;
+      line-height: 1.4;
       @include breakpoint(xs) {
         line-height: 1.9;
         position: relative;
@@ -76,15 +78,20 @@
   }
 }
 
-.team-btn-con {
-  padding-top: 100px;
-  height: 50px;
-  z-index: 1;
-  .team-btn {
-    width: 100%;
-    height: 60px;
+.team-cta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  .team-btn-a {
+    display: block;
     background-color: $color-darkgray;
+    color: white;
+    padding: 0 2rem;
+    padding-top: 1rem;
+    padding-bottom: 0.8rem;
     font-size: 1.5rem;
+<<<<<<< HEAD
     position: relative;
     right: 50%;
     @include breakpoint(md) {
@@ -99,5 +106,9 @@
     @include breakpoint(xs) {
       right: 0;
     }
+=======
+    font-weight: bold;
+    line-height: 1;
+>>>>>>> 9a7ab8fe2c966c17b47ea24166b258ca10e3e17d
   }
 }
