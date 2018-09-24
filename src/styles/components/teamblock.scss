@@ -17,6 +17,8 @@
   @include breakpoint(sm) {
     display: block;
     margin: 5%;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
   }
   .team-thumbnail-container {
     width: 10rem;
@@ -31,12 +33,12 @@
     @include breakpoint(xs) {
       width: 90%;
       height: 10rem;
-      align-content: center;
-      margin: 0;
+      align-items: center;
+      margin: auto;
     }
     @include breakpoint(sm) {
-      align-content: left;
-      width: 90%;
+      width: 100%;
+      margin: auto;
     }
     @include breakpoint(md) {
     }
@@ -71,7 +73,8 @@
         text-align: center;
       }
       @include breakpoint(sm) {
-        position: relative;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5em;
       }
     }
     p {
