@@ -21,9 +21,12 @@
     {% embed "components/stripeblock-start.twig" with { style: "lightgray-to-lightgray" }%}{% endembed %}
     {% embed "components/stripeblock.twig" with { style: "gray-to-lightgray", class: "job-block "} %}
         {% block stripecontent %}
+
             <div class="cube-grid">
+
                 <div class="cube1 cube">
-                    <div class="cubevid">{{post.get_field("ad_videos").video1}}</div>
+                    <div class="cubevid">{{post.get_field("videos").video}}</div>
+
                 </div>
                 <div class="cube2 cube"></div>
                 <div class="cube3 cube">
@@ -31,7 +34,25 @@
                 </div>
                 <div class="cube4 cube"></div>
                 <div class="cube5 cube">
-                    <div class="cubevid"></div>
+                    <div class="cubevid">
+
+                        <svg class="video-overlay-play-button" viewbox="0 0 200 200" alt="Play video">
+                            <a id="myBtn" href="#">
+                                <circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="white"/>
+                                <polygon points="70, 55 70, 145 145, 100" fill="white"/>
+                            </a>
+                        </svg>
+
+                        <div id="myModal" class="modal">
+
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <p>Some text in the Modal..</p>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
                 <div class="cube6 cube">
                     <div class="cubevid"></div>
@@ -42,6 +63,7 @@
                 <div class="cube8 cube"></div>
 
             </div>
+
         {% endblock %}
     {% endembed %}
 
