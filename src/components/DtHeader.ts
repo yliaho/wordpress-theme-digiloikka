@@ -5,6 +5,8 @@ export default class DtHeader {
   public intersectionElement: HTMLElement = null
   public hasBackground: boolean = false
 
+  public headerText: HTMLElement = null
+
   constructor(private element: HTMLElement) {}
 
   public initObserver(observableElement: HTMLElement) {

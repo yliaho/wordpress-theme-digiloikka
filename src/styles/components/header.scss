@@ -1,5 +1,4 @@
 @import 'breakpoints';
-
 header {
   position: fixed;
   left: 0;
@@ -12,23 +11,21 @@ header {
   @include breakpoint(xs) {
     display: none;
   }
-
   .logo-container {
     g.logo-group {
       fill: white;
     }
   }
-
+  .header-text {
+  }
   .nav-container {
     display: flex;
     justify-content: flex-end;
     padding-right: 1em;
     flex: 1;
-
     ul {
       li {
         display: inline-block;
-
         a {
           color: white;
           font-weight: bold;

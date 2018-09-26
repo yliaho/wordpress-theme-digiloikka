@@ -94,6 +94,166 @@
           },
           "width": "",
           "height": ""
+        },
+        {
+          "key": "field_5ba9fd4bc1f41",
+          "label": "Video thumbnail1",
+          "name": "video_thumbnail1",
+          "type": "image",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "url",
+          "preview_size": "thumbnail",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": ""
+        },
+        {
+          "key": "field_5ba9fd6cc1f42",
+          "label": "video1",
+          "name": "video1",
+          "type": "oembed",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "width": "",
+          "height": ""
+        },
+        {
+          "key": "field_5ba9fd75c1f43",
+          "label": "Video thumbnail2",
+          "name": "video_thumbnail2",
+          "type": "image",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "url",
+          "preview_size": "thumbnail",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": ""
+        },
+        {
+          "key": "field_5ba9fd87c1f44",
+          "label": "video2",
+          "name": "video2",
+          "type": "oembed",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "width": "",
+          "height": ""
+        },
+        {
+          "key": "field_5ba9fd97c1f45",
+          "label": "Video thumbnail3",
+          "name": "video_thumbnail3",
+          "type": "image",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "url",
+          "preview_size": "thumbnail",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": ""
+        },
+        {
+          "key": "field_5ba9fda5c1f46",
+          "label": "video3",
+          "name": "video3",
+          "type": "oembed",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "width": "",
+          "height": ""
+        },
+        {
+          "key": "field_5ba9fdb4c1f47",
+          "label": "Video thumbnail4",
+          "name": "video_thumbnail4",
+          "type": "image",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "url",
+          "preview_size": "thumbnail",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": ""
+        },
+        {
+          "key": "field_5ba9fdc5c1f48",
+          "label": "video4",
+          "name": "video4",
+          "type": "oembed",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "width": "",
+          "height": ""
         }
       ]
     }
@@ -115,5 +275,5 @@
   "hide_on_screen": "",
   "active": 1,
   "description": "",
-  "modified": 1537782149
+  "modified": 1537867224
 }

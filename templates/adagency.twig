@@ -1,4 +1,5 @@
 {% extends "base.twig" %}
+{% set more_body_class = 'adagency' %}
 
 {% block hero %}
     {% include "components/mainhero.twig" with { text: post.get_field('hero_description') }%}
@@ -17,48 +18,80 @@
     <div class="button-con">
         <button class="dep-button">Ota yhteyttä</button>
         <button onclick="location.href='http://localhost/wordpress1/index.php/tyopaikat/'" class="dep-button">Työpaikat</button>
+
     </div>
     {% embed "components/stripeblock-start.twig" with { style: "lightgray-to-lightgray" }%}{% endembed %}
     {% embed "components/stripeblock.twig" with { style: "gray-to-lightgray", class: "job-block "} %}
         {% block stripecontent %}
 
             <div class="cube-grid">
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span id="close">&times;</span>
+                        <div class="modal-vid">{{post.get_field('videos').video}}</div>
+                    </div>
+
+                </div>
 
                 <div class="cube1 cube">
-                    <div class="cubevid">{{post.get_field("videos").video}}</div>
-
-                </div>
-                <div class="cube2 cube"></div>
-                <div class="cube3 cube">
-                    <div class="cubevid">{{post.get_field("ad_videos").video2}}</div>
-                </div>
-                <div class="cube4 cube"></div>
-                <div class="cube5 cube">
-                    <div class="cubevid">
+                    <div class="cubevid myBtn" id="myBtn" style="background-image: url('{{post.get_field('videos').video_thumbnail}}')">
 
                         <svg class="video-overlay-play-button" viewbox="0 0 200 200" alt="Play video">
-                            <a id="myBtn" href="#">
+
+                            <circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="white"/>
+                            <polygon points="70, 55 70, 145 145, 100" fill="white"/>
+
+                        </svg>
+
+                    </div>
+                </div>
+                <div class="cube2 cube"></div>
+
+                <div class="cube3 cube">
+                    <div class="cubevid" style="background-image: url('{{post.get_field('videos').video_thumbnail}}')">
+                        <svg class="video-overlay-play-button" viewbox="0 0 200 200" alt="Play video">
+                            <a class="trigger">
                                 <circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="white"/>
                                 <polygon points="70, 55 70, 145 145, 100" fill="white"/>
                             </a>
                         </svg>
-
-                        <div id="myModal" class="modal">
-
-                            <!-- Modal content -->
-                            <div class="modal-content">
-                                <span class="close">&times;</span>
-                                <p>Some text in the Modal..</p>
-                            </div>
-
-                        </div>
                     </div>
                 </div>
+
+                <div class="cube4 cube"></div>
+
+                <div class="cube5 cube">
+                    <div class="cubevid" style="background-image: url('{{post.get_field('videos').video_thumbnail}}')">
+                        <svg class="video-overlay-play-button" viewbox="0 0 200 200" alt="Play video">
+                            <a class="trigger">
+                                <circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="white"/>
+                                <polygon points="70, 55 70, 145 145, 100" fill="white"/>
+                            </a>
+                        </svg>
+                    </div>
+                </div>
+
                 <div class="cube6 cube">
-                    <div class="cubevid"></div>
+                    <div class="cubevid" style="background-image: url('{{post.get_field('videos').video_thumbnail}}')">
+                        <svg class="video-overlay-play-button" viewbox="0 0 200 200" alt="Play video">
+                            <a class="trigger">
+                                <circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="white"/>
+                                <polygon points="70, 55 70, 145 145, 100" fill="white"/>
+                            </a>
+                        </svg>
+                    </div>
                 </div>
                 <div class="cube7 cube">
-                    <div class="cubevid"></div>
+                    <div class="cubevid" style="background-image: url('{{post.get_field('videos').video_thumbnail}}')">
+                        <svg class="video-overlay-play-button" viewbox="0 0 200 200" alt="Play video">
+                            <a class="trigger">
+                                <circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="white"/>
+                                <polygon points="70, 55 70, 145 145, 100" fill="white"/>
+                            </a>
+                        </svg>
+                    </div>
                 </div>
                 <div class="cube8 cube"></div>
 

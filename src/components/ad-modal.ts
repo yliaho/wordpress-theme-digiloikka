@@ -1,19 +1,27 @@
-var modal = document.getElementById('myModal')
+export default class Modal {
+  private modal: HTMLElement
 
-// Get the button that opens the modal
-var btn = document.getElementById('myBtn')
+  private btn: HTMLElement
+  private span: HTMLElement
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName('close')[0]
+  constructor(private element: HTMLElement) {
+    this.btn = this.element.querySelector('#myBtn')
+    this.modal = this.element.querySelector('#myModal')
+    this.span = this.element.querySelector('#close')
+    this.click()
+    console.log(this.element)
+  }
 
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = 'block'
-  console.log('asdasdsd')
-}
+  private click(): void {
+    this.btn.addEventListener('click', this.openModal.bind(this))
+    this.span.addEventListener('click', this.closeModal.bind(this))
+    console.log(this.btn)
+  }
 
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = 'none'
+  private openModal(): void {
+    this.modal.style.display = 'flex'
+  }
+  private closeModal(): void {
+    this.modal.style.display = 'none'
   }
 }

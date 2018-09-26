@@ -31,6 +31,16 @@
   }
 }
 
+.row-bg {
+  color: black;
+  font-size: 2rem;
+}
+
+.company-presentation {
+  padding-top: 100px;
+  text-align: center;
+}
+
 .our-teams-header {
   text-align: center;
   font-size: 2.5rem;
@@ -93,7 +103,7 @@
 }
 
 .partners-images {
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
   display: flex;
   flex-wrap: nowrap;

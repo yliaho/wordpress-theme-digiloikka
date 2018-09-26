@@ -1,12 +1,16 @@
 {% extends "base.twig" %}
 
 {% block hero %}
-  {% include "components/mainhero.twig" with { text: post.get_field('hero_description') }%}
+  {% include "components/mainhero.twig" with { text: post.get_field('hero_description') } %}
 {% endblock %}
-
+{# #}
 {% block content %}
 
   {# start of teamblock #}
+
+  <div class="company-presentation block">
+{{ post.get_field('company_presentation') }}
+  </div>
   <h1 class="block our-teams-header">MEIDÄN TIIMIMME</h1>
   <div class="block team-blocks-grid">
 
@@ -67,19 +71,7 @@
   {% endembed %}
   {# end of leaderblock #}
 
-  {#   whitesmoke block
-  <div class="full-width-block whitesmoke">
-    <div class="read-more-teams-wrapper">
-      <div class="read-more-teams">
-        <h2>Lue Lisää Tiimeistämme</h2>
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-        <div>
-          <button class="big">{{post.get_field('my_pet')}}</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  #}
+ 
   {# address box #}
   <div class="address">
     <p>
