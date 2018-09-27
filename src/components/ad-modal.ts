@@ -15,11 +15,11 @@ export default class Modal {
   private click(): void {
     this.btn.addEventListener('click', this.openModal.bind(this))
     this.span.addEventListener('click', this.closeModal.bind(this))
-    console.log(this.btn)
   }
 
   private openModal(): void {
     this.modal.style.display = 'flex'
+    console.log('i want to die')
   }
   private closeModal(): void {
     this.modal.style.display = 'none'

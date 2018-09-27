@@ -7,7 +7,9 @@ export default class DtHeader {
 
   public headerText: HTMLElement = null
 
-  constructor(private element: HTMLElement) {}
+  constructor(private element: HTMLElement) {
+    this.headerText = this.element.querySelector('.header-text')
+  }
 
   public initObserver(observableElement: HTMLElement) {
     this.intersectionElement = observableElement
@@ -54,10 +56,18 @@ export default class DtHeader {
 
       if (this.hasBackground) {
         this.fadeInBg()
+        this.fadeText()
       } else {
         this.fadeOutBg()
+        this.fadeOutText()
       }
     })
+  }
+  private fadeText() {
+    this.headerText.style.display = 'block'
+  }
+  private fadeOutText() {
+    this.headerText.style.display = 'none'
   }
 
   private fadeInBg() {

@@ -17,6 +17,10 @@ header {
     }
   }
   .header-text {
+    display: none;
+    color: white;
+    font-size: 1.4rem;
+    padding-left: 2rem;
   }
   .nav-container {
     display: flex;
