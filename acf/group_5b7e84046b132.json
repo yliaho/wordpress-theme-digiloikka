@@ -41,8 +41,8 @@
       "new_lines": ""
     },
     {
-      "key": "field_5ba8b14f2c91b",
-      "label": "videos",
+      "key": "field_5bac8f277c493",
+      "label": "Videos",
       "name": "videos",
       "type": "group",
       "instructions": "",
@@ -56,8 +56,8 @@
       "layout": "block",
       "sub_fields": [
         {
-          "key": "field_5ba8b1632c91c",
-          "label": "video_thumbnail",
+          "key": "field_5bac8f507c494",
+          "label": "Video thumbnail",
           "name": "video_thumbnail",
           "type": "image",
           "instructions": "",
@@ -80,7 +80,7 @@
           "mime_types": ""
         },
         {
-          "key": "field_5ba8b1762c91d",
+          "key": "field_5bac8f667c495",
           "label": "Video",
           "name": "video",
           "type": "oembed",
@@ -96,7 +96,7 @@
           "height": ""
         },
         {
-          "key": "field_5ba9fd4bc1f41",
+          "key": "field_5bac90db8c39e",
           "label": "Video thumbnail1",
           "name": "video_thumbnail1",
           "type": "image",
@@ -120,7 +120,7 @@
           "mime_types": ""
         },
         {
-          "key": "field_5ba9fd6cc1f42",
+          "key": "field_5bac90ef8c39f",
           "label": "video1",
           "name": "video1",
           "type": "oembed",
@@ -136,7 +136,7 @@
           "height": ""
         },
         {
-          "key": "field_5ba9fd75c1f43",
+          "key": "field_5bac91098c3a0",
           "label": "Video thumbnail2",
           "name": "video_thumbnail2",
           "type": "image",
@@ -160,7 +160,7 @@
           "mime_types": ""
         },
         {
-          "key": "field_5ba9fd87c1f44",
+          "key": "field_5bac91158c3a1",
           "label": "video2",
           "name": "video2",
           "type": "oembed",
@@ -176,7 +176,7 @@
           "height": ""
         },
         {
-          "key": "field_5ba9fd97c1f45",
+          "key": "field_5bac91248c3a2",
           "label": "Video thumbnail3",
           "name": "video_thumbnail3",
           "type": "image",
@@ -200,7 +200,7 @@
           "mime_types": ""
         },
         {
-          "key": "field_5ba9fda5c1f46",
+          "key": "field_5bac912f8c3a3",
           "label": "video3",
           "name": "video3",
           "type": "oembed",
@@ -216,7 +216,7 @@
           "height": ""
         },
         {
-          "key": "field_5ba9fdb4c1f47",
+          "key": "field_5bac913f8c3a4",
           "label": "Video thumbnail4",
           "name": "video_thumbnail4",
           "type": "image",
@@ -240,7 +240,7 @@
           "mime_types": ""
         },
         {
-          "key": "field_5ba9fdc5c1f48",
+          "key": "field_5bac915a8c3a5",
           "label": "video4",
           "name": "video4",
           "type": "oembed",
@@ -258,9 +258,9 @@
       ]
     },
     {
-      "key": "field_5bac74112a379",
-      "label": "video list",
-      "name": "video_list",
+      "key": "field_5baca998a180c",
+      "label": "vid list",
+      "name": "vid_list",
       "type": "repeater",
       "instructions": "",
       "required": 0,
@@ -277,9 +277,9 @@
       "button_label": "",
       "sub_fields": [
         {
-          "key": "field_5bac74382a37a",
-          "label": "Video thumb",
-          "name": "video_thumb",
+          "key": "field_5baca9ada180d",
+          "label": "vid thumb",
+          "name": "vid_thumb",
           "type": "image",
           "instructions": "",
           "required": 0,
@@ -301,7 +301,7 @@
           "mime_types": ""
         },
         {
-          "key": "field_5bac744f2a37b",
+          "key": "field_5baca9c5a180e",
           "label": "vid",
           "name": "vid",
           "type": "oembed",
@@ -336,5 +336,5 @@
   "hide_on_screen": "",
   "active": 1,
   "description": "",
-  "modified": 1538028633
+  "modified": 1538042328
 }
