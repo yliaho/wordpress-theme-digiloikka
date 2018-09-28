@@ -1,0 +1,19 @@
+.job-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  grid-template-rows: 2;
+}
+
+.job-blocks {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.job-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}

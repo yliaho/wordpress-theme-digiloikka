@@ -20,7 +20,7 @@ $hero-height: 100vh;
     right: 0;
     background-position: center;
     background-size: cover;
-    opacity: 0.5;
+    opacity: 0.9;
     background-attachment: fixed;
   }
   .hero-text-wrapper {
@@ -112,7 +112,6 @@ $hero-height: 100vh;
     opacity: 0;
     transform: translateY(-1rem);
   }
-
   100% {
     opacity: 1;
     transform: translateX(0);

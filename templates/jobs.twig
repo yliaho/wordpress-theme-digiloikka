@@ -19,22 +19,32 @@
         {% embed "components/stripeblock-start.twig" with { style: "lightgray-to-lightgray" }%}{% endembed %}
         {% embed "components/stripeblock.twig" with { style: "gray-to-lightgray", class: "job-block "} %}
             {% block stripecontent %}
-                <section class="job-listing block">
+                <div class="job-grid">
+                    {% for item in post.get_field('jobs_list') %}
+                        {% include "components/job-list.twig" with {
+                         job_title : item.job_title,
+                         job_desc: item.job_desc
+       
+            } %}
+
+                    {% endfor %}
+                </div>
+                {# <section class="job-listing block">
                     {% for job in post.get_field('jobs_list') %}
 
                         {% if job.hideshow[0] != "Hide" %}
                             {% embed "components/job-accordion.twig" with { jobTitle: job.job_title } %}
-                                {# accordion#}
+                               
                                 {% block jobDescription %}
-                                    {# job desc block #}
+                                    
                                     {{job.job_desc}}
                                 {% endblock %}
-                                {# job desc block end#}
+                             
                             {% endembed %}
-                            {# accordion end #}
+                          
                         {% endif %}
                     {% endfor %}
-                </section>
+                </section> #}
             {% endblock %}
         {% endembed %}
     {% endblock %}

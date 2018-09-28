@@ -103,6 +103,9 @@
     padding-top: 1rem;
     padding-bottom: 0.8rem;
     font-size: 1.5rem;
+    &:hover {
+      opacity: 0.8;
+    }
     @include breakpoint(md) {
       align-items: center;
     }
