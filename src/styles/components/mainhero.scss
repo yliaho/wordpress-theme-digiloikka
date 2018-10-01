@@ -22,6 +22,7 @@ $hero-height: 100vh;
     background-size: cover;
     opacity: 0.9;
     background-attachment: fixed;
+    opacity: 0.7;
   }
   .hero-text-wrapper {
     position: absolute;
@@ -41,6 +42,8 @@ $hero-height: 100vh;
       text-align: center;
       opacity: 0;
       animation: herotext_fadein 0.3s ease-out 0.1s forwards;
+      font-size: 2.2rem;
+      text-shadow: 2px 2px black;
       @include breakpoint(xs) {
       }
       h1,
@@ -56,7 +59,7 @@ $hero-height: 100vh;
       }
       p {
         font-weight: 500;
-        font-size: 1.1rem;
+        font-size: 2.3rem;
         margin-block-start: 1rem;
         margin-block-end: 1rem;
         line-height: 1.4;

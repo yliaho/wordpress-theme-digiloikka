@@ -3,6 +3,25 @@
   "title": "Departments",
   "fields": [
     {
+      "key": "field_5bade8103bafb",
+      "label": "hero description",
+      "name": "hero_description",
+      "type": "wysiwyg",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "tabs": "all",
+      "toolbar": "full",
+      "media_upload": 1,
+      "delay": 0
+    },
+    {
       "key": "field_5b7d6313a90e1",
       "label": "Department Heading",
       "name": "department_heading",
@@ -151,5 +170,5 @@
   "hide_on_screen": "",
   "active": 1,
   "description": "",
-  "modified": 1536132622
+  "modified": 1538124921
 }

@@ -1,8 +1,10 @@
 .job-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
-  grid-template-rows: 2;
+  grid-gap: 4rem;
+  @include breakpoint(xs) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .job-blocks {

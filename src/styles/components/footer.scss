@@ -32,6 +32,9 @@
           color: white;
           font-size: 1.7rem;
         }
+        &:hover {
+          opacity: 0.4;
+        }
         @include breakpoint(xs) {
           padding-bottom: 1rem;
         }

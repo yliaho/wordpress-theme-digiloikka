@@ -34,6 +34,9 @@ header {
           color: white;
           font-weight: bold;
           padding: 0.5rem;
+          &:hover {
+            font-size: 1.1rem;
+          }
         }
       }
     }

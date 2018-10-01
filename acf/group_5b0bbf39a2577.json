@@ -232,30 +232,6 @@
           "delay": 0
         },
         {
-          "key": "field_5b0d04bc446b3",
-          "label": "Background Image",
-          "name": "background_image",
-          "type": "image",
-          "instructions": "",
-          "required": 0,
-          "conditional_logic": 0,
-          "wrapper": {
-            "width": "",
-            "class": "",
-            "id": ""
-          },
-          "return_format": "array",
-          "preview_size": "thumbnail",
-          "library": "all",
-          "min_width": "",
-          "min_height": "",
-          "min_size": "",
-          "max_width": "",
-          "max_height": "",
-          "max_size": "",
-          "mime_types": ""
-        },
-        {
           "key": "field_5b0d159c63c4d",
           "label": "Call to Action",
           "name": "call_to_action",
@@ -430,30 +406,6 @@
           "step": ""
         }
       ]
-    },
-    {
-      "key": "field_5b757a9dd48be",
-      "label": "team_bg_image",
-      "name": "team_bg_image",
-      "type": "image",
-      "instructions": "",
-      "required": 0,
-      "conditional_logic": 0,
-      "wrapper": {
-        "width": "",
-        "class": "",
-        "id": ""
-      },
-      "return_format": "url",
-      "preview_size": "full",
-      "library": "all",
-      "min_width": "",
-      "min_height": "",
-      "min_size": "",
-      "max_width": "",
-      "max_height": "",
-      "max_size": "",
-      "mime_types": ""
     },
     {
       "key": "field_5b7a8b6278d64",
@@ -736,5 +688,5 @@
   "hide_on_screen": "",
   "active": 1,
   "description": "",
-  "modified": 1538028541
+  "modified": 1538136555
 }
