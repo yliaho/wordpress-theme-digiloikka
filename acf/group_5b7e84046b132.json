@@ -60,225 +60,8 @@
       "new_lines": ""
     },
     {
-      "key": "field_5bac8f277c493",
-      "label": "Videos",
-      "name": "videos",
-      "type": "group",
-      "instructions": "",
-      "required": 0,
-      "conditional_logic": 0,
-      "wrapper": {
-        "width": "",
-        "class": "",
-        "id": ""
-      },
-      "layout": "block",
-      "sub_fields": [
-        {
-          "key": "field_5bac8f507c494",
-          "label": "Video thumbnail",
-          "name": "video_thumbnail",
-          "type": "image",
-          "instructions": "",
-          "required": 0,
-          "conditional_logic": 0,
-          "wrapper": {
-            "width": "",
-            "class": "",
-            "id": ""
-          },
-          "return_format": "url",
-          "preview_size": "thumbnail",
-          "library": "all",
-          "min_width": "",
-          "min_height": "",
-          "min_size": "",
-          "max_width": "",
-          "max_height": "",
-          "max_size": "",
-          "mime_types": ""
-        },
-        {
-          "key": "field_5bac8f667c495",
-          "label": "Video",
-          "name": "video",
-          "type": "oembed",
-          "instructions": "",
-          "required": 0,
-          "conditional_logic": 0,
-          "wrapper": {
-            "width": "",
-            "class": "",
-            "id": ""
-          },
-          "width": "",
-          "height": ""
-        },
-        {
-          "key": "field_5bac90db8c39e",
-          "label": "Video thumbnail1",
-          "name": "video_thumbnail1",
-          "type": "image",
-          "instructions": "",
-          "required": 0,
-          "conditional_logic": 0,
-          "wrapper": {
-            "width": "",
-            "class": "",
-            "id": ""
-          },
-          "return_format": "url",
-          "preview_size": "thumbnail",
-          "library": "all",
-          "min_width": "",
-          "min_height": "",
-          "min_size": "",
-          "max_width": "",
-          "max_height": "",
-          "max_size": "",
-          "mime_types": ""
-        },
-        {
-          "key": "field_5bac90ef8c39f",
-          "label": "video1",
-          "name": "video1",
-          "type": "oembed",
-          "instructions": "",
-          "required": 0,
-          "conditional_logic": 0,
-          "wrapper": {
-            "width": "",
-            "class": "",
-            "id": ""
-          },
-          "width": "",
-          "height": ""
-        },
-        {
-          "key": "field_5bac91098c3a0",
-          "label": "Video thumbnail2",
-          "name": "video_thumbnail2",
-          "type": "image",
-          "instructions": "",
-          "required": 0,
-          "conditional_logic": 0,
-          "wrapper": {
-            "width": "",
-            "class": "",
-            "id": ""
-          },
-          "return_format": "url",
-          "preview_size": "thumbnail",
-          "library": "all",
-          "min_width": "",
-          "min_height": "",
-          "min_size": "",
-          "max_width": "",
-          "max_height": "",
-          "max_size": "",
-          "mime_types": ""
-        },
-        {
-          "key": "field_5bac91158c3a1",
-          "label": "video2",
-          "name": "video2",
-          "type": "oembed",
-          "instructions": "",
-          "required": 0,
-          "conditional_logic": 0,
-          "wrapper": {
-            "width": "",
-            "class": "",
-            "id": ""
-          },
-          "width": "",
-          "height": ""
-        },
-        {
-          "key": "field_5bac91248c3a2",
-          "label": "Video thumbnail3",
-          "name": "video_thumbnail3",
-          "type": "image",
-          "instructions": "",
-          "required": 0,
-          "conditional_logic": 0,
-          "wrapper": {
-            "width": "",
-            "class": "",
-            "id": ""
-          },
-          "return_format": "url",
-          "preview_size": "thumbnail",
-          "library": "all",
-          "min_width": "",
-          "min_height": "",
-          "min_size": "",
-          "max_width": "",
-          "max_height": "",
-          "max_size": "",
-          "mime_types": ""
-        },
-        {
-          "key": "field_5bac912f8c3a3",
-          "label": "video3",
-          "name": "video3",
-          "type": "oembed",
-          "instructions": "",
-          "required": 0,
-          "conditional_logic": 0,
-          "wrapper": {
-            "width": "",
-            "class": "",
-            "id": ""
-          },
-          "width": "",
-          "height": ""
-        },
-        {
-          "key": "field_5bac913f8c3a4",
-          "label": "Video thumbnail4",
-          "name": "video_thumbnail4",
-          "type": "image",
-          "instructions": "",
-          "required": 0,
-          "conditional_logic": 0,
-          "wrapper": {
-            "width": "",
-            "class": "",
-            "id": ""
-          },
-          "return_format": "url",
-          "preview_size": "thumbnail",
-          "library": "all",
-          "min_width": "",
-          "min_height": "",
-          "min_size": "",
-          "max_width": "",
-          "max_height": "",
-          "max_size": "",
-          "mime_types": ""
-        },
-        {
-          "key": "field_5bac915a8c3a5",
-          "label": "video4",
-          "name": "video4",
-          "type": "oembed",
-          "instructions": "",
-          "required": 0,
-          "conditional_logic": 0,
-          "wrapper": {
-            "width": "",
-            "class": "",
-            "id": ""
-          },
-          "width": "",
-          "height": ""
-        }
-      ]
-    },
-    {
       "key": "field_5baca998a180c",
-      "label": "vid list",
+      "label": "Video List",
       "name": "vid_list",
       "type": "repeater",
       "instructions": "",
@@ -297,7 +80,7 @@
       "sub_fields": [
         {
           "key": "field_5baca9ada180d",
-          "label": "vid thumb",
+          "label": "Video Thumbnail",
           "name": "vid_thumb",
           "type": "image",
           "instructions": "",
@@ -321,7 +104,7 @@
         },
         {
           "key": "field_5baca9c5a180e",
-          "label": "vid",
+          "label": "Video Embed",
           "name": "vid",
           "type": "oembed",
           "instructions": "",
@@ -355,5 +138,5 @@
   "hide_on_screen": "",
   "active": 1,
   "description": "",
-  "modified": 1538125363
+  "modified": 1538396890
 }

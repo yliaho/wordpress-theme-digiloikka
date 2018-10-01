@@ -1,19 +1,18 @@
 <header class="header">
-    <div class="logo-container">
-        {% include "components/site-logo.twig" with {
+  <div class="logo-container">
+    {% include "components/site-logo.twig" with {
       home_link: site.url,
       logo_size_width: 58,
       logo_size_height: 60
     } %}
-    </div>
-    <div class="header-text">
-        Digitalents</div>
-    <div class="nav-container ">
-        {% include "menu.twig" with {
-            'menu' : menu.get_items
-        } %}
-    </div>
-    <!-- <div class="some-container"> Some stuff here </div> -->
+  </div>
+  <div class="header-text">Digitalents</div>
+  <div class="nav-container ">
+    {% include "menu.twig" with {
+      'menu' : menu.get_items
+    } %}
+  </div>
+  <!-- <div class="some-container"> Some stuff here </div> -->
 </header>
-<!-- {{page_title}} -->
+<!-- {{page_title}} beb -->
 <!-- <a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a> -->
