@@ -1,72 +1,13 @@
 <div class="cube-grid">
-    <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-            <span id="close">&times;</span>
-            <div class="modal-vid">{{post.get_field('videos').video}}</div>
-        </div>
-
-    </div>
-
-    <div class="cube1 cube">
-        <div class="cubevid" id="myBtn" style="background-image: url('{{post.get_field('videos').video_thumbnail}}')">
-
-            <svg class="video-overlay-play-button" viewbox="0 0 200 200" alt="Play video">
-
-                <circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="white"/>
-                <polygon points="70, 55 70, 145 145, 100" fill="white"/>
-
-            </svg>
-
-        </div>
-    </div>
-    <div class="cube2 cube"></div>
-
-    <div class="cube3 cube">
-        <div class="cubevid" id="myBtn1" style="background-image: url('{{post.get_field('videos').video_thumbnail1}}')">
-            <svg class="video-overlay-play-button" viewbox="0 0 200 200" alt="Play video">
-                <a class="trigger">
-                    <circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="white"/>
-                    <polygon points="70, 55 70, 145 145, 100" fill="white"/>
-                </a>
-            </svg>
-        </div>
-    </div>
-
-    <div class="cube4 cube"></div>
-
-    <div class="cube5 cube">
-        <div class="cubevid" id="myBtn" style="background-image: url('{{post.get_field('videos').video_thumbnail2}}')">
-            <svg class="video-overlay-play-button" viewbox="0 0 200 200" alt="Play video">
-                <a class="trigger">
-                    <circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="white"/>
-                    <polygon points="70, 55 70, 145 145, 100" fill="white"/>
-                </a>
-            </svg>
-        </div>
-    </div>
-
-    <div class="cube6 cube">
-        <div class="cubevid" id="myBtn" style="background-image: url('{{post.get_field('videos').video_thumbnail3}}')">
-            <svg class="video-overlay-play-button" viewbox="0 0 200 200" alt="Play video">
-                <a class="trigger">
-                    <circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="white"/>
-                    <polygon points="70, 55 70, 145 145, 100" fill="white"/>
-                </a>
-            </svg>
-        </div>
-    </div>
-    <div class="cube7 cube">
-        <div class="cubevid" id="myBtn" style="background-image: url('{{post.get_field('videos').video_thumbnail4}}')">
-            <svg class="video-overlay-play-button" viewbox="0 0 200 200" alt="Play video">
-                <a class="trigger">
-                    <circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="white"/>
-                    <polygon points="70, 55 70, 145 145, 100" fill="white"/>
-                </a>
-            </svg>
-        </div>
-    </div>
-    <div class="cube8 cube"></div>
-
+  {# {{post.get_field('videos').video_thumbnail}} #}
+  {% for video in post.get_field('vid_list') %}
+    {% include 'components/cube.twig' with {
+      cubeId: loop.index,
+      thumbnail: video.vid_thumb,
+      embed: video.vid|escape
+    }%}
+  {% endfor %}
+  {% for i in 0..3 %}
+    <div class="emptycube cube"></div>
+  {% endfor %}
 </div>
