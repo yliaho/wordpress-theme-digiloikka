@@ -8,6 +8,6 @@
     }%}
   {% endfor %}
   {% for i in 0..3 %}
-    <div class="emptycube cube"></div>
+    <div class="emptycube{{loop.index}} emptycube cube"></div>
   {% endfor %}
 </div>

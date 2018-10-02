@@ -1,26 +1,7 @@
 {
   "key": "group_5b7e84046b132",
-  "title": "ad-agency",
+  "title": "Ad Agency",
   "fields": [
-    {
-      "key": "field_5badeba5ffe67",
-      "label": "hero description",
-      "name": "hero_description",
-      "type": "wysiwyg",
-      "instructions": "",
-      "required": 0,
-      "conditional_logic": 0,
-      "wrapper": {
-        "width": "",
-        "class": "",
-        "id": ""
-      },
-      "default_value": "",
-      "tabs": "all",
-      "toolbar": "full",
-      "media_upload": 1,
-      "delay": 0
-    },
     {
       "key": "field_5b7e84205f4f8__trashed",
       "label": "ad agency",
@@ -111,8 +92,8 @@
           "required": 0,
           "conditional_logic": 0,
           "wrapper": {
-            "width": "",
-            "class": "",
+            "width": "50",
+            "class": "video-embed-wrapper",
             "id": ""
           },
           "width": "",
@@ -138,5 +119,5 @@
   "hide_on_screen": "",
   "active": 1,
   "description": "",
-  "modified": 1538396890
+  "modified": 1538466062
 }
