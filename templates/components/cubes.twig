@@ -1,13 +1,13 @@
 <div class="cube-grid">
-  {# {{post.get_field('videos').video_thumbnail}} #}
-  {% for video in post.get_field('vid_list') %}
-    {% include 'components/cube.twig' with {
+    {# {{post.get_field('videos').video_thumbnail}} #}
+    {% for video in post.get_field('vid_list') %}
+        {% include 'components/cube.twig' with {
       cubeId: loop.index,
       thumbnail: video.vid_thumb,
       embed: video.vid|escape
     }%}
-  {% endfor %}
-  {% for i in 0..3 %}
-    <div class="emptycube{{loop.index}} emptycube cube"></div>
-  {% endfor %}
+    {% endfor %}
+    {% for i in 0..2 %}
+        <div class="emptycube{{loop.index}} emptycube cube"></div>
+    {% endfor %}
 </div>
