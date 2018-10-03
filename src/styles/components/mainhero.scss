@@ -72,6 +72,16 @@ $hero-height: 100vh;
       }
     }
   }
+  .digi-logo {
+    width: 30rem;
+    height: 100px;
+    position: absolute;
+    top: 20rem;
+    @include breakpoint(xs) {
+      width: 20rem;
+      top: 10rem;
+    }
+  }
   .hero-stripe-container {
     position: absolute;
     left: 0;
