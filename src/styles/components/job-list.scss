@@ -11,6 +11,10 @@
   padding-top: 10px;
   padding-bottom: 10px;
   width: 100%;
+  @include breakpoint(md) {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
 }
 
 .job-title {
