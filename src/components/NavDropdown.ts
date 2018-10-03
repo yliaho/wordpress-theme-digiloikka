@@ -1,10 +1,8 @@
 export default class NavDropdown {
   private dropdown: HTMLTemplateElement
-  private nub: HTMLElement
   private isOpen: boolean = false
   constructor(private element: HTMLElement) {
     const aTag = this.element.querySelector('a')
-    this.nub = this.element.querySelector('.nub')
     aTag.addEventListener('click', e => {
       if (e.target === aTag) {
         e.preventDefault()
@@ -35,11 +33,10 @@ export default class NavDropdown {
     const { width } = this.dropdown.getBoundingClientRect()
     this.dropdown.style.top = `${elTop + 40}px`
     this.dropdown.style.left = `${Math.floor(elRight) - width}px`
-
-    this.nub.style.top = `${elTop}px`
   }
 
   public hideDropdown() {
+    console.log('what')
     this.dropdown.style.display = 'none'
   }
 }
