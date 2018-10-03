@@ -1,15 +1,27 @@
 {% if footer_menu %}
   <ul class="{{is_children ? 'child ' : ''}}nav-ul">
     {% for item in menu %}
-      <li class="{{ item.classes | join(' ') }}">
-        <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
-        {% if item.get_children %}
-          {% include "menu.twig" with {
-            'menu' : item.get_children,
-            'is_children' : true
-          } %}
-        {% endif %}
-      </li>
+      {% if 'lang-item' in item.class %}
+        <li class="{{ item.classes | join(' ') }}">
+          <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+          {% if item.get_children %}
+            {% include "menu.twig" with {
+              'menu' : item.get_children,
+              'is_children' : true
+            } %}
+          {% endif %}
+        </li>
+      {% else %}
+        <li class="{{ item.classes | join(' ') }}">
+          <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+          {% if item.get_children %}
+            {% include "menu.twig" with {
+              'menu' : item.get_children,
+              'is_children' : true
+            } %}
+          {% endif %}
+        </li>
+      {% endif %}
     {% endfor %}
   </ul>
 {% endif %}
