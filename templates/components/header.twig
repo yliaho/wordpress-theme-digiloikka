@@ -9,7 +9,8 @@
   <div class="header-text">Digitalents</div>
   <div class="nav-container ">
     {% include "menu.twig" with {
-      'menu' : menu.get_items
+      'menu' : menu.get_items,
+      'is_children' : false
     } %}
   </div>
   <!-- <div class="some-container"> Some stuff here </div> -->

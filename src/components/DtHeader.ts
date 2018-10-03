@@ -1,4 +1,5 @@
 import * as anime from 'animejs'
+import NavDropdown from './NavDropdown'
 
 export default class DtHeader {
   private observer: IntersectionObserver = null
@@ -9,6 +10,7 @@ export default class DtHeader {
 
   constructor(private element: HTMLElement) {
     this.headerText = this.element.querySelector('.header-text')
+    this.createNavDropdowns()
   }
 
   public initObserver(observableElement: HTMLElement) {
@@ -82,5 +84,18 @@ export default class DtHeader {
       targets: this.element,
       backgroundColor: 'rgba(0,0,0,0.0)'
     })
+  }
+
+  private createNavDropdowns() {
+    const navContainerElement = this.element.querySelector(
+      '.nav-container'
+    ) as HTMLElement
+    const navDropdowns = navContainerElement.querySelectorAll(
+      '.nav-ul li.menu-item-has-children'
+    )
+
+    for (let navDropdown of Array.from(navDropdowns)) {
+      new NavDropdown(navDropdown as HTMLElement)
+    }
   }
 }

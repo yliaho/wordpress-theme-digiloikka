@@ -38,23 +38,34 @@ header {
       }
     }
   }
-  .nav-container > ul > li > ul {
-    display: none;
-    height: auto;
-    transition: height 5s ease;
-  }
-  .nav-container > ul > li:nth-child(3):hover {
-    ul {
+}
+
+.nav-container {
+  .nav-ul {
+    &.child {
+      display: none;
       position: absolute;
-      display: list-item;
-      width: 120px;
-      background-color: black;
+      flex-direction: column;
+      border-radius: 3px;
+      padding: 1rem 0;
+      background-color: white;
+      box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
+      * {
+        color: black;
+        font-weight: normal;
+      }
+
       li {
-        margin: 0.2rem;
+        display: flex !important;
+        a {
+          width: 100%;
+          padding: 0.5rem 1.8rem;
+          &:hover {
+            background-color: #8161ff;
+            color: white;
+          }
+        }
       }
     }
-  }
-  .nav-container > ul > li:nth-child(4) {
-    margin-left: 2.4rem;
   }
 }
