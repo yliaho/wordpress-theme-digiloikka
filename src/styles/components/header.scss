@@ -18,6 +18,7 @@ header {
   }
   .header-text {
     display: none;
+    opacity: 0;
     color: white;
     font-size: 1.4rem;
     padding-left: 2rem;
@@ -57,13 +58,15 @@ header {
       border-radius: 3px;
       padding: 1rem 0;
       background-color: white;
-      box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 6px 8px -4px rgba(0, 0, 0, 0.3),
+        inset 0 0 0 1px rgba(0, 0, 0, 0.08);
       * {
         color: black;
         font-weight: normal;
       }
       li {
         display: flex !important;
+        text-align: right;
         a {
           width: 100%;
           padding: 0.5rem 1.8rem;
@@ -73,6 +76,13 @@ header {
           }
         }
       }
+    }
+    .nub {
+      display: none;
+      border: 0 solid transparent;
+      border-bottom-color: white;
+      position: absolute;
+      z-index: 201;
     }
   }
 }

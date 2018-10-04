@@ -23,7 +23,7 @@ export default class DtHeader {
     }
 
     if (Array.isArray(options.threshold)) {
-      for (let i = 0; i <= 1; i += 0.01) {
+      for (let i = 0; i <= 1; i += 0.001) {
         options.threshold.push(i)
       }
     }
@@ -58,21 +58,36 @@ export default class DtHeader {
 
       if (this.hasBackground) {
         this.fadeInBg()
-        this.fadeText()
+        this.fadeInText()
       } else {
         this.fadeOutBg()
         this.fadeOutText()
       }
     })
   }
-  private fadeText() {
+  private fadeInText() {
     this.headerText.style.display = 'block'
+    const fadeInAnim = anime({
+      opacity: 1,
+      translateX: [-20, 0],
+      targets: this.headerText,
+      duration: 150,
+      easing: 'easeOutQuad'
+    })
   }
   private fadeOutText() {
-    this.headerText.style.display = 'none'
+    this.headerText.style.display = 'block'
+    const fadeOutAnim = anime({
+      opacity: 0,
+      translateX: 20,
+      targets: this.headerText,
+      duration: 150,
+      easing: 'easeOutQuad'
+    })
   }
 
   private fadeInBg() {
+    anime.remove(this.element)
     const fadeInAnim = anime({
       targets: this.element,
       backgroundColor: 'rgb(53, 53, 53'
@@ -80,9 +95,12 @@ export default class DtHeader {
   }
 
   private fadeOutBg() {
+    anime.remove(this.element)
     const fadeOutAnim = anime({
       targets: this.element,
-      backgroundColor: 'rgba(0,0,0,0.0)'
+      easing: 'easeOutQuad',
+      duration: 380,
+      backgroundColor: 'rgba(0,0,0,0.24)'
     })
   }
 
@@ -94,8 +112,10 @@ export default class DtHeader {
       '.nav-ul li.menu-item-has-children'
     )
 
-    for (let navDropdown of Array.from(navDropdowns)) {
-      new NavDropdown(navDropdown as HTMLElement)
+    if (navDropdowns) {
+      for (let navDropdown of Array.from(navDropdowns)) {
+        new NavDropdown(navDropdown as HTMLElement)
+      }
     }
   }
 }

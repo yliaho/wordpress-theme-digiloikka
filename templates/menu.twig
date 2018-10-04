@@ -1,5 +1,6 @@
 {% if footer_menu %}
   <ul class="{{is_children ? 'child ' : ''}}nav-ul">
+    <div class="nub"></div>
     {% for item in menu %}
       {% if 'lang-item' in item.class %}
         <li class="{{ item.classes | join(' ') }}">
