@@ -52,11 +52,13 @@
         </div>
 
     </div>
+    <div id="leaders"></div>
     {% embed "components/stripeblock-end.twig" with { style: "lightgray-to-gray" } %}{% endembed %}
     {# end of osaamo stripeblock #}
 
     {#  Leader stripeblock  #}
     {% embed "components/stripeblock.twig" with { style: "gray-to-lightgray", class: "leader-block"} %}
+
         {% block stripecontent %}
 
             <div class="block leader-blocks-grid">

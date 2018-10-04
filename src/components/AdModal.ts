@@ -29,8 +29,6 @@ export default class AdModal {
   }
 
   public hideEmbed() {
-    console.log('moi')
-    console.log(this)
     this.modalVideoContent.innerHTML = ''
     this.element.style.display = 'none'
   }

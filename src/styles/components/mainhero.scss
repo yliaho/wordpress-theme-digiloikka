@@ -77,8 +77,11 @@ $hero-height: 100vh;
     height: 100px;
     position: absolute;
     top: 20rem;
+    @include breakpoint(md) {
+      top: 30rem;
+    }
     @include breakpoint(xs) {
-      width: 20rem;
+      width: 18rem;
       top: 10rem;
     }
   }

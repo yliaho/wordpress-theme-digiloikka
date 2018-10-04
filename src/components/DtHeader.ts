@@ -75,7 +75,7 @@ export default class DtHeader {
   private fadeInBg() {
     const fadeInAnim = anime({
       targets: this.element,
-      backgroundColor: 'rgba(0,0,0,1.0)'
+      backgroundColor: 'rgb(53, 53, 53'
     })
   }
 

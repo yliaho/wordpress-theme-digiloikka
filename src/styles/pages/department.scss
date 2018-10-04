@@ -35,17 +35,20 @@
   grid-row-start: 2;
   grid-column-start: 2;
   justify-content: center;
-  @include breakpoint(xs) {
-    grid-template-columns: 1fr;
-    grid-column-start: 1;
-    width: 80%;
-    padding-top: 20px;
-    justify-items: center;
-    grid-gap: 10px;
-  }
+  align-content: center;
   @include breakpoint(sm) {
     margin: auto;
     grid-gap: 20px;
+  }
+  @include breakpoint(xs) {
+    grid-template-columns: 1fr;
+    grid-column-start: 1;
+    width: 50%;
+    padding-top: 20px;
+    align-content: center;
+    justify-content: center;
+    grid-gap: 10px;
+    flex-direction: column;
   }
   .dep-button {
     width: 15%;
@@ -56,8 +59,12 @@
     color: white;
     padding: 10px;
     margin: 20px;
+    font-size: 1.2rem;
     &:hover {
       background-color: rgba($color-darkgray, 0.8);
+    }
+    @include breakpoint(md) {
+      text-align: center;
     }
     @include breakpoint(xs) {
       width: 25vh;
@@ -66,10 +73,7 @@
       position: relative;
       padding: 7px;
       font-size: 1rem;
-      vertical-align: middle;
-    }
-    @include breakpoint(md) {
-      text-align: center;
+      margin-top: 20px;
     }
   }
 }

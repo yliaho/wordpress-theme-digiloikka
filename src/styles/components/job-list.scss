@@ -2,6 +2,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 4rem;
+  @include breakpoint(md) {
+    grid-gap: 1rem;
+  }
   @include breakpoint(xs) {
     grid-template-columns: 1fr;
   }

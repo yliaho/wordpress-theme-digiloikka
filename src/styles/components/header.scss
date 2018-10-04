@@ -21,6 +21,7 @@ header {
     color: white;
     font-size: 1.4rem;
     padding-left: 2rem;
+    text-align: center;
   }
   .nav-container {
     display: flex;
@@ -49,7 +50,6 @@ header {
         margin-left: 0;
       }
     }
-
     &.child {
       display: none;
       position: absolute;

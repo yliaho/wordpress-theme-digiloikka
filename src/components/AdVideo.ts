@@ -15,5 +15,4 @@ export default class AdVideo {
   private onClickHandle(): void {
     this.onClickCallback(this.element.dataset.embed)
   }
-  private closeModal(): void {}
 }
