@@ -10,7 +10,6 @@ export default class AdModal {
     // click on myModal
     this.element.addEventListener('click', e => {
       if (e.target !== this.element) return
-
       this.hideEmbed()
     })
 

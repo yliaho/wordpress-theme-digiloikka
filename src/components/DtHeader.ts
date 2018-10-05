@@ -90,7 +90,7 @@ export default class DtHeader {
     anime.remove(this.element)
     const fadeInAnim = anime({
       targets: this.element,
-      backgroundColor: 'rgb(53, 53, 53'
+      backgroundColor: 'rgb(53, 53, 53)'
     })
   }
 
@@ -100,7 +100,7 @@ export default class DtHeader {
       targets: this.element,
       easing: 'easeOutQuad',
       duration: 380,
-      backgroundColor: 'rgba(0,0,0,0.24)'
+      backgroundColor: 'rgba(0,0,0,0.0)'
     })
   }
 

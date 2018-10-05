@@ -1,4 +1,5 @@
 import DtHeader from '../components/DtHeader'
+import SmoothScroll from '../components/SmoothScroll'
 
 /**
  * Since the header position is absolute, we will calculate the main
@@ -28,6 +29,7 @@ function calcMainSectionPadding() {
 export const common: Route = {
   init() {
     calcMainSectionPadding()
+    SmoothScroll
   },
 
   finalize() {}
