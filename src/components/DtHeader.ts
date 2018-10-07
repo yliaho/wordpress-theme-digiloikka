@@ -69,10 +69,10 @@ export default class DtHeader {
     this.headerText.style.display = 'block'
     const fadeInAnim = anime({
       opacity: 1,
-      translateY: [-20, 0],
-      delay: 300,
+      translateX: [-10, 0],
+      delay: 100,
       targets: this.headerText,
-      duration: 150,
+      duration: 500,
       easing: 'easeOutQuad'
     })
   }
@@ -80,21 +80,14 @@ export default class DtHeader {
     this.headerText.style.display = 'block'
     const fadeOutAnim = anime({
       opacity: 0,
-      translateY: 20,
       targets: this.headerText,
-      duration: 150,
+      duration: 0,
       easing: 'easeOutQuad'
     })
   }
 
   private fadeInBg() {
     anime.remove(this.element.querySelector('.header-background-cover'))
-    // const fadeInAnim = anime({
-    //   targets: this.element,
-    //   easing: 'linear',
-    //   duration: 0,
-    //   backgroundColor: 'rgb(53, 53, 53)'
-    // })
     anime({
       targets: this.element.querySelector('.header-background-cover'),
       opacity: {
@@ -102,9 +95,10 @@ export default class DtHeader {
         duration: 0
       },
       backgroundPositionY: {
-        value: [-252, -208],
-        duration: 1300,
-        elasticity: 400
+        value: ['54%', '50%'],
+        duration: 1200,
+        elasticity: 400,
+        delay: 0
       }
     })
     this.element.classList.remove('above')
