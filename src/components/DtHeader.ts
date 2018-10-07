@@ -69,7 +69,8 @@ export default class DtHeader {
     this.headerText.style.display = 'block'
     const fadeInAnim = anime({
       opacity: 1,
-      translateX: [-20, 0],
+      translateY: [-20, 0],
+      delay: 300,
       targets: this.headerText,
       duration: 150,
       easing: 'easeOutQuad'
@@ -79,7 +80,7 @@ export default class DtHeader {
     this.headerText.style.display = 'block'
     const fadeOutAnim = anime({
       opacity: 0,
-      translateX: 20,
+      translateY: 20,
       targets: this.headerText,
       duration: 150,
       easing: 'easeOutQuad'
@@ -87,21 +88,38 @@ export default class DtHeader {
   }
 
   private fadeInBg() {
-    anime.remove(this.element)
-    const fadeInAnim = anime({
-      targets: this.element,
-      backgroundColor: 'rgb(53, 53, 53)'
+    anime.remove(this.element.querySelector('.header-background-cover'))
+    // const fadeInAnim = anime({
+    //   targets: this.element,
+    //   easing: 'linear',
+    //   duration: 0,
+    //   backgroundColor: 'rgb(53, 53, 53)'
+    // })
+    anime({
+      targets: this.element.querySelector('.header-background-cover'),
+      opacity: {
+        value: 0.6,
+        duration: 0
+      },
+      backgroundPositionY: {
+        value: [-252, -208],
+        duration: 1300,
+        elasticity: 400
+      }
     })
+    this.element.classList.remove('above')
+    this.element.classList.add('below')
   }
 
   private fadeOutBg() {
-    anime.remove(this.element)
-    const fadeOutAnim = anime({
-      targets: this.element,
-      easing: 'easeOutQuad',
-      duration: 380,
-      backgroundColor: 'rgba(0,0,0,0.0)'
+    anime.remove(this.element.querySelector('.header-background-cover'))
+    anime({
+      targets: this.element.querySelector('.header-background-cover'),
+      opacity: 0,
+      duration: 0
     })
+    this.element.classList.remove('below')
+    this.element.classList.add('above')
   }
 
   private createNavDropdowns() {

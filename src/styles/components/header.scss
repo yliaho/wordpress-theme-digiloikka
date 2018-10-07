@@ -4,10 +4,21 @@ header {
   left: 0;
   right: 0;
   top: 0;
-  padding: 1rem 2rem;
+  padding: 3rem 4rem;
   display: flex;
   align-items: center;
   z-index: 200;
+  &.above {
+    background-color: transparent;
+    padding: 3rem 4rem;
+    transition: padding 0.3s ease-out;
+  }
+  &.below {
+    background-color: black;
+    padding: 1rem 2rem;
+    transition: padding 0.3s ease-out;
+  }
+
   @include breakpoint(sm) {
     padding: 0.5rem 1rem;
   }
@@ -51,6 +62,19 @@ header {
         }
       }
     }
+  }
+  .header-background-cover {
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    opacity: 0.6;
+    background-position: 0px -252px;
+    z-index: -1;
   }
 }
 
