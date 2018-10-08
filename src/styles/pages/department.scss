@@ -64,6 +64,9 @@
     @include breakpoint(md) {
       text-align: center;
     }
+    @include breakpoint(sm) {
+      width: 20%;
+    }
     @include breakpoint(xs) {
       width: 25vh;
       height: 5vh;

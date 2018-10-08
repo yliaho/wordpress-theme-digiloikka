@@ -41,9 +41,14 @@ $hero-height: 100vh;
       text-align: center;
       /*opacity:0;  ask about this later */
       animation: herotext_fadein 0.3s ease-out 0.1s forwards;
-      font-size: 1.1rem;
+      font-size: 1.8rem;
       text-shadow: 1px 1px black;
+      margin-block-start: 5rem;
+      @include breakpoint(md) {
+        margin-block-start: 2rem;
+      }
       @include breakpoint(xs) {
+        margin-block-start: 2rem;
       }
       h1,
       h1,
@@ -52,18 +57,20 @@ $hero-height: 100vh;
         font-weight: 800;
         margin-block-end: 1rem;
         @include breakpoint(xs) {
-          font-size: 10px;
+          font-size: 1rem;
           font-weight: 600;
         }
       }
       p {
         font-weight: 500;
         font-size: 2.3rem;
-        margin-block-start: 1rem;
+        margin-block-start: 2rem;
         margin-block-end: 1rem;
         line-height: 1.1;
+        @include breakpoint(md) {
+          font-size: 1.5rem;
+        }
         @include breakpoint(sm) {
-          margin-block-start: 19rem;
         }
         @include breakpoint(xs) {
           font-weight: 300;
@@ -80,16 +87,16 @@ $hero-height: 100vh;
     width: 30rem;
     height: 100px;
     position: absolute;
-    top: 21rem;
+    top: 20rem;
     @include breakpoint(md) {
-      top: 30rem;
+      top: 32rem;
+    }
+    @include breakpoint(sm) {
+      top: 22rem;
     }
     @include breakpoint(xs) {
       width: 18rem;
       top: 12rem;
-    }
-    &:hover + .hero-background-image {
-      opacity: 0.1;
     }
   }
   .hero-stripe-container {

@@ -66,7 +66,7 @@ export default class DtHeader {
     })
   }
   private fadeInText() {
-    this.headerText.style.display = 'block'
+    this.headerText.style.display = 'list-item'
     const fadeInAnim = anime({
       opacity: 1,
       translateX: [-10, 0],
