@@ -8,6 +8,17 @@ header {
   display: flex;
   align-items: center;
   z-index: 200;
+  &.above {
+    background-color: transparent;
+    padding: 1rem 2rem;
+    transition: padding 0.3s ease-out;
+  }
+  &.below {
+    background-color: black;
+    padding: 1rem 3rem;
+    transition: padding 0.15s ease-out;
+  }
+
   @include breakpoint(sm) {
     padding: 0.5rem 1rem;
   }
@@ -24,13 +35,21 @@ header {
     opacity: 0;
     color: white;
     font-size: 1.4rem;
-    padding-left: 2rem;
+    padding-left: 1rem;
     text-align: center;
     @include breakpoint(sm) {
       padding-left: 0.5rem;
       font-size: 1rem;
     }
     @include breakpoint(xs) {
+    }
+
+    span {
+      display: block;
+      font-size: 0.8rem;
+      text-align: left;
+      line-height: 0.8;
+      text-transform: uppercase;
     }
   }
   .nav-container {
@@ -51,6 +70,20 @@ header {
         }
       }
     }
+  }
+  .header-background-cover {
+    background-size: cover;
+    position: absolute;
+    background-attachment: fixed;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    opacity: 0.6;
+    background-position: 0px 50%;
+    z-index: -1;
   }
 }
 
