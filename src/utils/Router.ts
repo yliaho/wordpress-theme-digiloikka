@@ -27,7 +27,11 @@ export class Router {
       typeof this.routes[route][event] === 'function'
 
     if (fire) {
-      this.routes[route][event](arg)
+      try {
+        this.routes[route][event](arg)
+      } catch (err) {
+        console.error(err)
+      }
     }
   }
 
