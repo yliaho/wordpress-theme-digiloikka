@@ -4,7 +4,7 @@
   grid-gap: 3rem;
   @include breakpoint(xs) {
     grid-template-columns: 1fr;
-    grid-gap: 3rem;
+    grid-gap: 1rem;
   }
 }
 
@@ -68,13 +68,15 @@
       line-height: 1;
       text-transform: uppercase;
       margin-block-end: 0.5rem;
-      @include breakpoint(xs) {
-        margin: 1.6rem;
-        text-align: center;
-      }
       @include breakpoint(sm) {
         padding-top: 0.5rem;
         padding-bottom: 0.5em;
+      }
+      @include breakpoint(xs) {
+        margin: 0.6rem;
+        text-align: center;
+        padding-top: 0;
+        padding-bottom: 0;
       }
     }
     p {
