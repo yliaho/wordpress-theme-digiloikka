@@ -53,13 +53,14 @@
     height: 40px;
     display: inline-block;
     text-align: center;
-    background-color: $color-darkgray;
+    background-color: dt-color('primary');
     color: white;
     padding: 10px;
     margin: 20px;
     font-size: 1.2rem;
+
     &:hover {
-      background-color: rgba($color-darkgray, 0.8);
+      background-color: rgba(dt-color('primary'), 0.8);
     }
     @include breakpoint(md) {
       text-align: center;

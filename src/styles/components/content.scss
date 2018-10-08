@@ -25,10 +25,10 @@
       margin: 0;
     }
     &.whitesmoke {
-      background-color: $color-lightgray;
+      background-color: dt-color('foreground');
     }
     &.gray {
-      background-color: $color-darkgray;
+      background-color: dt-color('primary');
       color: white;
     }
   }

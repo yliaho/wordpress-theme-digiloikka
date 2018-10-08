@@ -2,3 +2,63 @@ $color-background-color: white;
 $color-lightgray: #eeeeee;
 $color-darkgray: #353535;
 $color-black: rgb(0, 0, 0);
+$color-white: white;
+$color-light-slate: #8161ff;
+
+$color-mix-light: $color-white;
+$color-mix-dark: $color-black;
+
+$dt-color-key: 'base' !default;
+
+$dt-color-mix-weight: 15% !global;
+
+$dt-colors: (
+  'background': (
+    'base': $color-background-color,
+    'light':
+      mix($color-mix-light, $color-background-color, $dt-color-mix-weight),
+    'dark': mix($color-mix-dark, $color-background-color, $dt-color-mix-weight)
+  ),
+  'foreground': (
+    'base': $color-lightgray,
+    'light': mix($color-mix-light, $color-lightgray, $dt-color-mix-weight),
+    'dark': mix($color-mix-dark, $color-lightgray, $dt-color-mix-weight)
+  ),
+  'primary': (
+    'base': $color-darkgray,
+    'light': mix($color-mix-light, $color-darkgray, $dt-color-mix-weight),
+    'dark': mix($color-mix-dark, $color-darkgray, $dt-color-mix-weight)
+  ),
+  'secondary': (
+    'base': $color-light-slate,
+    'light': mix($color-mix-light, $color-light-slate, $dt-color-mix-weight),
+    'dark': mix($color-mix-dark, $color-light-slate, $dt-color-mix-weight)
+  )
+);
+
+$dt-opacity: (
+  'light': 0.8,
+  'dark': 0.4
+);
+
+@function dt-color($name: 'primary', $variant: $dt-color-key, $opacity: 1) {
+  $color: null;
+
+  $color-spectrum: map-get($dt-colors, $name);
+
+  @if color-spectrum {
+    $color: map-get($color-spectrum, $variant);
+  }
+
+  $alpha: if(
+    type-of($opacity) == 'number',
+    $opacity,
+    map-get($dt-opacity, $opacity)
+  );
+
+  @if $alpha {
+    $color: rgba($color, $alpha);
+  }
+
+  @return $color;
+}
