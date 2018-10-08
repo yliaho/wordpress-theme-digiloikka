@@ -23,7 +23,7 @@
   .team-thumbnail-container {
     width: 10rem;
     height: 10rem;
-    background-color: $color-lightgray;
+    background-color: dt-color('foreground');
     position: relative;
     margin-right: 1rem;
     margin-left: 1rem;
@@ -97,7 +97,7 @@
   margin-top: 4rem;
   .team-btn-a {
     display: block;
-    background-color: $color-darkgray;
+    background-color: dt-color('primary');
     color: white;
     padding: 0 2rem;
     padding-top: 1rem;

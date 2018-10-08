@@ -14,7 +14,7 @@ header {
     transition: padding 0.3s ease-out;
   }
   &.below {
-    background-color: black;
+    background-color: $color-black;
     padding: 1rem 3rem;
     transition: padding 0.15s ease-out;
   }
@@ -104,11 +104,11 @@ header {
       flex-direction: column;
       border-radius: 3px;
       padding: 1rem 0;
-      background-color: white;
+      background-color: $color-white;
       box-shadow: 0 6px 8px -4px rgba(0, 0, 0, 0.3),
         inset 0 0 0 1px rgba(0, 0, 0, 0.08);
       * {
-        color: black;
+        color: $color-black;
         font-weight: normal;
       }
       li {
@@ -118,8 +118,8 @@ header {
           width: 100%;
           padding: 0.5rem 1.8rem;
           &:hover {
-            background-color: #8161ff;
-            color: white;
+            background-color: dt-color('secondary');
+            color: $color-white;
           }
         }
       }

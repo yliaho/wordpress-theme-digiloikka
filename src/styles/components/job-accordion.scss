@@ -1,5 +1,5 @@
 .job-accordion-container {
-  background-color: white;
+  background-color: $color-white;
   padding: 0rem 1rem 1rem 1rem;
   box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.15);
   margin: 1rem 2.7rem;
@@ -7,7 +7,7 @@
   button {
     outline: none;
     background-color: transparent;
-    color: black;
+    color: $color-black;
     font-size: 1rem;
     padding: 0;
     text-transform: uppercase;
@@ -18,7 +18,7 @@
       svg {
         height: 0.4rem;
         path {
-          fill: black;
+          fill: $color-black;
         }
       }
     }

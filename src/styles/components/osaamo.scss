@@ -34,9 +34,9 @@
     .infobutton {
       display: inline-block;
       min-width: 140px;
-      background-color: rgba(white, 0.3);
+      background-color: dt-color('primary', 'dark');
       padding: 0.58rem 0 0.58rem 0;
-      color: white;
+      color: $color-white;
       &:not(:last-of-type) {
         margin-right: 2rem;
         @include breakpoint(xs) {
@@ -46,7 +46,7 @@
         }
       }
       &:hover {
-        background-color: rgba(white, 0.5);
+        background-color: rgba($color-white, 0.5);
       }
     }
   }

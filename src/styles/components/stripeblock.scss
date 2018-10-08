@@ -46,12 +46,12 @@
   }
   &.gray-to-white {
     .stripe-block-stripe {
-      background-color: $color-darkgray;
+      background-color: dt-color('primary');
     }
   }
   &.lightgray-to-lightgray {
     .stripe-block-stripe {
-      background-color: $color-lightgray;
+      background-color: dt-color('foreground');
     }
   }
 }
@@ -85,46 +85,46 @@
   }
   &.black-to-white {
     .stripe-block-stripe {
-      background-color: $color-darkgray;
+      background-color: dt-color('primary');
     }
   }
   &.gray-to-white {
     .stripe-block-stripe {
-      background-color: $color-darkgray;
+      background-color: dt-color('primary');
     }
   }
   &.lightgray-to-gray {
-    background-color: $color-darkgray;
+    background-color: dt-color('primary');
     z-index: -1;
     .stripe-block-stripe {
-      background-color: $color-lightgray;
+      background-color: dt-color('foreground');
     }
   }
 }
 
 .stripe-block {
   &.black-to-white {
-    background-color: $color-darkgray;
+    background-color: dt-color('primary');
     color: $color-background-color;
     .stripe-block-stripe {
       background-color: $color-background-color;
     }
   }
   &.gray-to-white {
-    background-color: $color-darkgray;
+    background-color: dt-color('primary');
     color: $color-background-color;
   }
   &.white-to-black {
     background-color: $color-background-color;
     color: $color-black;
     .stripe-block-stripe {
-      background-color: $color-darkgray;
+      background-color: dt-color('primary');
     }
   }
   &.gray-to-lightgray {
-    background-color: $color-lightgray;
+    background-color: dt-color('foreground');
     .stripe-block-stripe {
-      background-color: $color-lightgray;
+      background-color: dt-color('foreground');
     }
   }
 }
@@ -183,10 +183,10 @@
   padding-top: 4rem;
   padding-bottom: 4rem;
   height: auto;
-  background-color: $color-lightgray;
+  background-color: dt-color('foreground');
 }
 
 .job-block {
-  background-color: $color-lightgray;
+  background-color: dt-color('foreground');
   height: auto;
 }
