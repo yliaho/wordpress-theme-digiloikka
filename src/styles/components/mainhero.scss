@@ -35,24 +35,24 @@ $hero-height: 100vh;
     z-index: 3;
     .hero-text-container {
       display: inline-block;
-      width: 720px;
+      width: 710px;
       color: white;
       line-height: 1;
       text-align: center;
       /*opacity:0;  ask about this later */
       animation: herotext_fadein 0.3s ease-out 0.1s forwards;
-      font-size: 2.2rem;
-      text-shadow: 2px 2px black;
+      font-size: 1.1rem;
+      text-shadow: 1px 1px black;
       @include breakpoint(xs) {
       }
       h1,
-      h2,
+      h1,
       h3 {
-        font-size: 2.2rem;
+        font-size: 1.1rem;
         font-weight: 800;
-        margin-block-end: 2rem;
+        margin-block-end: 1rem;
         @include breakpoint(xs) {
-          font-size: 40px;
+          font-size: 10px;
           font-weight: 600;
         }
       }
@@ -61,12 +61,17 @@ $hero-height: 100vh;
         font-size: 2.3rem;
         margin-block-start: 1rem;
         margin-block-end: 1rem;
-        line-height: 1.4;
+        line-height: 1.1;
+        @include breakpoint(sm) {
+          margin-block-start: 19rem;
+        }
         @include breakpoint(xs) {
           font-weight: 300;
-          font-size: 16px;
-          margin-right: 4px;
-          margin-left: 4px;
+          font-size: 1.5rem;
+          margin-right: 1px;
+          margin-left: 1px;
+          margin-block-start: 1rem;
+          margin-block-end: 1rem;
         }
       }
     }
@@ -75,16 +80,16 @@ $hero-height: 100vh;
     width: 30rem;
     height: 100px;
     position: absolute;
-    top: 20rem;
+    top: 21rem;
     @include breakpoint(md) {
       top: 30rem;
     }
     @include breakpoint(xs) {
       width: 18rem;
-      top: 10rem;
+      top: 12rem;
     }
     &:hover + .hero-background-image {
-      opacity: 0.2;
+      opacity: 0.1;
     }
   }
   .hero-stripe-container {
@@ -93,7 +98,7 @@ $hero-height: 100vh;
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 2; // animation: stripe-fadein 2s ease-out 1s forwards;
+    z-index: 1; // animation: stripe-fadein 1s ease-out 1s forwards;
     // transform: translateY(-80px);
     .hero-stripe {
       background-color: $color-black;
@@ -103,10 +108,10 @@ $hero-height: 100vh;
       right: 0;
       height: 100vw;
       &.hero-stripe-1 {
-        transform: skewY(-14deg);
+        transform: skewY(-11deg);
       }
-      &.hero-stripe-2 {
-        transform: skewY(14deg);
+      &.hero-stripe-1 {
+        transform: skewY(11deg);
       }
     }
   }
@@ -114,4 +119,56 @@ $hero-height: 100vh;
 
 .main-hero-spacer {
   margin-top: $hero-height;
+}
+
+.glitch {
+  color: white;
+  font-size: 100px;
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+}
+
+@keyframes noise-anim {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+    }
+  }
+}
+
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2 {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+    }
+  }
+}
+
+.glitch:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
 }
