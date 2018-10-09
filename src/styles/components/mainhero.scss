@@ -96,8 +96,8 @@ $hero-height: 100vh;
         @include breakpoint(xs) {
           font-weight: 300;
           font-size: 1.5rem;
-          margin-right: 1px;
-          margin-left: 1px;
+          margin-right: 11rem;
+          margin-left: 11rem;
           margin-block-end: 1rem;
           margin-block-start: -1rem;
         }
