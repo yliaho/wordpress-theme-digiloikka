@@ -13,7 +13,9 @@
     <div class="company-presentation block">
         {{ post.get_field('company_presentation') }}
     </div>
-    <h1 class="block our-teams-header">MEIDÄN TIIMIMME</h1>
+
+    <h1 class="block our-teams-header">{{ post.get_field('our_teams') }}</h1>
+
     <div class="block team-blocks-grid">
 
         {% for item in post.get_field('team_block') %}
@@ -76,13 +78,13 @@
     {# end of leaderblock #}
 
     {# address box #}
-    <div class="address">
+    <h1 class="address">
         <p>
             Lapinlahdenkatu 16
             <br>
             00180 HELSINKI
         </p>
-    </div>
+    </h1>
     {# address box end #}
     {# map start #}
     {% include 'components/mapbox.twig' with {

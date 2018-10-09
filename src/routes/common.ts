@@ -29,7 +29,6 @@ function calcMainSectionPadding() {
 export const common: Route = {
   init() {
     calcMainSectionPadding()
-    SmoothScroll
   },
 
   finalize() {}
