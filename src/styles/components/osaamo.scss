@@ -34,7 +34,7 @@
     .infobutton {
       display: inline-block;
       min-width: 140px;
-      background-color: dt-color('primary', 'dark');
+      background-color: rgba($color-white, 0.3);
       padding: 0.58rem 0 0.58rem 0;
       color: $color-white;
       &:not(:last-of-type) {
@@ -46,7 +46,7 @@
         }
       }
       &:hover {
-        background-color: rgba($color-white, 0.5);
+        background-color: rgba($color-white, 0.6);
       }
     }
   }

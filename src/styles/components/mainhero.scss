@@ -33,6 +33,24 @@ $hero-height: 100vh;
     justify-content: center;
     align-items: center;
     z-index: 3;
+    flex-direction: column;
+    .digi-logo {
+      width: 30rem;
+      height: 100px;
+      top: 20rem;
+      display: inline-block;
+      margin-bottom: 10px;
+      @include breakpoint(md) {
+        top: 32rem;
+      }
+      @include breakpoint(sm) {
+        top: 22rem;
+      }
+      @include breakpoint(xs) {
+        width: 18rem;
+        top: 12rem;
+      }
+    }
     .hero-text-container {
       display: inline-block;
       width: 710px;
@@ -43,12 +61,15 @@ $hero-height: 100vh;
       animation: herotext_fadein 0.3s ease-out 0.1s forwards;
       font-size: 1.8rem;
       text-shadow: 1px 1px black;
-      margin-block-start: 5rem;
       @include breakpoint(md) {
-        margin-block-start: 2rem;
+        margin-block-start: 0rem;
+        position: sticky;
+      }
+      @include breakpoint(sm) {
+        position: sticky;
       }
       @include breakpoint(xs) {
-        margin-block-start: 2rem;
+        margin-block-start: 0rem;
       }
       h1,
       h1,
@@ -77,26 +98,10 @@ $hero-height: 100vh;
           font-size: 1.5rem;
           margin-right: 1px;
           margin-left: 1px;
-          margin-block-start: 4rem;
           margin-block-end: 1rem;
+          margin-block-start: -1rem;
         }
       }
-    }
-  }
-  .digi-logo {
-    width: 30rem;
-    height: 100px;
-    position: absolute;
-    top: 20rem;
-    @include breakpoint(md) {
-      top: 32rem;
-    }
-    @include breakpoint(sm) {
-      top: 22rem;
-    }
-    @include breakpoint(xs) {
-      width: 18rem;
-      top: 12rem;
     }
   }
   .hero-stripe-container {
