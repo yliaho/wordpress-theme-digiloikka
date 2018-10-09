@@ -2,7 +2,7 @@
   <ul class="{{is_children ? 'child ' : ''}}nav-ul">
     <div class="nub"></div>
     {% for item in menu %}
-      {% if 'lang-item' in item.class %}
+      {% if fn('is_front_page') %}
         <li class="{{ item.classes | join(' ') }}">
           <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
           {% if item.get_children %}
@@ -12,7 +12,7 @@
             } %}
           {% endif %}
         </li>
-      {% else %}
+      {% elseif 'scroll-link' not in item.class and not fn('is_front_page') %}
         <li class="{{ item.classes | join(' ') }}">
           <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
           {% if item.get_children %}
