@@ -29,9 +29,19 @@ class Digiloikka extends Timber\Site {
 		acf_add_options_page();
 		// If you want to disable the ACF panel from WP Admin, uncomment the line below.
 		// add_filter('acf/settings/show_admin', '__return_false');
+		add_filter('upload_mimes', 'custom_upload_mimes');
+		function custom_upload_mimes ( $existing_mimes=array() ) {
+		// add your extension to the array
+		$existing_mimes['vcf'] = 'text/x-vcard';
+			return $existing_mimes;
+		}
+
+		
 
 		parent::__construct();
 	}
+	
+
 	
 
 	function theme_scripts() {

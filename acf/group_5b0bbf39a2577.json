@@ -335,6 +335,25 @@
           "min": "",
           "max": "",
           "step": ""
+        },
+        {
+          "key": "field_5bbf0104b470a",
+          "label": "vcard",
+          "name": "vcard",
+          "type": "file",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "url",
+          "library": "all",
+          "min_size": "",
+          "max_size": "",
+          "mime_types": "vcf"
         }
       ]
     },
@@ -619,5 +638,5 @@
   "hide_on_screen": "",
   "active": 1,
   "description": "",
-  "modified": 1538729929
+  "modified": 1539245150
 }
