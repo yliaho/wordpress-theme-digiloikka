@@ -3,3 +3,29 @@
   // Thus casting an !important here. Sorry.
   padding-top: 0 !important;
 }
+
+.gdpr-pop {
+  width: 250px;
+  height: 150px;
+  background-color: $color-darkgray;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  display: none;
+  text-align: center;
+  z-index: 200;
+  .gdpr-text {
+    color: white;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+  }
+  .gdpr-button {
+    width: 40%;
+    height: auto;
+    font-size: 1rem;
+    margin-top: 0.4rem;
+  }
+}

@@ -39,6 +39,10 @@
   padding-top: 100px;
   text-align: center;
   font-size: 1.2rem;
+  @include breakpoint(sm) {
+    margin-right: 0.6rem;
+    margin-left: 0.6rem;
+  }
   @include breakpoint(xs) {
     padding-left: 0.4rem;
     padding-right: 0.4rem;

@@ -1,40 +1,46 @@
 {% block html_head_container %}
 
-  {% include 'html-header.twig' %}
-  {% block head %}{% endblock %}
+    {% include 'html-header.twig' %}
+    {% block head %}{% endblock %}
 </head>
 {% endblock %}
+<div class="gdpr-pop">
+<p class="gdpr-text">We take your information and sell it, fuck you</p>
+<button class="gdpr-button">
+    We cool
+</button>
+</div>
 
 <body class="{{body_class}} {{more_body_class}}" data-template="base.twig">
 {% block header %}
-  {% include "components/header.twig" with {
-    page_title : block('page_title')
-  } %}
+    {% include "components/header.twig" with {
+        page_title : block('page_title')
+    } %}
 {% endblock %}
 
 {% block hero %}{% endblock %}
 
 <section id="main-content" role="main" class="content-wrapper">
-  {% if title %}
-    <h1>{{title}}</h1>
-  {% endif %}
-  <div class="main-content-grid wrapper {{sidebar_class}}">
-    {% block content %}
-      Sorry, no content
-    {% endblock %}
-  </div>
-  {% if sidebar %}
-    <aside class="layout-sidebar">
-      {{sidebar}}
-    </aside>
-  {% endif %}
+    {% if title %}
+        <h1>{{title}}</h1>
+    {% endif %}
+    <div class="main-content-grid wrapper {{sidebar_class}}">
+        {% block content %}
+            Sorry, no content
+        {% endblock %}
+    </div>
+    {% if sidebar %}
+        <aside class="layout-sidebar">
+            {{sidebar}}
+        </aside>
+    {% endif %}
 </section>
 
 {% block footer %}
-  <footer id="footer" class="footer">
-    {% include 'footer.twig' %}
-  </footer>
-  {{ function('wp_footer') }}
+    <footer id="footer" class="footer">
+        {% include 'footer.twig' %}
+    </footer>
+    {{ function('wp_footer') }}
 {% endblock %}
 </body>
 </html>
