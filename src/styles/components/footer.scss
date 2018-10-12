@@ -7,8 +7,11 @@
     max-width: $main-section-width;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr min-content;
+    grid-template-columns: 1fr 1fr 1fr min-content;
     grid-template-rows: min-content min-content min-content;
+    @include breakpoint(xs) {
+      grid-template-columns: 1fr 1fr;
+    }
     li {
       font-size: 1.7rem;
       color: white;
@@ -16,32 +19,43 @@
     a {
       color: white;
     }
-    .social-icons {
-      display: flex;
-      align-items: flex-end;
-      grid-column-start: 2;
-      grid-row-end: 3;
-      a {
-        padding-top: 1rem;
-        min-width: 50px;
+    .social-container {
+      grid-column-start: 3;
+      width: 50%;
+      padding-top: 3rem;
+      .follow-us {
+        display: inline-block;
+        color: white;
+        width: 100%;
         text-align: center;
-        &:not(:last-of-type) {
-          padding-right: 1rem;
+      }
+      .social-icons {
+        display: flex;
+        grid-column-start: 3;
+        grid-row-end: 2;
+        align-items: center;
+        justify-content: center;
+        @include breakpoint(xs) {
+          flex-direction: column;
         }
-        .fa {
-          color: white;
-          font-size: 1.7rem;
-        }
-        &:hover {
-          opacity: 0.4;
+        a {
+          min-width: 50px;
+          text-align: center;
+          .fa {
+            color: white;
+            font-size: 1.7rem;
+          }
+          &:hover {
+            opacity: 0.4;
+          }
+          @include breakpoint(xs) {
+            padding-bottom: 1rem;
+          }
         }
         @include breakpoint(xs) {
-          padding-bottom: 1rem;
+          grid-row-start: 2;
+          grid-column-start: 2;
         }
-      }
-      @include breakpoint(xs) {
-        grid-row-start: 2;
-        grid-column-start: 2;
       }
     }
     .copy {
@@ -50,6 +64,7 @@
       font-size: 0.85rem;
       color: rgba(white, 0.3);
       grid-column: span 2;
+      grid-column-start: 2;
       @include breakpoint(xs) {
         grid-row-start: 3;
       }
@@ -57,13 +72,22 @@
     .stadi-con {
       width: 130px;
       height: 70px;
-      padding-top: 40px;
+      padding-top: 10px;
       grid-row-end: 3;
       .stadi-logo {
         background-size: cover;
         height: auto;
         width: 100%;
       }
+    }
+    .address-footer {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding-top: 40px;
+      grid-column-start: 2;
+      grid-row-start: 1;
     }
   }
 }
