@@ -1,116 +1,116 @@
 {% extends "base.twig" %}
 
 {% block hero %}
-    {% include "components/mainhero.twig" with {
-        text : post.get_field('hero_description')
-    } %}
+  {% include "components/mainhero.twig" with {
+    text : post.get_field('hero_description')
+  } %}
 {% endblock %}
 {# #}
 {% block content %}
 
-    {# start of teamblock #}
+  {# start of teamblock #}
 
-    <div class="company-presentation block">
-        {{ post.get_field('company_presentation') }}
-    </div>
+  <div class="company-presentation block">
+    {{ post.get_field('company_presentation') }}
+  </div>
 
-    <h1 class="block our-teams-header">{{ post.get_field('our_teams') }}</h1>
+  <h1 class="block our-teams-header">{{ post.get_field('our_teams') }}</h1>
 
-    <div class="block team-blocks-grid">
+  <div class="block team-blocks-grid">
 
-        {% for item in post.get_field('team_block') %}
-            {% include "components/teamblock.twig" with {
-                team_title : item.team_title,
-                team_thumbnail: item.team_thumbnail,
-                team_description: item.team_description,
-                team_url: item.team_url
-            } %}
-        {% endfor %}
-    </div>
-    <div class="block team-cta-container">
-        <a class="team-btn-a" href="{{post.get_field('team_button').team_button_link}}">
-            {{post.get_field("team_button").team_button_text}}
+    {% for item in post.get_field('team_block') %}
+      {% include "components/teamblock.twig" with {
+        team_title : item.team_title,
+        team_thumbnail: item.team_thumbnail,
+        team_description: item.team_description,
+        team_url: item.team_url
+      } %}
+    {% endfor %}
+  </div>
+  <div class="block team-cta-container">
+    <a class="team-btn-a" href="{{post.get_field('team_button').team_button_link}}">
+      {{post.get_field("team_button").team_button_text}}
+    </a>
+
+  </div>
+  {# end of teamblock #}
+
+  {# osaamo stripeblock #}
+  {% embed "components/stripeblock-start.twig" with { style: "gray-to-white" }%}{% endembed %}
+
+  <div class="full-width-block gray no-margin">
+    <div class="full-width-block-wrapper osaamo">
+      {{post.get_field("info").infotext}}
+
+      <div class="button-container">
+        <a class="infobutton" href="{{post.get_field('info').buttons.buttonurl1}}">
+          {{post.get_field("info").buttons.buttontext1}}
         </a>
 
+        <a class="infobutton" href="{{post.get_field('info').buttons.buttonurl2}}">
+          {{post.get_field("info").buttons.buttontext2}}
+        </a>
+      </div>
     </div>
-    {# end of teamblock #}
 
-    {# osaamo stripeblock #}
-    {% embed "components/stripeblock-start.twig" with { style: "gray-to-white" }%}{% endembed %}
+  </div>
+  <div id="leaders"></div>
+  {% embed "components/stripeblock-end.twig" with { style: "lightgray-to-gray" } %}{% endembed %}
+  {# end of osaamo stripeblock #}
 
-    <div class="full-width-block gray no-margin">
-        <div class="full-width-block-wrapper osaamo">
-            {{post.get_field("info").infotext}}
+  {#  Leader stripeblock  #}
+  {% embed "components/stripeblock.twig" with { style: "gray-to-lightgray", class: "leader-block"} %}
 
-            <div class="button-container">
-                <a class="infobutton" href="{{post.get_field('info').buttons.buttonurl1}}">
-                    {{post.get_field("info").buttons.buttontext1}}
-                </a>
+    {% block stripecontent %}
 
-                <a class="infobutton" href="{{post.get_field('info').buttons.buttonurl2}}">
-                    {{post.get_field("info").buttons.buttontext2}}
-                </a>
-            </div>
-        </div>
+      <div class="block leader-blocks-grid">
 
-    </div>
-    <div id="leaders"></div>
-    {% embed "components/stripeblock-end.twig" with { style: "lightgray-to-gray" } %}{% endembed %}
-    {# end of osaamo stripeblock #}
+        {% for leader in post.get_field('leader_block') %}
+          {% include "components/leaderblock.twig" with {
+            leader : leader
+          } %}
+        {% endfor %}
 
-    {#  Leader stripeblock  #}
-    {% embed "components/stripeblock.twig" with { style: "gray-to-lightgray", class: "leader-block"} %}
+      </div>
 
-        {% block stripecontent %}
+    {% endblock %}
+  {% endembed %}
+  {# end of leaderblock #}
 
-            <div class="block leader-blocks-grid">
-
-                {% for leader in post.get_field('leader_block') %}
-                    {% include "components/leaderblock.twig" with {
-                        leader : leader
-                    } %}
-                {% endfor %}
-
-            </div>
-
-        {% endblock %}
-    {% endembed %}
-    {# end of leaderblock #}
-
-    {# address box #}
-    <h1 class="address">
-        <p>
-            Lapinlahdenkatu 16
-            <br>
-            00180 HELSINKI
-        </p>
-    </h1>
-    {# address box end #}
-    {# map start #}
-    {% include 'components/mapbox.twig' with {
+  {# address box #}
+  <h1 class="address">
+    <p>
+      Lapinlahdenkatu 16
+      <br>
+      00180 HELSINKI
+    </p>
+  </h1>
+  {# address box end #}
+  {# map start #}
+  {% include 'components/mapbox.twig' with {
     containerId: 'map',
     map: {
       markerUrl: post.get_field('map').map_marker_image,
       coordinates: post.get_field('map').map_coordinates
     }
   }%}
-    {# map end #}
-    {# partners start #}
-    <div class="block partners">
-        <div class="block-container">
-            {#  {{post.get_field("partners").partner_text}} #}
+  {# map end #}
+  {# partners start #}
+  <div class="block partners">
+    <div class="block-container">
+      {#  {{post.get_field("partners").partner_text}} #}
 
-            <div class="partners-images">
+      <div class="partners-images">
 
-                {% for image in post.get_field('partner_logo') %}
-                    {% include "components/partnersblock.twig" with {
-                        partner_image : item.partner_image,
-                        partner_link: image.partner_link
-                    } %}
+        {% for image in post.get_field('partner_logo') %}
+          {% include "components/partnersblock.twig" with {
+            partner_image : item.partner_image,
+            partner_link: image.partner_link
+          } %}
 
-                {% endfor %}
-            </div>
-        </div>
+        {% endfor %}
+      </div>
     </div>
-    {# partners end #}
+  </div>
+  {# partners end #}
 {% endblock %}
