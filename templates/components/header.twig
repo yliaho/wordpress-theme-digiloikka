@@ -9,11 +9,15 @@
   <a href="{{site.url}}">
     <h2 class="header-text">Digitalents<span>Helsinki</span></h2>
   </a>
+
   <div class="nav-container ">
     {% include "menu.twig" with {
       'menu' : menu.get_items,
       'is_children' : false
     } %}
+    <div class="hamburger-container">
+      <i class="fa fa-bars"></i>
+    </div>
   </div>
   <div class="header-background-cover" style="background-image:url('{{post.thumbnail.src}}')"></div>
   <!-- <div class="some-container"> Some stuff here </div> -->

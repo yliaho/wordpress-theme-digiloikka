@@ -21,9 +21,9 @@ header {
   @include breakpoint(sm) {
     padding: 0.5rem 1rem;
   }
-  @include breakpoint(xs) {
-    display: none;
-  }
+  // @include breakpoint(xs) {
+  //   display: none;
+  // }
   .logo-container {
     g.logo-group {
       fill: white;
