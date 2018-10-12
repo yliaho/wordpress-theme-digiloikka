@@ -13,6 +13,13 @@
   width: 320px;
   padding: 1rem 0;
   justify-self: center;
+  .leader-cube {
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    background-color: $color-darkgray;
+    display: inline-block;
+  }
   @include breakpoint(xs) {
     height: 345px;
   }
@@ -33,6 +40,7 @@
       font-size: 1.5rem;
       font-weight: 800;
       text-transform: uppercase;
+      display: inline-block;
     }
     .vcard {
       text-decoration: underline;

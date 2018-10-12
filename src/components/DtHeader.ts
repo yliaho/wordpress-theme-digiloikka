@@ -1,4 +1,5 @@
 import * as anime from 'animejs'
+import MobileNav from './MobileNav'
 import NavDropdown from './NavDropdown'
 
 export default class DtHeader {
@@ -10,6 +11,7 @@ export default class DtHeader {
 
   constructor(private element: HTMLElement) {
     this.headerText = this.element.querySelector('.header-text')
+    this.createHamburgerMenu()
     this.createNavDropdowns()
   }
 
@@ -114,6 +116,15 @@ export default class DtHeader {
     })
     this.element.classList.remove('below')
     this.element.classList.add('above')
+  }
+
+  private createHamburgerMenu() {
+    const hamburgerEl = this.element.querySelector('.hamburger-container i')
+    const navEl = this.element.querySelector('.nav-ul')
+    const hamburgerMenu = new MobileNav(
+      hamburgerEl as HTMLElement,
+      navEl as HTMLElement
+    )
   }
 
   private createNavDropdowns() {
