@@ -1,9 +1,13 @@
 .leader-blocks-grid {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 340px 340px;
+  grid-template-rows: auto;
   justify-content: center;
+  grid-gap: 0.5rem;
+  /*align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; */
   @include breakpoint(xs) {
     grid-template-columns: 1fr;
   }
@@ -19,6 +23,8 @@
     transform: rotate(45deg);
     background-color: $color-darkgray;
     display: inline-block;
+    position: absolute;
+    margin-left: -1.8rem;
   }
   @include breakpoint(xs) {
     height: 345px;
@@ -35,7 +41,10 @@
     }
   }
   .leader-text {
-    text-align: center;
+    text-align: left;
+    @include breakpoint(xs) {
+      text-align: center;
+    }
     h3 {
       font-size: 1.5rem;
       font-weight: 800;

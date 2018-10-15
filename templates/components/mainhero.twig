@@ -1,13 +1,9 @@
 <div class="main-hero" aria-hidden="true">
     {% if fn('is_front_page') %}
-        <div class="test-image">
-            <div class="window"></div>
-        </div>
+        
         <div class="hero-background-image" style="background-image:url('{{post.thumbnail.src}}')"></div>
         <div class="hero-text-wrapper">
-            <div class="digi-logo">
-                {% include "components/digi-logo.twig" %}
-            </div>
+          
             <h1 class="hero-text-container">
                 {{text}}
             </h1>
@@ -15,9 +11,7 @@
     {% else %}
         <div class="hero-background-image" style="background-image:url('{{post.thumbnail.src}}')"></div>
         <div class="hero-text-wrapper">
-            <div class="digi-logo">
-                {% include "components/digi-logo.twig" %}
-            </div>
+         
             <h1 class="hero-text-container">
                 {{text}}
             </h1>

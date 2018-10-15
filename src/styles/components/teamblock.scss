@@ -10,12 +10,9 @@
 .team-block {
   display: flex;
   flex-direction: column;
-  width: 100%;
   align-items: center;
   justify-content: center;
   @include breakpoint(xs) {
-    display: block;
-    margin: 5%;
   }
   @include breakpoint(sm) {
     display: block;
@@ -37,13 +34,11 @@
     transform: rotate(45deg);
     overflow: hidden;
     @include breakpoint(xs) {
-      width: 90%;
       height: 10rem;
       align-items: center;
       margin: auto;
     }
     @include breakpoint(sm) {
-      width: 100%;
       margin: auto;
     }
     @include breakpoint(md) {
@@ -83,7 +78,7 @@
       @include breakpoint(xs) {
         margin: 0.6rem;
         text-align: center;
-        padding-top: 0;
+        padding-top: 2.6rem;
         padding-bottom: 0;
       }
     }

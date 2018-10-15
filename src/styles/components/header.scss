@@ -85,7 +85,15 @@ header {
 }
 
 .nav-container {
+  .current_page_item,
+  .current-menu-ancestor {
+    text-decoration: underline;
+  }
   .hamburger-container {
+    display: none;
+    @include breakpoint(xs) {
+      display: block;
+    }
     i {
       color: $color-white;
       font-size: 1.5rem;
@@ -144,6 +152,8 @@ header {
   }
 }
 
+/* mobile nav */
+
 .nav-ul {
   @include breakpoint(md) {
     display: none;
@@ -160,6 +170,7 @@ header {
       display: block;
       margin-right: 2rem;
       margin-left: 2rem;
+      margin-top: 1rem;
       & li:first-child {
         margin-top: 2rem;
       }
@@ -169,6 +180,7 @@ header {
     }
     > .lang-item {
       display: block;
+      padding-left: 2.7rem;
     }
   }
 }
