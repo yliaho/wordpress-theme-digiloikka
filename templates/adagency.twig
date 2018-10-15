@@ -24,10 +24,7 @@
             {{post.get_field("ad_agency_intro")}}
         </p>
     </div>
-    <div class="button-con">
-        <a class="dep-button myBtn" href="{{post.get_field('department_buttons').department_button_link0}}">{{post.get_field("department_buttons").department_button_text0}}</a>
-        <a class="dep-button" href="{{post.get_field('department_buttons').department_button_link1}}">{{post.get_field("department_buttons").department_button_text1}}</a>
-    </div>
+
     {% embed "components/stripeblock-start.twig" with { style: "lightgray-to-lightgray" }%}{% endembed %}
     {% embed "components/stripeblock.twig" with { style: "gray-to-lightgray", class: "job-block "} %}
         {% block stripecontent %}

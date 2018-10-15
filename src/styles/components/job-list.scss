@@ -14,6 +14,19 @@
   }
 }
 
+.job-container {
+  display: grid;
+  grid-column-start: 2;
+  grid-template-columns: 1fr 20%;
+  padding-top: 100px;
+  p {
+    grid-column-start: 1;
+  }
+  @include breakpoint(xs) {
+    grid-column-start: 1;
+  }
+}
+
 .job-blocks {
   padding-top: 10px;
   padding-bottom: 10px;

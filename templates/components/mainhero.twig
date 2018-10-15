@@ -1,9 +1,9 @@
 <div class="main-hero" aria-hidden="true">
     {% if fn('is_front_page') %}
-        
+
         <div class="hero-background-image" style="background-image:url('{{post.thumbnail.src}}')"></div>
         <div class="hero-text-wrapper">
-          
+
             <h1 class="hero-text-container">
                 {{text}}
             </h1>
@@ -11,7 +11,7 @@
     {% else %}
         <div class="hero-background-image" style="background-image:url('{{post.thumbnail.src}}')"></div>
         <div class="hero-text-wrapper">
-         
+
             <h1 class="hero-text-container">
                 {{text}}
             </h1>

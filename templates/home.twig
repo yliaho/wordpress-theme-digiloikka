@@ -27,12 +27,14 @@
             } %}
         {% endfor %}
     </div>
+
+    {#   Haluatko mukaan tiimiin nappi
     <div class="block team-cta-container">
         <a class="team-btn-a" href="{{post.get_field('team_button').team_button_link}}">
             {{post.get_field("team_button").team_button_text}}
         </a>
 
-    </div>
+    </div> #}
     {# end of teamblock #}
 
     {# osaamo stripeblock #}
@@ -41,7 +43,7 @@
     <div class="full-width-block gray no-margin">
         <div class="full-width-block-wrapper osaamo">
             {{post.get_field("info").infotext}}
-
+            {#
             <div class="button-container">
                 <a class="infobutton" href="{{post.get_field('info').buttons.buttonurl1}}">
                     {{post.get_field("info").buttons.buttontext1}}
@@ -51,6 +53,10 @@
                     {{post.get_field("info").buttons.buttontext2}}
                 </a>
             </div>
+            #}
+            <p>
+                <i class="fa fa-angle-down"></i>
+            </p>
         </div>
 
     </div>
@@ -63,7 +69,7 @@
 
         {% block stripecontent %}
 
-            <div class="leader-blocks-grid">
+            <div class="block leader-blocks-grid">
 
                 {% for leader in post.get_field('leader_block') %}
                     {% include "components/leaderblock.twig" with {

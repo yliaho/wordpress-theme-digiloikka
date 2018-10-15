@@ -1,0 +1,32 @@
+{% extends "base.twig" %}
+
+{% block hero %}
+
+    {% include "components/mainhero.twig" with { text: post.get_field('hero_description') }%}
+{% endblock %}
+
+{% block content %}
+    <div class="block leader-blocks-grid">
+
+        {% for leader in post.get_field('leader_block1') %}
+            {% include "components/leaderblock.twig" with {
+                leader : leader
+            } %}
+        {% endfor %}
+    </div>
+    <h1 class="address">
+        <p>
+            Lapinlahdenkatu 16 00180 HELSINKI
+            <br>
+            PL 18402, 00099 Helsingin kaupunki
+        </p>
+    </h1>
+    {% include 'components/mapbox.twig' with {
+    containerId: 'map',
+    map: {
+      markerUrl: post.get_field('map').map_marker_image,
+      coordinates: post.get_field('map').map_coordinates
+    }
+  }%}
+
+{% endblock %}

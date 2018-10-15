@@ -8,13 +8,14 @@
 {% block content %}
 
     <body class="department-body">
-        <div class="department-container">
+        <div class="job-container">
             <h3>
                 <b>{{post.get_field("jobs")}}</b>
             </h3>
             <p>
                 {{post.get_field("jobs_intro")}}
             </p>
+            <img src="{{post.get_field('osaamo_logo')}}">
         </div>
         {#{% embed "components/stripeblock-start.twig" with { style: "lightgray-to-lightgray" }%}{% endembed %}
         {% embed "components/stripeblock.twig" with { style: "gray-to-lightgray", class: "job-block "} %} #}

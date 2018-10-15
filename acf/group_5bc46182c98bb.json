@@ -1,0 +1,201 @@
+{
+  "key": "group_5bc46182c98bb",
+  "title": "Contact Information",
+  "fields": [
+    {
+      "key": "field_5bc46193c07cc",
+      "label": "Leader Block",
+      "name": "leader_block1",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "collapsed": "",
+      "min": 0,
+      "max": 0,
+      "layout": "table",
+      "button_label": "",
+      "sub_fields": [
+        {
+          "key": "field_5bc461b3c07ce",
+          "label": "Full Name",
+          "name": "leader_title",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5bc461dbc07cf",
+          "label": "Email",
+          "name": "email",
+          "type": "email",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": ""
+        },
+        {
+          "key": "field_5bc461eac07d0",
+          "label": "Job Title",
+          "name": "job_title",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5bc461f7c07d1",
+          "label": "Phone Number",
+          "name": "phone_number",
+          "type": "number",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "min": "",
+          "max": "",
+          "step": ""
+        },
+        {
+          "key": "field_5bc46203c07d2",
+          "label": "vcard",
+          "name": "vcard",
+          "type": "file",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "url",
+          "library": "all",
+          "min_size": "",
+          "max_size": "",
+          "mime_types": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5bc47061d9052",
+      "label": "Map",
+      "name": "map",
+      "type": "group",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "sub_fields": [
+        {
+          "key": "field_5bc47077d9053",
+          "label": "Map Coordinates",
+          "name": "map_coordinates",
+          "type": "text",
+          "instructions": "",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "24.9199,60.1652",
+          "placeholder": "24.9199,60.1652",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5bc4707ad9054",
+          "label": "Map Marker Image",
+          "name": "map_marker_image",
+          "type": "image",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "return_format": "array",
+          "preview_size": "thumbnail",
+          "library": "all",
+          "min_width": "",
+          "min_height": "",
+          "min_size": "",
+          "max_width": "",
+          "max_height": "",
+          "max_size": "",
+          "mime_types": ""
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "contactinfo.php"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": 1,
+  "description": "",
+  "modified": 1539601150
+}
