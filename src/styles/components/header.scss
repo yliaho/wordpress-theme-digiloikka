@@ -85,8 +85,7 @@ header {
 }
 
 .nav-container {
-  .current_page_item,
-  .current-menu-ancestor {
+  .current_page_item {
     text-decoration: underline;
   }
   .hamburger-container {
@@ -106,13 +105,15 @@ header {
     }
   }
   .nav-ul {
+    .close-button {
+      display: none;
+    }
     @include breakpoint(xs) {
       display: none;
     }
     > .lang-item {
       margin-left: 2rem;
       opacity: 0.7;
-      border-left: 2px solid pink;
       @include breakpoint(md) {
         margin-left: 0rem;
       }
@@ -142,21 +143,19 @@ header {
         display: block;
         position: relative;
         box-shadow: initial;
-        background-color: pink;
+        background-color: initial;
         padding: 0;
       }
       @include breakpoint(sm) {
         display: block;
         position: relative;
         box-shadow: initial;
-        background-color: pink;
         padding: 0;
       }
       @include breakpoint(xs) {
         display: block;
         position: relative;
         box-shadow: initial;
-        background-color: pink;
         padding: 0;
       }
       * {
@@ -215,26 +214,41 @@ header {
 .nav-ul {
   @include breakpoint(md) {
     display: none;
+    .close-button {
+      display: block !important;
+      width: 24px;
+      height: 24px;
+      color: white;
+      position: absolute;
+      margin-right: 32px;
+      margin-top: 20px;
+      right: 0;
+    }
     &.active {
-      display: block;
-      width: 80%;
+      display: flex;
       height: 200rem;
-      background-color: pink;
       position: absolute;
       right: 0;
       top: 0;
-      @include breakpoint(md) {
-        width: 25%;
-      }
+      background-color: rgba(0, 0, 0, 0.8);
+      flex-direction: column;
+      font-size: 1.7rem;
+      font-weight: bold;
       @include breakpoint(sm) {
-        width: 40%;
       }
       @include breakpoint(xs) {
-        width: 80%;
+        font-size: 1.2rem;
+      }
+      .child {
+        li {
+          a {
+            font-weight: bold;
+          }
+        }
       }
     }
     & li {
-      display: block;
+      display: inline-block;
       margin-right: 2rem;
       margin-left: 2rem;
       margin-top: 1rem;

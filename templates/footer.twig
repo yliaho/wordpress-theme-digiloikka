@@ -4,8 +4,16 @@
     } %}
     <div class="social-container">
 
-        <p class="follow-us">
-            seuraa meitä:</p>
+        {% if site.language == "fi" %}
+            <p class="follow-us">
+                seuraa meitä:</p>
+        {% elseif site.language == "en_US" %}
+            <p class="follow-us">
+                Follow us:</p>
+        {% else %}
+            <p class="follow-us">
+                följ oss:</p>
+        {% endif %}
         <div class="social-icons">
 
             <a href="https://www.facebook.com/digitalentshelsinki/">
@@ -26,11 +34,15 @@
     </div>
     <div class="address-footer">
         <p>
-            Lapinlahdenkatu 16, <br> 00180 HELSINKI
+            Lapinlahdenkatu 16,
+            <br>
+            00180 HELSINKI
             <br>
             <br>
-            
-            PL 18402, 00099 <br> Helsingin kaupunki
+
+            PL 18402, 00099
+            <br>
+            Helsingin kaupunki
         </p>
     </div>
     <div class="copy">

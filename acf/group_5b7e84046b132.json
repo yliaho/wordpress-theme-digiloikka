@@ -6,7 +6,7 @@
       "key": "field_5bb4c5dd27b58",
       "label": "hero description",
       "name": "hero_description",
-      "type": "text",
+      "type": "wysiwyg",
       "instructions": "",
       "required": 0,
       "conditional_logic": 0,
@@ -16,10 +16,10 @@
         "id": ""
       },
       "default_value": "",
-      "placeholder": "",
-      "prepend": "",
-      "append": "",
-      "maxlength": ""
+      "tabs": "all",
+      "toolbar": "full",
+      "media_upload": 1,
+      "delay": 0
     },
     {
       "key": "field_5b7e84205f4f8__trashed",
@@ -58,99 +58,6 @@
       "maxlength": "",
       "rows": "",
       "new_lines": ""
-    },
-    {
-      "key": "field_5bbb251f8a81b",
-      "label": "Department Buttons",
-      "name": "department_buttons",
-      "type": "group",
-      "instructions": "",
-      "required": 0,
-      "conditional_logic": 0,
-      "wrapper": {
-        "width": "",
-        "class": "",
-        "id": ""
-      },
-      "layout": "block",
-      "sub_fields": [
-        {
-          "key": "field_5bbb254e8a81c",
-          "label": "Department Button Text0",
-          "name": "department_button_text0",
-          "type": "text",
-          "instructions": "",
-          "required": 0,
-          "conditional_logic": 0,
-          "wrapper": {
-            "width": "",
-            "class": "",
-            "id": ""
-          },
-          "default_value": "",
-          "placeholder": "",
-          "prepend": "",
-          "append": "",
-          "maxlength": ""
-        },
-        {
-          "key": "field_5bbb25608a81d",
-          "label": "Department Button Link0",
-          "name": "department_button_link0",
-          "type": "page_link",
-          "instructions": "",
-          "required": 0,
-          "conditional_logic": 0,
-          "wrapper": {
-            "width": "",
-            "class": "",
-            "id": ""
-          },
-          "post_type": [],
-          "taxonomy": [],
-          "allow_null": 0,
-          "allow_archives": 1,
-          "multiple": 0
-        },
-        {
-          "key": "field_5bbb25708a81e",
-          "label": "Department Button Text1",
-          "name": "department_button_text1",
-          "type": "text",
-          "instructions": "",
-          "required": 0,
-          "conditional_logic": 0,
-          "wrapper": {
-            "width": "",
-            "class": "",
-            "id": ""
-          },
-          "default_value": "",
-          "placeholder": "",
-          "prepend": "",
-          "append": "",
-          "maxlength": ""
-        },
-        {
-          "key": "field_5bbb25848a81f",
-          "label": "Department Button Link1",
-          "name": "department_button_link1",
-          "type": "page_link",
-          "instructions": "",
-          "required": 0,
-          "conditional_logic": 0,
-          "wrapper": {
-            "width": "",
-            "class": "",
-            "id": ""
-          },
-          "post_type": [],
-          "taxonomy": [],
-          "allow_null": 0,
-          "allow_archives": 1,
-          "multiple": 0
-        }
-      ]
     },
     {
       "key": "field_5baca998a180c",
@@ -231,5 +138,5 @@
   "hide_on_screen": "",
   "active": 1,
   "description": "",
-  "modified": 1538991511
+  "modified": 1539689610
 }
