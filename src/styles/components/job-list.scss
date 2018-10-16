@@ -19,11 +19,26 @@
   grid-column-start: 2;
   grid-template-columns: 1fr 20%;
   padding-top: 100px;
+  h3 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
   p {
     grid-column-start: 1;
+    margin-right: 10px;
+    margin-left: 10px;
   }
   @include breakpoint(xs) {
     grid-column-start: 1;
+    grid-template-columns: 1fr;
+  }
+  .osaamo-logo {
+    justify-content: center;
+    width: 60%;
+    margin: auto;
+    @include breakpoint(xs) {
+      grid-column-start: 1;
+    }
   }
 }
 

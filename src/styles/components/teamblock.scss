@@ -40,6 +40,9 @@
     }
     @include breakpoint(sm) {
       margin: auto;
+      width: 8rem;
+      height: 8rem;
+      text-align: center;
     }
     @include breakpoint(md) {
     }
@@ -74,6 +77,7 @@
       @include breakpoint(sm) {
         padding-top: 0.5rem;
         padding-bottom: 0.5em;
+        text-align: center;
       }
       @include breakpoint(xs) {
         margin: 0.6rem;

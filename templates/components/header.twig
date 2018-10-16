@@ -1,26 +1,26 @@
 <header class="header">
-  <div class="logo-container">
-    {% include "components/site-logo.twig" with {
+    <div class="logo-container">
+        {% include "components/site-logo.twig" with {
       home_link: site.url,
       logo_size_width: 200,
       logo_size_height: 38
     } %}
-  </div>
-  <a href="{{site.url}}">
-  
-  </a>
-
-  <div class="nav-container ">
-    {% include "menu.twig" with {
-      'menu' : menu.get_items,
-      'is_children' : false
-    } %}
-    <div class="hamburger-container">
-      <i class="fa fa-bars"></i>
     </div>
-  </div>
-  <div class="header-background-cover" style="background-image:url('{{post.thumbnail.src}}')"></div>
-  <!-- <div class="some-container"> Some stuff here </div> -->
+    <a href="{{site.url}}"></a>
+
+    <div class="nav-container ">
+        {% include "menu.twig" with {
+            'menu' : menu.get_items,
+            'is_children' : false
+        } %}
+        <div class="hamburger-container">
+            <i class="fa fa-bars"></i>
+
+        </div>
+
+    </div>
+    <div class="header-background-cover" style="background-image:url('{{post.thumbnail.src}}')"></div>
+    <!-- <div class="some-container"> Some stuff here </div> -->
 </header>
 <!-- {{page_title}} beb -->
 <!-- <a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a> -->

@@ -62,7 +62,7 @@ header {
           font-weight: bold;
           padding: 0.5rem;
           @include breakpoint(sm) {
-            padding: 0.4rem;
+            padding: 1rem;
           }
         }
       }
@@ -91,6 +91,12 @@ header {
   }
   .hamburger-container {
     display: none;
+    @include breakpoint(sm) {
+      display: block;
+    }
+    @include breakpoint(md) {
+      display: block;
+    }
     @include breakpoint(xs) {
       display: block;
     }
@@ -106,8 +112,9 @@ header {
     > .lang-item {
       margin-left: 2rem;
       opacity: 0.7;
+      border-left: 2px solid pink;
       @include breakpoint(sm) {
-        margin-left: 1rem;
+        margin-left: 0rem;
       }
       @include breakpoint(xs) {
         margin-left: 0rem;
@@ -125,16 +132,45 @@ header {
       background-color: $color-white;
       box-shadow: 0 6px 8px -4px rgba(0, 0, 0, 0.3),
         inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+      @include breakpoint(sm) {
+        display: block;
+        position: relative;
+        box-shadow: initial;
+        background-color: pink;
+        padding: 0;
+      }
+      @include breakpoint(xs) {
+        display: block;
+        position: relative;
+        box-shadow: initial;
+        background-color: pink;
+        padding: 0;
+      }
       * {
         color: $color-black;
         font-weight: normal;
+        @include breakpoint(sm) {
+          color: $color-white;
+        }
+        @include breakpoint(xs) {
+          color: $color-white;
+        }
       }
       li {
         display: flex !important;
         text-align: right;
+        @include breakpoint(sm) {
+          text-align: left;
+        }
+        @include breakpoint(xs) {
+          text-align: left;
+        }
         a {
           width: 100%;
           padding: 0.5rem 1.8rem;
+          @include breakpoint(xs) {
+            padding: 0rem;
+          }
           &:hover {
             background-color: dt-color('secondary');
             color: $color-white;
@@ -165,6 +201,10 @@ header {
       position: absolute;
       right: 0;
       top: 0;
+      @include breakpoint(sm) {
+        width: 40%;
+        display: inline-block;
+      }
     }
     & li {
       display: block;
@@ -177,6 +217,9 @@ header {
     }
     & a {
       padding-top: 20px;
+      @include breakpoint(sm) {
+        padding: 1rem;
+      }
     }
     > .lang-item {
       display: block;

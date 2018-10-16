@@ -1,5 +1,5 @@
 {% extends "base.twig" %}
-
+{% set more_body_class = 'contactinfo' %}
 {% block hero %}
 
     {% include "components/mainhero.twig" with { text: post.get_field('hero_description') }%}
