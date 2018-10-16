@@ -113,14 +113,20 @@ header {
       margin-left: 2rem;
       opacity: 0.7;
       border-left: 2px solid pink;
-      @include breakpoint(sm) {
+      @include breakpoint(md) {
         margin-left: 0rem;
       }
+      @include breakpoint(sm) {
+        margin-left: -1rem;
+      }
       @include breakpoint(xs) {
-        margin-left: 0rem;
+        margin-left: -1rem;
       }
       ~ .lang-item {
         margin-left: 0;
+        @include breakpoint(sm) {
+          margin-left: -1rem;
+        }
       }
     }
     &.child {
@@ -132,6 +138,13 @@ header {
       background-color: $color-white;
       box-shadow: 0 6px 8px -4px rgba(0, 0, 0, 0.3),
         inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+      @include breakpoint(md) {
+        display: block;
+        position: relative;
+        box-shadow: initial;
+        background-color: pink;
+        padding: 0;
+      }
       @include breakpoint(sm) {
         display: block;
         position: relative;
@@ -149,6 +162,9 @@ header {
       * {
         color: $color-black;
         font-weight: normal;
+        @include breakpoint(md) {
+          color: $color-white;
+        }
         @include breakpoint(sm) {
           color: $color-white;
         }
@@ -159,6 +175,9 @@ header {
       li {
         display: flex !important;
         text-align: right;
+        @include breakpoint(md) {
+          text-align: left;
+        }
         @include breakpoint(sm) {
           text-align: left;
         }
@@ -168,6 +187,9 @@ header {
         a {
           width: 100%;
           padding: 0.5rem 1.8rem;
+          @include breakpoint(md) {
+            padding: 0rem;
+          }
           @include breakpoint(xs) {
             padding: 0rem;
           }
@@ -201,9 +223,14 @@ header {
       position: absolute;
       right: 0;
       top: 0;
+      @include breakpoint(md) {
+        width: 25%;
+      }
       @include breakpoint(sm) {
         width: 40%;
-        display: inline-block;
+      }
+      @include breakpoint(xs) {
+        width: 80%;
       }
     }
     & li {
