@@ -9,10 +9,22 @@
     <a href="{{site.url}}"></a>
 
     <div class="nav-container ">
-        {% include "menu.twig" with {
-            'menu' : menu.get_items,
-            'is_children' : false
-        } %}
+        {% if site.language == "fi" %}
+            {% include "menu.twig" with {
+                'menu' : menu.get_items,
+                'is_children' : false
+            } %}
+        {% elseif site.language == "en-US" %}
+            {% include "menu.twig" with {
+                'menu_en' : menu_en.get_items,
+                'is_children' : false
+            } %}
+        {% else %}
+            {% include "menu.twig" with {
+                'menu_sv' : menu_sv.get_items,
+                'is_children' : false
+            } %}
+        {% endif %}
         <div class="hamburger-container">
             <i class="fa fa-bars"></i>
 

@@ -1,28 +1,96 @@
 {% if footer_menu %}
-  <ul class="{{is_children ? 'child ' : ''}}nav-ul">
-    <div class="nub"></div>
-    {% for item in menu %}
-      {% if fn('is_front_page') %}
-        <li class="{{ item.classes | join(' ') }}">
-          <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
-          {% if item.get_children %}
-            {% include "menu.twig" with {
-              'menu' : item.get_children,
-              'is_children' : true
-            } %}
-          {% endif %}
-        </li>
-      {% elseif 'scroll-link' not in item.class and not fn('is_front_page') %}
-        <li class="{{ item.classes | join(' ') }}">
-          <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
-          {% if item.get_children %}
-            {% include "menu.twig" with {
-              'menu' : item.get_children,
-              'is_children' : true
-            } %}
-          {% endif %}
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
+    {% if site.language == "fi" %}
+        <ul class="{{is_children ? 'child ' : ''}}nav-ul">
+            <div class="nub"></div>
+
+            {% for item in menu %}
+
+                {% if fn('is_front_page') %}
+                    <li class="{{ item.classes | join(' ') }}">
+                        <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+                        {% if item.get_children %}
+                            {% include "menu.twig" with {
+                                'menu' : item.get_children,
+                                'is_children' : true
+                            } %}
+                        {% endif %}
+                    </li>
+                {% elseif 'scroll-link' not in item.class and not fn('is_front_page') %}
+                    <li class="{{ item.classes | join(' ') }}">
+                        <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+                        {% if item.get_children %}
+                            {% include "menu.twig" with {
+                                'menu' : item.get_children,
+                                'is_children' : true
+                            } %}
+                        {% endif %}
+                    </li>
+                {% endif %}
+            {% endfor %}
+
+        </ul>
+    {% elseif site.language == "en-US" %}
+
+        <ul class="{{is_children ? 'child ' : ''}}nav-ul">
+            <div class="nub"></div>
+
+            {% for item in menu_en %}
+
+                {% if fn('is_front_page') %}
+                    <li class="{{ item.classes | join(' ') }}">
+                        <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+                        {% if item.get_children %}
+                            {% include "menu.twig" with {
+                                'menu_en' : item.get_children,
+                                'is_children' : true
+                            } %}
+                        {% endif %}
+                    </li>
+                {% elseif 'scroll-link' not in item.class and not fn('is_front_page') %}
+                    <li class="{{ item.classes | join(' ') }}">
+                        <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+                        {% if item.get_children %}
+                            {% include "menu.twig" with {
+                                'menu' : item.get_children,
+                                'is_children' : true
+                            } %}
+                        {% endif %}
+                    </li>
+                {% endif %}
+            {% endfor %}
+
+        </ul>
+
+    {% else %}
+
+        <ul class="{{is_children ? 'child ' : ''}}nav-ul">
+            <div class="nub"></div>
+
+            {% for item in menu_sv %}
+
+                {% if fn('is_front_page') %}
+                    <li class="{{ item.classes | join(' ') }}">
+                        <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+                        {% if item.get_children %}
+                            {% include "menu.twig" with {
+                                'menu_sv' : item.get_children,
+                                'is_children' : true
+                            } %}
+                        {% endif %}
+                    </li>
+                {% elseif 'scroll-link' not in item.class and not fn('is_front_page') %}
+                    <li class="{{ item.classes | join(' ') }}">
+                        <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+                        {% if item.get_children %}
+                            {% include "menu.twig" with {
+                                'menu' : item.get_children,
+                                'is_children' : true
+                            } %}
+                        {% endif %}
+                    </li>
+                {% endif %}
+            {% endfor %}
+
+        </ul>
+    {% endif %}
 {% endif %}
