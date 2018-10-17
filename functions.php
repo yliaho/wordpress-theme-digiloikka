@@ -104,6 +104,7 @@ class Digiloikka extends Timber\Site {
 		$context['menu_sv'] = new TimberMenu("nav-menu-sv");
 		$context['footer_menu'] = new TimberMenu("nav-footer");
 		$context['footer_menu_en'] = new TimberMenu("nav-footer-en");
+		$context['footer_menu_sv'] = new TimberMenu("nav-footer-sv");
 		$context['site'] = $this;
 
 		return $context;

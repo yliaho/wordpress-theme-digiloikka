@@ -1,7 +1,18 @@
 <div class="navfoot-container">
-    {% include "nav-menu.twig" with {
+    {% if site.language == "fi" %}
+        {% include "nav-menu.twig" with {
         'footer_menu' : footer_menu.get_items
     } %}
+    {% elseif site.language == "en-US" %}
+        {% include "nav-menu.twig" with {
+        'footer_menu' : footer_menu_en.get_items
+    } %}
+
+    {% else  %}
+        {% include "nav-menu.twig" with {
+        'footer_menu' : footer_menu_sv.get_items
+    } %}
+    {% endif %}
     <div class="social-container">
 
         {% if site.language == "fi" %}
