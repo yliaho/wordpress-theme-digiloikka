@@ -23,6 +23,12 @@
       grid-column-start: 3;
       width: 50%;
       padding-top: 3rem;
+      @include breakpoint(md) {
+        justify-self: end;
+      }
+      @include breakpoint(sm) {
+        justify-self: center;
+      }
       @include breakpoint(xs) {
         grid-column-start: 2;
         width: 100%;

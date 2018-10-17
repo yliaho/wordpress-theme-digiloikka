@@ -5,6 +5,9 @@
   justify-content: center;
   grid-gap: 1.5rem;
   column-gap: 6rem;
+  @include breakpoint(sm) {
+    column-gap: 2rem;
+  }
   @include breakpoint(xs) {
     grid-template-columns: 1fr;
   }
@@ -14,6 +17,9 @@
   width: 320px;
   padding: 1rem 0;
   justify-self: center;
+  @include breakpoint(sm) {
+    width: 250px;
+  }
   .leader-cube {
     width: 20px;
     height: 20px;

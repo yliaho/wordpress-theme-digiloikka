@@ -7,10 +7,7 @@ export default class DtHeader {
   public intersectionElement: HTMLElement = null
   public hasBackground: boolean = false
 
-  public headerText: HTMLElement = null
-
   constructor(private element: HTMLElement) {
-    this.headerText = this.element.querySelector('.header-text')
     this.createHamburgerMenu()
     this.createNavDropdowns()
   }
@@ -60,31 +57,9 @@ export default class DtHeader {
 
       if (this.hasBackground) {
         this.fadeInBg()
-        this.fadeInText()
       } else {
         this.fadeOutBg()
-        this.fadeOutText()
       }
-    })
-  }
-  private fadeInText() {
-    this.headerText.style.display = 'list-item'
-    const fadeInAnim = anime({
-      opacity: 1,
-      translateX: [-10, 0],
-      delay: 100,
-      targets: this.headerText,
-      duration: 500,
-      easing: 'easeOutQuad'
-    })
-  }
-  private fadeOutText() {
-    this.headerText.style.display = 'block'
-    const fadeOutAnim = anime({
-      opacity: 0,
-      targets: this.headerText,
-      duration: 0,
-      easing: 'easeOutQuad'
     })
   }
 

@@ -33,10 +33,7 @@
     justify-content: center;
     transform: rotate(45deg);
     overflow: hidden;
-    @include breakpoint(xs) {
-      height: 10rem;
-      align-items: center;
-      margin: auto;
+    @include breakpoint(md) {
     }
     @include breakpoint(sm) {
       margin: auto;
@@ -44,7 +41,11 @@
       height: 8rem;
       text-align: center;
     }
-    @include breakpoint(md) {
+    @include breakpoint(xs) {
+      height: 12rem;
+      width: 12rem;
+      align-items: center;
+      margin: auto;
     }
     div {
       position: absolute;
