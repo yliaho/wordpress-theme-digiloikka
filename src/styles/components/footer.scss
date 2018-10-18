@@ -35,9 +35,16 @@
       }
       .follow-us {
         display: inline-block;
-        color: white;
+        color: $color-white;
         width: 100%;
         text-align: center;
+        font-weight: bold;
+        padding-bottom: 0.5rem;
+      }
+      .hashtag {
+        padding-top: 0.5rem;
+        text-align: center;
+        color: $color-white;
         font-weight: bold;
       }
       .social-icons {
