@@ -2,7 +2,6 @@
   <ul class="{{is_children ? 'child ' : ''}}nav-ul">
     <div class="nub"></div>
     {% for item in menu %}
-      {# THIS IS LINK #}
       {% if fn('is_front_page') %}
         <li class="{{ item.classes | join(' ') }}">
           <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
@@ -13,10 +12,15 @@
             } %}
           {% endif %}
         </li>
-        {# THIS IS SCROLL LINK #}
       {% elseif 'scroll-link' not in item.class and not fn('is_front_page') %}
         <li class="{{ item.classes | join(' ') }}">
           <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+          {% if item.get_children %}
+            {% include "menu.twig" with {
+              'menu' : item.get_children,
+              'is_children' : true
+            } %}
+          {% endif %}
         </li>
       {% endif %}
     {% endfor %}
