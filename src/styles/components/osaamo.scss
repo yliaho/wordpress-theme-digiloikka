@@ -1,7 +1,7 @@
 .osaamo {
   width: 40%;
   margin: 0 auto;
-  padding: 5rem 0;
+  padding-top: 4rem;
   padding-bottom: 0;
   text-align: center;
   font-size: 2.2rem;
@@ -9,21 +9,19 @@
   @include breakpoint(md) {
     width: 70%;
     font-size: 1.2rem;
-    padding: 3rem;
-    margin-block-end: -8rem;
+    margin-top: 3rem;
+    padding-top: 0rem;
   }
   @include breakpoint(sm) {
     width: 70%;
     font-size: 1.2rem;
-    padding: 2rem;
-    margin-block-end: -8rem;
+    padding: 0rem;
   }
   @include breakpoint(xs) {
     padding: 0rem;
     width: 90%;
     text-align: center;
     padding-top: 1rem;
-    margin-block-end: -7rem;
   }
   .fa-angle-down {
     font-size: 3.5rem;

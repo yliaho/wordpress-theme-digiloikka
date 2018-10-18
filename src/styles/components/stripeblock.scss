@@ -62,6 +62,9 @@
   grid-column-start: 1;
   grid-column-end: 4;
   padding: 70px 0;
+  @include breakpoint(md) {
+    padding: 40px 0;
+  }
   .stripe-block-stripe-container {
     position: absolute;
     left: 0;
