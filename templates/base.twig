@@ -11,7 +11,7 @@
 </button>
 </div>
 
-<body class="{{body_class}} {{more_body_class}} {{site.language}}" data-template="base.twig">
+<body class="{{body_class}} {{more_body_class}} {{site.language == 'fi' ? 'fi_FI' : site.language}}" data-template="base.twig">
 {% block header %}
   {% include "components/header.twig" with {
     page_title : block('page_title')
