@@ -65,7 +65,7 @@ header {
 }
 
 .nav-container {
-  // applies to lang-item and menu-item
+  text-transform: uppercase; // applies to lang-item and menu-item
   .current_page_item:not(.lang-item) a,
   .current-menu-item:not(.lang-item) a {
     position: relative;
@@ -102,7 +102,6 @@ header {
     @include breakpoint(xs) {
       display: none;
     }
-
     > .lang-item {
       margin-left: 2rem;
       opacity: 0.7;
