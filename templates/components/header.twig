@@ -1,38 +1,42 @@
 <header class="header">
-  <div class="logo-container">
-    {% include "components/site-logo.twig" with {
+    <div class="logo-container">
+        <a href="{{site.url}}">
+            {% include "components/site-logo.twig" with {
       home_link: site.url,
       logo_size_width: 200,
       logo_size_height: 38
     } %}
-  </div>
-  <a href="{{site.url}}"></a>
-
-  <div class="nav-container ">
-    {% if site.language == "fi" %}
-      {% include "menu.twig" with {
-        'menu' : menu.get_items,
-        'is_children' : false
-      } %}
-    {% elseif site.language == "en-US" %}
-      {% include "menu.twig" with {
-        'menu' : menu_en.get_items,
-        'is_children' : false
-      } %}
-    {% else %}
-      {% include "menu.twig" with {
-        'menu' : menu_sv.get_items,
-        'is_children' : false
-      } %}
-    {% endif %}
-    <div class="hamburger-container">
-      <i class="fa fa-bars"></i>
-
+        </a>
     </div>
 
-  </div>
-  <div class="header-background-cover" style="background-image:url('{{post.thumbnail.src}}')"></div>
-  <!-- <div class="some-container"> Some stuff here </div> -->
+    <div class="nav-container ">
+        {% if site.language == "fi" %}
+            {% include "menu.twig" with {
+                'menu' : menu.get_items,
+                'is_children' : false
+            } %}
+        {% elseif site.language == "en-US" %}
+            {% include "menu.twig" with {
+                'menu' : menu_en.get_items,
+                'is_children' : false
+            } %}
+        {% else %}
+            {% include "menu.twig" with {
+                'menu' : menu_sv.get_items,
+                'is_children' : false
+            } %}
+        {% endif %}
+        <div class="hamburger-container">
+            <i class="fa fa-bars"></i>
+
+        </div>
+        <div class="social-container-mobile">
+            {% include "components/social-icons.twig"  %}
+        </div>
+
+    </div>
+    <div class="header-background-cover" style="background-image:url('{{post.thumbnail.src}}')"></div>
+    <!-- <div class="some-container"> Some stuff here </div> -->
 </header>
 <!-- {{page_title}} beb -->
 <!-- <a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a> -->
