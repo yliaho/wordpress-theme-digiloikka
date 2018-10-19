@@ -1,6 +1,7 @@
 import * as anime from 'animejs'
 import getWindowClientWidth from '../utils/getWindowClientWidth'
 const mdBreakpoint = 1024
+const smBreakpoint = 768
 const xsBreakpoint = 767
 export default class MobileNav {
   private closeButtonEl: HTMLElement
@@ -26,7 +27,7 @@ export default class MobileNav {
   private openNav() {
     this.navEl.classList.remove('inactive')
     this.navEl.classList.add('active')
-    if (getWindowClientWidth() < mdBreakpoint) {
+    if (getWindowClientWidth() < smBreakpoint) {
       console.log(getWindowClientWidth())
       const fadeInMobileNav = anime({
         targets: this.navEl,
@@ -34,10 +35,13 @@ export default class MobileNav {
         easing: 'easeOutCubic',
         duration: 400
       })
-    } else if (getWindowClientWidth() > xsBreakpoint) {
+    } else if (
+      getWindowClientWidth() > xsBreakpoint &&
+      getWindowClientWidth() <= mdBreakpoint
+    ) {
       const fadeInMobileNav = anime({
         targets: this.navEl,
-        left: ['100vw', '60vw'],
+        left: ['100vw', '55vw'],
         easing: 'easeOutCubic',
         duration: 400
       })
@@ -50,7 +54,6 @@ export default class MobileNav {
     this.socialIcons.style.display = 'none'
   }
   private socialContainer() {
-    console.log('how to fuck am i supposed to work')
     this.socialIcons = document.querySelector('.social-container-mobile')
     this.socialIcons.style.display = 'block'
     this.navEl.appendChild(this.socialIcons)

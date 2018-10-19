@@ -41,12 +41,18 @@ header {
           padding: 0.5rem;
           font-size: 1rem;
           line-height: 0.9rem;
-          @include breakpoint(xs) {
+          @include breakpoint(md) {
             font-size: 1.5rem;
             line-height: 1.4rem;
           }
           @include breakpoint(sm) {
             padding: 1rem;
+            font-size: 1.5rem;
+            line-height: 1.4rem;
+          }
+          @include breakpoint(xs) {
+            font-size: 1.5rem;
+            line-height: 1.4rem;
           }
         }
       }
@@ -116,9 +122,11 @@ header {
       }
       @include breakpoint(md) {
         margin-left: 0.1rem;
+        margin-top: 5rem;
       }
       @include breakpoint(sm) {
         margin-left: -1rem;
+        margin-top: 5rem;
       }
       @include breakpoint(xs) {
         margin-left: -1rem;
@@ -200,6 +208,8 @@ header {
           @include breakpoint(md) {
             padding: 0rem;
           }
+          @include breakpoint(sm) {
+          }
           @include breakpoint(xs) {
             padding: 0rem;
           }
@@ -264,6 +274,12 @@ body {
       margin-right: 19rem;
       margin-top: -6rem;
       right: 0;
+      @include breakpoint(md) {
+        margin-right: 3rem;
+      }
+      @include breakpoint(sm) {
+        margin-right: 3rem;
+      }
     }
     &.active {
       .services > a {
@@ -286,6 +302,9 @@ body {
       padding-right: 2rem;
       line-height: 1.2rem;
       padding-top: 7rem;
+      @include breakpoint(sm) {
+        font-size: 2.5rem;
+      }
       @include breakpoint(xs) {
         font-size: 2.4rem;
         font-weight: 800;
