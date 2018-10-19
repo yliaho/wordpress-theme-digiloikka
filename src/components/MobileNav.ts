@@ -9,6 +9,7 @@ export default class MobileNav {
     this.socialContainer()
     this.navEl.classList.add('inactive')
     this.createCloseButton()
+    this.socialIcons.style.display = 'none'
     this.element.addEventListener(
       'click',
       this.hamburgerClickListener.bind(this)
@@ -19,7 +20,6 @@ export default class MobileNav {
     this.navEl.classList.toggle('active')
     if (this.navEl.classList.contains('active')) {
       this.openNav()
-      this.socialContainer()
     }
   }
 
@@ -42,10 +42,12 @@ export default class MobileNav {
         duration: 400
       })
     }
+    this.socialContainer()
   }
 
   private closeNav() {
     this.navEl.classList.remove('active')
+    this.socialIcons.style.display = 'none'
   }
   private socialContainer() {
     console.log('how to fuck am i supposed to work')
