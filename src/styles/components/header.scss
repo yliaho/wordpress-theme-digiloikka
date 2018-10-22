@@ -265,7 +265,7 @@ body {
 .nav-ul {
   @include breakpoint(md) {
     display: none;
-
+    padding: 20rem;
     .close-button {
       display: block !important;
       width: 24px;
@@ -346,7 +346,7 @@ body {
     }
   }
   @include breakpoint(sm) {
-    width: 100vw;
+    padding: 20rem;
   }
   .social-container-mobile {
     display: none;

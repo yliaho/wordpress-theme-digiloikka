@@ -94,6 +94,7 @@
       color: rgba(white, 0.3);
       grid-column: span 2;
       grid-column-start: 2;
+      grid-row-start: 4;
       @include breakpoint(xs) {
         grid-row-start: 5;
         grid-column-start: 1;

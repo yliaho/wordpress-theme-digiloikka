@@ -1,7 +1,19 @@
 {% block html_head_container %}
 
     {% include 'html-header.twig' %}
-    {% block head %}{% endblock %}
+    {% block head %}
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-127903339-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-127903339-1');
+        </script>
+    {% endblock %}
 </head>
 {% endblock %}
 
