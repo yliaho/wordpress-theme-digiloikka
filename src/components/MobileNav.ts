@@ -52,6 +52,13 @@ export default class MobileNav {
   private closeNav() {
     this.navEl.classList.remove('active')
     this.socialIcons.style.display = 'none'
+
+    const fadeOutMobileNav = anime({
+      targets: this.navEl,
+      right: ['100vw', '0vw'],
+      easing: 'easeInQuad',
+      duration: 400
+    })
   }
   private socialContainer() {
     this.socialIcons = document.querySelector('.social-container-mobile')

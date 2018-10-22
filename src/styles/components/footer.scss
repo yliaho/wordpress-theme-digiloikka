@@ -10,7 +10,12 @@
     grid-template-columns: 1fr 1fr 1fr min-content;
     grid-template-rows: min-content min-content min-content;
     @include breakpoint(xs) {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
+      grid-template-rows: min-content min-content min-content min-content;
+      justify-items: center;
+      text-align: center;
+      font-weight: 800;
+      text-transform: uppercase;
     }
     li {
       font-size: 1.7rem;
@@ -31,7 +36,9 @@
         justify-self: center;
       }
       @include breakpoint(xs) {
-        grid-column-start: 2;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        grid-column-start: 1;
         width: 100%;
       }
       .follow-us {
@@ -42,6 +49,10 @@
         font-weight: bold;
         padding-bottom: 0.5rem;
         font-size: 1.2rem;
+        @include breakpoint(xs) {
+          padding-bottom: 0.5rem;
+          padding-top: 0.5rem;
+        }
       }
       .hashtag {
         padding-top: 0.5rem;
@@ -56,9 +67,6 @@
         grid-row-end: 2;
         align-items: center;
         justify-content: center;
-        @include breakpoint(xs) {
-          flex-direction: row;
-        }
         a {
           min-width: 50px;
           text-align: center;
@@ -75,7 +83,7 @@
         }
         @include breakpoint(xs) {
           grid-row-start: 2;
-          grid-column-start: 2;
+          grid-column-start: 1;
         }
       }
     }
@@ -87,7 +95,7 @@
       grid-column: span 2;
       grid-column-start: 2;
       @include breakpoint(xs) {
-        grid-row-start: 3;
+        grid-row-start: 5;
         grid-column-start: 1;
         margin-top: 0rem;
       }
@@ -96,7 +104,10 @@
       width: 130px;
       height: 70px;
       padding-top: 10px;
-      grid-row-end: 3;
+      grid-row-start: 4;
+      @include breakpoint(xs) {
+        grid-column-start: 1;
+      }
       .stadi-logo {
         background-size: cover;
         height: auto;
@@ -112,8 +123,8 @@
       grid-column-start: 2;
       grid-row-start: 1;
       @include breakpoint(xs) {
-        grid-column-start: 2;
-        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-row-start: 3;
         padding-top: 0px;
       }
     }
