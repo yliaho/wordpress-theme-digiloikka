@@ -1,8 +1,6 @@
 import * as anime from 'animejs'
 import getWindowClientWidth from '../utils/getWindowClientWidth'
-const mdBreakpoint = 1024
-const smBreakpoint = 768
-const xsBreakpoint = 767
+
 export default class MobileNav {
   private closeButtonEl: HTMLElement
   private socialIcons: HTMLElement
@@ -25,39 +23,28 @@ export default class MobileNav {
   }
 
   private openNav() {
-    this.navEl.classList.remove('inactive')
     this.navEl.classList.add('active')
-    if (getWindowClientWidth() < smBreakpoint) {
-      console.log(getWindowClientWidth())
-      const fadeInMobileNav = anime({
-        targets: this.navEl,
-        left: ['100vw', '0vw'],
-        easing: 'easeOutCubic',
-        duration: 400
-      })
-    } else if (
-      getWindowClientWidth() > xsBreakpoint &&
-      getWindowClientWidth() <= mdBreakpoint
-    ) {
-      const fadeInMobileNav = anime({
-        targets: this.navEl,
-        left: ['100vw', '55vw'],
-        easing: 'easeOutCubic',
-        duration: 400
-      })
-    }
+
+    const fadeInMobileNav = anime({
+      targets: this.navEl,
+      translateX: [document.documentElement.clientWidth, 0],
+      easing: 'easeOutCubic',
+      duration: 400
+    })
     this.socialContainer()
   }
 
   private closeNav() {
-    this.navEl.classList.remove('active')
     this.socialIcons.style.display = 'none'
 
     const fadeOutMobileNav = anime({
       targets: this.navEl,
-      right: ['100vw', '0vw'],
+      translateX: [0, document.documentElement.clientWidth],
       easing: 'easeInQuad',
-      duration: 400
+      duration: 400,
+      complete: () => {
+        this.navEl.classList.remove('active')
+      }
     })
   }
   private socialContainer() {

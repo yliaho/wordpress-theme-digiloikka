@@ -265,6 +265,7 @@ body {
 .nav-ul {
   @include breakpoint(md) {
     display: none;
+
     .close-button {
       display: block !important;
       width: 24px;
@@ -343,6 +344,9 @@ body {
     > .lang-item {
       display: block;
     }
+  }
+  @include breakpoint(sm) {
+    width: 100vw;
   }
   .social-container-mobile {
     display: none;
