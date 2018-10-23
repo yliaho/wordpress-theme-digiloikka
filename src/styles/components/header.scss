@@ -88,6 +88,9 @@ header {
       left: 0; // box-shadow: 0 2px rgba(255, 255, 255, 0.8);
     }
   }
+  .current-menu-item {
+    text-decoration: underline;
+  }
   .hamburger-container {
     display: none;
     @include breakpoint(sm) {
@@ -130,7 +133,7 @@ header {
       }
       @include breakpoint(xs) {
         margin-left: -1rem;
-        margin-top: 10rem;
+        margin-top: 6rem;
       }
       ~ .lang-item {
         margin-left: 0;
@@ -237,7 +240,7 @@ body {
       content: '';
       position: absolute;
       top: 0;
-      bottom: 17px;
+      bottom: 12px;
       right: 0;
       left: 0;
       box-shadow: 0 2px rgba(255, 255, 255, 0.8);
@@ -309,6 +312,7 @@ body {
       @include breakpoint(xs) {
         font-size: 2.4rem;
         font-weight: 800;
+        width: 35rem;
       }
       .child {
         margin-top: 2rem;
@@ -350,10 +354,18 @@ body {
   }
   .social-container-mobile {
     display: none;
-    text-align: left;
     margin-top: 26rem;
-    margin-left: 2rem;
+    margin-left: -3rem;
     position: absolute;
+    @include breakpoint(md) {
+      margin-left: 5rem;
+    }
+    @include breakpoint(sm) {
+      margin-left: 3rem;
+    }
+    @include breakpoint(xs) {
+      margin-left: -3rem;
+    }
     a {
       color: white;
       padding: 0;

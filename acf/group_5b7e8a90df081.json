@@ -60,10 +60,10 @@
       "new_lines": ""
     },
     {
-      "key": "field_5bc475ee6fbbc",
-      "label": "osaamo_logo",
-      "name": "osaamo_logo",
-      "type": "image",
+      "key": "field_5bcec348941d6",
+      "label": "Job List Heading",
+      "name": "job_list_heading",
+      "type": "text",
       "instructions": "",
       "required": 0,
       "conditional_logic": 0,
@@ -72,16 +72,11 @@
         "class": "",
         "id": ""
       },
-      "return_format": "url",
-      "preview_size": "thumbnail",
-      "library": "all",
-      "min_width": "",
-      "min_height": "",
-      "min_size": "",
-      "max_width": "",
-      "max_height": "",
-      "max_size": "",
-      "mime_types": ""
+      "default_value": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
     },
     {
       "key": "field_5b7fcf54cbc79",
@@ -183,5 +178,5 @@
   "hide_on_screen": "",
   "active": 1,
   "description": "",
-  "modified": 1539929770
+  "modified": 1540277168
 }

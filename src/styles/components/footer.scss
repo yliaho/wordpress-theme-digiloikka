@@ -36,8 +36,8 @@
         justify-self: center;
       }
       @include breakpoint(xs) {
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
+        padding-top: 2.5rem;
+        padding-bottom: 2rem;
         grid-column-start: 1;
         width: 100%;
       }
@@ -60,6 +60,9 @@
         color: $color-white;
         font-weight: bold;
         font-size: 0.8rem;
+        @include breakpoint(xs) {
+          font-size: 1rem;
+        }
       }
       .social-icons {
         display: flex;
@@ -98,7 +101,7 @@
       @include breakpoint(xs) {
         grid-row-start: 5;
         grid-column-start: 1;
-        margin-top: 0rem;
+        margin-top: 0.4rem;
       }
     }
     .stadi-con {
@@ -126,7 +129,7 @@
       @include breakpoint(xs) {
         grid-column-start: 1;
         grid-row-start: 3;
-        padding-top: 0px;
+        padding-bottom: 20px;
       }
     }
   }
