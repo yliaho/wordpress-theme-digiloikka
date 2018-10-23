@@ -85,11 +85,18 @@ header {
       top: 0;
       bottom: 5px;
       right: 0;
-      left: 0; // box-shadow: 0 2px rgba(255, 255, 255, 0.8);
+      left: 0;
+      box-shadow: 0 4px 2px -2px rgba(255, 255, 255, 0.8);
+      @include breakpoint(md) {
+        bottom: 9px;
+      }
+      @include breakpoint(sm) {
+        bottom: 16px;
+      }
+      @include breakpoint(xs) {
+        bottom: 19px;
+      }
     }
-  }
-  .current-menu-item {
-    text-decoration: underline;
   }
   .hamburger-container {
     display: none;
@@ -126,14 +133,17 @@ header {
       @include breakpoint(md) {
         margin-left: 0.1rem;
         margin-top: 5rem;
+        border-left: initial;
       }
       @include breakpoint(sm) {
         margin-left: -1rem;
         margin-top: 5rem;
+        border-left: initial;
       }
       @include breakpoint(xs) {
         margin-left: -1rem;
         margin-top: 6rem;
+        border-left: initial;
       }
       ~ .lang-item {
         margin-left: 0;
@@ -219,6 +229,9 @@ header {
           &:hover {
             background-color: dt-color('secondary');
             color: $color-white;
+            @include breakpoint(xs) {
+              background-color: initial;
+            }
           }
         }
       }
@@ -243,7 +256,15 @@ body {
       bottom: 12px;
       right: 0;
       left: 0;
-      box-shadow: 0 2px rgba(255, 255, 255, 0.8);
+      box-shadow: 0 4px 2px -2px rgba(255, 255, 255, 0.8);
+      @include breakpoint(sm) {
+        box-shadow: 0 4px 2px -3px rgba(255, 255, 255, 0.8);
+        bottom: 17px;
+      }
+      @include breakpoint(xs) {
+        box-shadow: 0 4px 2px -2px rgba(255, 255, 255, 0.8);
+        bottom: 16px;
+      }
     }
   }
   &[class*='fi'] {
@@ -304,7 +325,7 @@ body {
       font-weight: bold;
       text-align: end;
       padding-right: 2rem;
-      line-height: 1.2rem;
+      line-height: 1.7rem;
       padding-top: 7rem;
       @include breakpoint(sm) {
         font-size: 2.5rem;
@@ -317,25 +338,35 @@ body {
       .child {
         margin-top: 2rem;
         margin-bottom: 2rem;
-        text-align: right;
+        text-align: left;
+        width: auto;
         line-height: 0.5rem;
+        .current-menu-item a {
+          box-shadow: 0 4px 2px -2px rgba(255, 255, 255, 0.8);
+          @include breakpoint(md) {
+            box-shadow: none;
+          }
+          @include breakpoint(sm) {
+            box-shadow: none;
+          }
+        }
         li {
-          margin: none;
+          flex-direction: row-reverse;
           padding-top: 0.2rem;
           padding-bottom: 0.2rem;
           a {
+            display: inline-block;
             font-weight: bold;
-            text-align: end;
-            margin: none;
-            padding-right: 1rem;
+            text-align: right;
+            margin-right: 1rem;
+            width: auto;
           }
         }
       }
     }
     & li {
-      display: inline-block; // margin-right: 0rem;
-      // margin-left: 2rem;
-      // margin-top: 1rem;
+      display: inline-block;
+      margin-top: 0.2rem;
       & li:first-child {
         margin-top: 10rem;
       }
@@ -359,12 +390,16 @@ body {
     position: absolute;
     @include breakpoint(md) {
       margin-left: 5rem;
+      margin-top: 30rem;
+      font-size: 2rem;
     }
     @include breakpoint(sm) {
-      margin-left: 3rem;
+      margin-left: 4rem;
+      margin-top: 30rem;
     }
     @include breakpoint(xs) {
       margin-left: -3rem;
+      margin-top: 26rem;
     }
     a {
       color: white;
