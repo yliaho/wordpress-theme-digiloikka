@@ -25,6 +25,12 @@ export default class AdModal {
       '.modal-content .video-content'
     )
     this.modalVideoContent.innerHTML = embedString
+
+    for (let fullscrnAttr of ['allowfullscreen', 'webkitallowfullscreen']) {
+      this.modalVideoContent
+        .querySelector('iframe')
+        .removeAttribute(fullscrnAttr)
+    }
   }
 
   public hideEmbed() {
