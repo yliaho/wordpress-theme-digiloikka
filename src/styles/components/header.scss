@@ -83,15 +83,15 @@ header {
       content: '';
       position: absolute;
       top: 0;
-      bottom: 5px;
+      bottom: 12px;
       right: 0;
       left: 0;
       box-shadow: 0 4px 2px -2px rgba(255, 255, 255, 0.8);
       @include breakpoint(md) {
-        bottom: 9px;
+        bottom: 0px;
       }
       @include breakpoint(sm) {
-        bottom: 16px;
+        bottom: 0px;
       }
       @include breakpoint(xs) {
         bottom: 19px;
@@ -125,7 +125,7 @@ header {
       margin-left: 2rem;
       opacity: 0.7;
       border-left: 3px solid rgba(255, 255, 255, 0.8);
-      padding-left: 2rem;
+      padding-left: 1rem;
       margin: 0.2rem;
       > .lang-item:first-child {
         padding-left: 20px;
@@ -229,6 +229,12 @@ header {
           &:hover {
             background-color: dt-color('secondary');
             color: $color-white;
+            @include breakpoint(md) {
+              background-color: initial;
+            }
+            @include breakpoint(sm) {
+              background-color: initial;
+            }
             @include breakpoint(xs) {
               background-color: initial;
             }
