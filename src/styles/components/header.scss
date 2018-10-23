@@ -87,11 +87,8 @@ header {
       right: 0;
       left: 0;
       box-shadow: 0 4px 2px -2px rgba(255, 255, 255, 0.8);
-      @include breakpoint(md) {
-        bottom: 0px;
-      }
       @include breakpoint(sm) {
-        bottom: 0px;
+        bottom: 21px;
       }
       @include breakpoint(xs) {
         bottom: 19px;
@@ -348,12 +345,20 @@ body {
         width: auto;
         line-height: 0.5rem;
         .current-menu-item a {
-          box-shadow: 0 4px 2px -2px rgba(255, 255, 255, 0.8);
-          @include breakpoint(md) {
-            box-shadow: none;
-          }
-          @include breakpoint(sm) {
-            box-shadow: none;
+          &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 1px;
+            right: 0;
+            left: 0;
+            box-shadow: 0 4px 2px -2px rgba(255, 255, 255, 0.8);
+            @include breakpoint(md) {
+              bottom: 3px;
+            }
+            @include breakpoint(sm) {
+              bottom: 3px;
+            }
           }
         }
         li {
