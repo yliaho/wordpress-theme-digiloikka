@@ -41,19 +41,6 @@ header {
           padding: 0.5rem;
           font-size: 1rem;
           line-height: 0.9rem;
-          @include breakpoint(md) {
-            font-size: 1.5rem;
-            line-height: 1.4rem;
-          }
-          @include breakpoint(sm) {
-            padding: 1rem;
-            font-size: 1.5rem;
-            line-height: 1.4rem;
-          }
-          @include breakpoint(xs) {
-            font-size: 1.5rem;
-            line-height: 1.4rem;
-          }
         }
       }
     }
@@ -83,16 +70,10 @@ header {
       content: '';
       position: absolute;
       top: 0;
-      bottom: 9px;
+      bottom: 0px;
       right: 0;
       left: 0;
-      box-shadow: 0 4px 2px -2px rgba(255, 255, 255, 0.8);
-      @include breakpoint(sm) {
-        bottom: 21px;
-      }
-      @include breakpoint(xs) {
-        bottom: 19px;
-      }
+      box-shadow: 0 4px rgba(255, 255, 255, 0.8) !important;
     }
   }
   .hamburger-container {
@@ -122,25 +103,11 @@ header {
       margin-left: 2rem;
       opacity: 0.7;
       border-left: 3px solid rgba(255, 255, 255, 0.8);
+
       padding-left: 1rem;
       margin: 0.2rem;
       > .lang-item:first-child {
         padding-left: 20px;
-      }
-      @include breakpoint(md) {
-        margin-left: 0.1rem;
-        margin-top: 5rem;
-        border-left: initial;
-      }
-      @include breakpoint(sm) {
-        margin-left: -1rem;
-        margin-top: 5rem;
-        border-left: initial;
-      }
-      @include breakpoint(xs) {
-        margin-left: -1rem;
-        margin-top: 6rem;
-        border-left: initial;
       }
       ~ .lang-item {
         margin-left: 0;
@@ -189,7 +156,7 @@ header {
       }
       * {
         color: $color-black;
-        font-weight: normal;
+
         @include breakpoint(md) {
           color: $color-white;
         }
@@ -256,18 +223,13 @@ body {
       content: '';
       position: absolute;
       top: 0;
-      bottom: 8.5px;
+      bottom: 0px;
       right: 0;
       left: 0;
-      box-shadow: 0 4px 2px -2px rgba(255, 255, 255, 0.8);
-      @include breakpoint(sm) {
-        box-shadow: 0 4px 2px -3px rgba(255, 255, 255, 0.8);
-        bottom: 17px;
-      }
-      @include breakpoint(xs) {
-        box-shadow: 0 4px 2px -2px rgba(255, 255, 255, 0.8);
-        bottom: 16px;
-      }
+      box-shadow: 0 4px rgba(255, 255, 255, 0.8);
+      // @include breakpoint(sm) {
+      //   bottom: 17px;
+      // }
     }
   }
   &[class*='fi'] {
@@ -290,141 +252,121 @@ body {
 /* mobile nav */
 
 .nav-ul {
-  @include breakpoint(md) {
+  @mixin mobileNavDefaults() {
     display: none;
-    padding: 20rem;
-    .close-button {
-      display: block !important;
-      width: 24px;
-      height: 24px;
-      color: white;
-      position: absolute;
-      margin-right: 19rem;
-      margin-top: -6rem;
-      right: 0;
-      @include breakpoint(md) {
-        margin-right: 3rem;
-      }
-      @include breakpoint(sm) {
-        margin-right: 3rem;
-      }
-    }
     &.active {
-      .services > a {
-        display: none;
-        text-align: end;
-      }
-      .services > a > li {
-        text-align: end;
-      }
+      padding-left: 2rem;
       display: flex;
-      height: 200rem;
-      position: absolute;
-      right: 0;
+      position: fixed;
       top: 0;
-      background-color: rgba(0, 0, 0, 0.8);
+      bottom: 0;
+      background-color: rgba($color-darkgray, 0.74);
       flex-direction: column;
-      font-size: 1.7rem;
-      font-weight: bold;
-      text-align: end;
-      padding-right: 2rem;
-      line-height: 1.7rem;
-      padding-top: 7rem;
-      @include breakpoint(sm) {
-        font-size: 2.5rem;
+      justify-content: center;
+      align-items: flex-end;
+      .close-button {
+        display: block;
+        color: $color-white;
+        position: absolute;
+        top: 17px;
+        right: 31px;
+        font-size: 2rem;
       }
-      @include breakpoint(xs) {
-        font-size: 2.4rem;
-        font-weight: 800;
-        width: 35rem;
-      }
-      .child {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        text-align: left;
-        width: auto;
-        line-height: 0.5rem;
-        .current-menu-item a {
-          &:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 1px;
-            right: 0;
-            left: 0;
-            box-shadow: 0 4px 2px -2px rgba(255, 255, 255, 0.8);
-            @include breakpoint(md) {
-              bottom: 3px;
-            }
-            @include breakpoint(sm) {
-              bottom: 3px;
-            }
-          }
-        }
-        li {
-          flex-direction: row-reverse;
-          padding-top: 0.2rem;
-          padding-bottom: 0.2rem;
-          a {
-            display: inline-block;
-            font-weight: bold;
-            text-align: right;
-            margin-right: 1rem;
-            width: auto;
-          }
-        }
-      }
-    }
-    & li {
-      display: inline-block;
-      margin-top: 0.2rem;
-      & li:first-child {
-        margin-top: 10rem;
-      }
-    }
-    & a {
-      @include breakpoint(sm) {
-        padding: 1rem;
-      }
-    }
-    > .lang-item {
-      display: block;
-    }
-  }
-  @include breakpoint(sm) {
-    padding: 20rem;
-  }
-  .social-container-mobile {
-    display: none;
-    margin-top: 26rem;
-    margin-left: -3rem;
-    position: absolute;
-    @include breakpoint(md) {
-      margin-left: 5rem;
-      margin-top: 30rem;
-      font-size: 2rem;
-    }
-    @include breakpoint(sm) {
-      margin-left: 4rem;
-      margin-top: 30rem;
-    }
-    @include breakpoint(xs) {
-      margin-left: -3rem;
-      margin-top: 26rem;
-    }
-    a {
-      color: white;
-      padding: 0;
-    }
-  }
-}
 
-.nav-ul {
+      .social-container-mobile {
+        display: block !important;
+        width: 100%;
+      }
+
+      li {
+        &:not(.menu-item-has-children) {
+          padding: 0.4rem 2rem;
+        }
+        a {
+          font-size: 2rem;
+          padding: 0;
+          line-height: 1;
+        }
+      }
+
+      .lang-item {
+        border-left: initial;
+      }
+    }
+
+    .menu-item-has-children {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin: 2rem 0;
+
+      > a {
+        display: none;
+      }
+
+      .child.mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        position: static !important;
+      }
+    }
+
+    .social-container-mobile {
+      display: none;
+      position: relative;
+      top: -2.8rem;
+      a {
+        color: white;
+        font-size: 2rem;
+        &:not(:last-of-type) {
+          margin-right: 1rem;
+        }
+      }
+      // display: none;
+      // margin-top: 26rem;
+      // margin-left: -3rem;
+      // position: absolute;
+      // @include breakpoint(md) {
+      //   margin-left: 5rem;
+      //   margin-top: 30rem;
+      //   font-size: 2rem;
+      // }
+      // @include breakpoint(sm) {
+      //   margin-left: 4rem;
+      //   margin-top: 30rem;
+      // }
+      // @include breakpoint(xs) {
+      //   margin-left: -3rem;
+      //   margin-top: 26rem;
+      // }
+      // a {
+      //   color: white;
+      //   padding: 0;
+      // }
+    }
+  }
+
+  @include breakpoint(md) {
+    @include mobileNavDefaults();
+  }
+
+  @include breakpoint(sm) {
+    @include mobileNavDefaults();
+    width: 100vw;
+  }
   .nub.mobile {
     display: none !important;
   }
-  &.child.mobile {
-    position: static !important;
-    display: block !important;
-  }
 }
+
+// .nav-ul {
+//   .nub.mobile {
+//     display: none !important;
+//   }
+//   &.child.mobile {
+//     position: static !important;
+//     display: block !important;
+//   }
+// }

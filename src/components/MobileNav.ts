@@ -1,6 +1,11 @@
 import * as anime from 'animejs'
 import getWindowClientWidth from '../utils/getWindowClientWidth'
 
+const getHeaderElPadding = () =>
+  window
+    .getComputedStyle(document.querySelector('header'), null)
+    .getPropertyValue('padding-left')
+
 export default class MobileNav {
   private closeButtonEl: HTMLElement
   private socialIcons: HTMLElement
@@ -13,6 +18,8 @@ export default class MobileNav {
       'click',
       this.hamburgerClickListener.bind(this)
     )
+
+    this.socialContainer()
   }
 
   public hamburgerClickListener(e: Event) {
@@ -27,11 +34,14 @@ export default class MobileNav {
 
     const fadeInMobileNav = anime({
       targets: this.navEl,
-      translateX: [document.documentElement.clientWidth, 0],
+      translateX: [
+        document.documentElement.clientWidth +
+          parseInt(getHeaderElPadding().substring(0, 2)),
+        parseInt(getHeaderElPadding().substring(0, 2))
+      ],
       easing: 'easeOutCubic',
       duration: 400
     })
-    this.socialContainer()
   }
 
   private closeNav() {
@@ -39,8 +49,12 @@ export default class MobileNav {
 
     const fadeOutMobileNav = anime({
       targets: this.navEl,
-      translateX: [0, document.documentElement.clientWidth],
-      easing: 'easeInQuad',
+      translateX: [
+        parseInt(getHeaderElPadding().substring(0, 2)),
+        document.documentElement.clientWidth +
+          parseInt(getHeaderElPadding().substring(0, 2))
+      ],
+      easing: 'easeOutCubic',
       duration: 400,
       complete: () => {
         this.navEl.classList.remove('active')
@@ -50,9 +64,10 @@ export default class MobileNav {
   }
   private socialContainer() {
     this.socialIcons = document.querySelector('.social-container-mobile')
-    this.socialIcons.style.display = 'block'
+    // this.socialIcons.style.display = 'block'
     this.navEl.appendChild(this.socialIcons)
   }
+
   private createCloseButton() {
     this.closeButtonEl = document.createElement('div')
     this.closeButtonEl.classList.add('close-button', 'fa', 'fa-times')
