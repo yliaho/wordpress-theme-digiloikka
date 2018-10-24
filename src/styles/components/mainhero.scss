@@ -73,7 +73,8 @@ $hero-height: 100vh;
         margin-bottom: 3.3rem;
       }
       @include breakpoint(sm) {
-        position: sticky;
+        position: absolute;
+        margin-top: 5rem;
       }
       @include breakpoint(xs) {
         margin-left: 2.5rem;
@@ -104,7 +105,6 @@ $hero-height: 100vh;
           font-weight: 300;
           font-size: 1.5rem;
           margin-right: 11rem;
-          margin-left: 11rem;
         }
       }
     }
