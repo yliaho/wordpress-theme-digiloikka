@@ -44,6 +44,7 @@ export default class MobileNav {
       duration: 400,
       complete: () => {
         this.navEl.classList.remove('active')
+        this.navEl.style.transform = 'initial'
       }
     })
   }
@@ -59,7 +60,6 @@ export default class MobileNav {
 
     this.closeButtonEl.addEventListener('click', () => {
       this.closeNav()
-      console.log('asasd')
     })
   }
 }
