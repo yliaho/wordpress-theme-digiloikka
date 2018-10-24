@@ -70,10 +70,16 @@ header {
       content: '';
       position: absolute;
       top: 0;
-      bottom: 0px;
+      bottom: 9px;
       right: 0;
       left: 0;
       box-shadow: 0 4px rgba(255, 255, 255, 0.8) !important;
+      @include breakpoint(md) {
+        bottom: 4px;
+      }
+      @include breakpoint(xs) {
+        bottom: 0px;
+      }
     }
   }
   .hamburger-container {
@@ -103,7 +109,6 @@ header {
       margin-left: 2rem;
       opacity: 0.7;
       border-left: 3px solid rgba(255, 255, 255, 0.8);
-
       padding-left: 1rem;
       margin: 0.2rem;
       > .lang-item:first-child {
@@ -156,7 +161,6 @@ header {
       }
       * {
         color: $color-black;
-
         @include breakpoint(md) {
           color: $color-white;
         }
@@ -223,13 +227,16 @@ body {
       content: '';
       position: absolute;
       top: 0;
-      bottom: 0px;
+      bottom: 9px;
       right: 0;
       left: 0;
       box-shadow: 0 4px rgba(255, 255, 255, 0.8);
-      // @include breakpoint(sm) {
-      //   bottom: 17px;
-      // }
+      @include breakpoint(md) {
+        bottom: 4px;
+      }
+      @include breakpoint(xs) {
+        bottom: 0px;
+      }
     }
   }
   &[class*='fi'] {
@@ -271,13 +278,14 @@ body {
         top: 17px;
         right: 31px;
         font-size: 2rem;
+        @include breakpoint(md) {
+          right: 49px;
+        }
       }
-
       .social-container-mobile {
         display: block !important;
         width: 100%;
       }
-
       li {
         &:not(.menu-item-has-children) {
           padding: 0.4rem 2rem;
@@ -288,31 +296,25 @@ body {
           line-height: 1;
         }
       }
-
       .lang-item {
         border-left: initial;
       }
     }
-
     .menu-item-has-children {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
       margin: 2rem 0;
-
       > a {
         display: none;
       }
-
       .child.mobile {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-
         position: static !important;
       }
     }
-
     .social-container-mobile {
       display: none;
       position: relative;
@@ -323,8 +325,7 @@ body {
         &:not(:last-of-type) {
           margin-right: 1rem;
         }
-      }
-      // display: none;
+      } // display: none;
       // margin-top: 26rem;
       // margin-left: -3rem;
       // position: absolute;
@@ -347,12 +348,13 @@ body {
       // }
     }
   }
-
   @include breakpoint(md) {
     @include mobileNavDefaults();
   }
-
   @include breakpoint(sm) {
+    @include mobileNavDefaults();
+  }
+  @include breakpoint(xs) {
     @include mobileNavDefaults();
     width: 100vw;
   }

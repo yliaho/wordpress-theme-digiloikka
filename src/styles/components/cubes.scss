@@ -33,14 +33,14 @@
 
 // 2, 4, 8
 .cube {
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
   transform: rotate(45deg);
   overflow: hidden;
   background-color: $color-darkgray;
   @include breakpoint(xs) {
-    width: 115px;
-    height: 115px;
+    width: 100px;
+    height: 100px;
   }
   &.cube1 {
     background-color: black;
