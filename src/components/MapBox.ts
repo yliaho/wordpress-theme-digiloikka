@@ -1,5 +1,6 @@
 import * as mapbox from 'mapbox-gl'
-
+import getWindowClientWidth from '../utils/getWindowClientWidth'
+import breakpoints from '../utils/breakpoints'
 //@ts-ignore
 mapbox.accessToken =
   'pk.eyJ1IjoiZGlnaXRhbGVudHMiLCJhIjoiY2psdnp3czA4MTE5ZjNwcjZpdWlubmt1aiJ9.LLRsuThraRTWyXbY2Vt8pQ'
@@ -26,6 +27,11 @@ export default class MapBox extends mapbox.Map {
 
   private init() {
     this.scrollZoom.disable() // disable scroll zoom
+    if (getWindowClientWidth() <= breakpoints.md) {
+      this.dragPan.disable()
+      this.touchZoomRotate.disable()
+      this.doubleClickZoom.disable()
+    }
 
     this.on('load', () => {
       this.addMarker()
