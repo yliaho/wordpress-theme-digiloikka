@@ -27,15 +27,24 @@ export default class MapBox extends mapbox.Map {
 
   private init() {
     this.scrollZoom.disable() // disable scroll zoom
-    if (getWindowClientWidth() <= breakpoints.md) {
-      this.dragPan.disable()
-      this.touchZoomRotate.disable()
-      this.doubleClickZoom.disable()
-    }
 
     this.on('load', () => {
       this.addMarker()
     })
+
+    const toggleTouch = e => {
+      if (getWindowClientWidth() <= breakpoints.md) {
+        this.dragPan.disable()
+        this.touchZoomRotate.disable()
+        this.doubleClickZoom.disable()
+      } else if (getWindowClientWidth() > breakpoints.md) {
+        this.dragPan.enable()
+        this.touchZoomRotate.enable()
+        this.doubleClickZoom.enable()
+      }
+    }
+
+    window.addEventListener('resize', toggleTouch)
   }
 
   public addMarker() {
