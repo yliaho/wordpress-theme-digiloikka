@@ -113,7 +113,8 @@
                 {% for image in post.get_field('partner_logo') %}
                     {% include "components/partnersblock.twig" with {
                         partner_image : item.partner_image,
-                        partner_link: image.partner_link
+                        partner_link: image.partner_link,
+                        partner_text: image.partner_text
                     } %}
 
                 {% endfor %}
