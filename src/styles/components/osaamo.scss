@@ -4,7 +4,7 @@
   padding-top: 4rem;
   padding-bottom: 0;
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 1.2rem;
   font-weight: bold;
   @include breakpoint(md) {
     width: 70%;
@@ -26,8 +26,7 @@
   .fa-angle-down {
     font-size: 3.5rem;
   }
-  /*
-    .button-container {
+  .button-container {
     display: block;
     width: 100%;
     justify-self: center;
@@ -46,9 +45,9 @@
     .infobutton {
       display: inline-block;
       min-width: 140px;
-      background-color: rgba($color-white, 0.3);
+      background-color: $color-white;
       padding: 0.58rem 0 0.58rem 0;
-      color: $color-white;
+      color: $color-black;
       &:not(:last-of-type) {
         margin-right: 2rem;
         @include breakpoint(xs) {
@@ -61,5 +60,5 @@
         background-color: rgba($color-white, 0.6);
       }
     }
-  }*/
+  }
 }
