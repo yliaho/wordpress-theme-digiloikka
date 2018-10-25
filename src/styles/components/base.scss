@@ -31,4 +31,18 @@
       width: 40%;
     }
   }
+  .gdpr-button1 {
+    width: 10%;
+    height: auto;
+    font-size: 1rem;
+    margin-top: 0.4rem;
+    padding: 10px;
+    background-color: $color-lightgray;
+    @include breakpoint(xs) {
+      width: 40%;
+    }
+    a {
+      color: $color-black;
+    }
+  }
 }

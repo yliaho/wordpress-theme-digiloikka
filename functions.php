@@ -18,6 +18,7 @@ class Digiloikka extends Timber\Site {
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
 
 		add_action( 'wp_enqueue_scripts', [ $this, 'theme_scripts']);
+
 	
 		// ACF Pro
 		
