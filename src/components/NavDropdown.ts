@@ -66,7 +66,6 @@ export default class NavDropdown {
   }
 
   public hideDropdown() {
-    console.log('what')
     this.dropdown.style.display = 'none'
     this.nub.style.display = 'none'
   }
