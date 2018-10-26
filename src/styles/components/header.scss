@@ -284,7 +284,8 @@ body {
       }
       .social-container-mobile {
         display: block !important;
-        width: 100%;
+        width: 50%;
+        align-self: end;
       }
       li {
         &:not(.menu-item-has-children) {
