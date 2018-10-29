@@ -39,8 +39,8 @@
   overflow: hidden;
   background-color: $color-darkgray;
   @include breakpoint(xs) {
-    width: 115px;
-    height: 115px;
+    width: 100px;
+    height: 100px;
   }
   &.cube1 {
     background-color: black;

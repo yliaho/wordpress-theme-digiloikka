@@ -10,7 +10,12 @@
     grid-template-columns: 1fr 1fr 1fr min-content;
     grid-template-rows: min-content min-content min-content;
     @include breakpoint(xs) {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
+      grid-template-rows: min-content min-content min-content min-content;
+      justify-items: center;
+      text-align: center;
+      font-weight: 800;
+      text-transform: uppercase;
     }
     li {
       font-size: 1.7rem;
@@ -23,6 +28,7 @@
       grid-column-start: 3;
       width: 50%;
       padding-top: 3rem;
+      justify-self: end;
       @include breakpoint(md) {
         justify-self: end;
       }
@@ -30,15 +36,33 @@
         justify-self: center;
       }
       @include breakpoint(xs) {
-        grid-column-start: 2;
+        padding-top: 2.5rem;
+        padding-bottom: 2rem;
+        grid-column-start: 1;
         width: 100%;
       }
       .follow-us {
         display: inline-block;
-        color: white;
+        color: $color-white;
         width: 100%;
         text-align: center;
         font-weight: bold;
+        padding-bottom: 0.5rem;
+        font-size: 1.2rem;
+        @include breakpoint(xs) {
+          padding-bottom: 0.5rem;
+          padding-top: 0.5rem;
+        }
+      }
+      .hashtag {
+        padding-top: 0.5rem;
+        text-align: center;
+        color: $color-white;
+        font-weight: bold;
+        font-size: 0.8rem;
+        @include breakpoint(xs) {
+          font-size: 1rem;
+        }
       }
       .social-icons {
         display: flex;
@@ -46,9 +70,6 @@
         grid-row-end: 2;
         align-items: center;
         justify-content: center;
-        @include breakpoint(xs) {
-          flex-direction: row;
-        }
         a {
           min-width: 50px;
           text-align: center;
@@ -65,7 +86,7 @@
         }
         @include breakpoint(xs) {
           grid-row-start: 2;
-          grid-column-start: 2;
+          grid-column-start: 1;
         }
       }
     }
@@ -76,17 +97,21 @@
       color: rgba(white, 0.3);
       grid-column: span 2;
       grid-column-start: 2;
+      grid-row-start: 4;
       @include breakpoint(xs) {
-        grid-row-start: 3;
+        grid-row-start: 5;
         grid-column-start: 1;
-        margin-top: 0rem;
+        margin-top: 0.4rem;
       }
     }
     .stadi-con {
       width: 130px;
       height: 70px;
       padding-top: 10px;
-      grid-row-end: 3;
+      grid-row-start: 4;
+      @include breakpoint(xs) {
+        grid-column-start: 1;
+      }
       .stadi-logo {
         background-size: cover;
         height: auto;
@@ -102,9 +127,9 @@
       grid-column-start: 2;
       grid-row-start: 1;
       @include breakpoint(xs) {
-        grid-column-start: 2;
-        grid-row-start: 2;
-        padding-top: 0px;
+        grid-column-start: 1;
+        grid-row-start: 3;
+        padding-bottom: 20px;
       }
     }
   }

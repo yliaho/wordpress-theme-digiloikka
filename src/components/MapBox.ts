@@ -1,5 +1,6 @@
 import * as mapbox from 'mapbox-gl'
-
+import getWindowClientWidth from '../utils/getWindowClientWidth'
+import breakpoints from '../utils/breakpoints'
 //@ts-ignore
 mapbox.accessToken =
   'pk.eyJ1IjoiZGlnaXRhbGVudHMiLCJhIjoiY2psdnp3czA4MTE5ZjNwcjZpdWlubmt1aiJ9.LLRsuThraRTWyXbY2Vt8pQ'
@@ -30,6 +31,20 @@ export default class MapBox extends mapbox.Map {
     this.on('load', () => {
       this.addMarker()
     })
+
+    const toggleTouch = e => {
+      if (getWindowClientWidth() <= breakpoints.md) {
+        this.dragPan.disable()
+        this.touchZoomRotate.disable()
+        this.doubleClickZoom.disable()
+      } else if (getWindowClientWidth() > breakpoints.md) {
+        this.dragPan.enable()
+        this.touchZoomRotate.enable()
+        this.doubleClickZoom.enable()
+      }
+    }
+
+    window.addEventListener('resize', toggleTouch)
   }
 
   public addMarker() {

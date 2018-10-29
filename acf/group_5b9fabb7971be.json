@@ -25,6 +25,285 @@
       "max_height": "",
       "max_size": "",
       "mime_types": ""
+    },
+    {
+      "key": "field_5bd1879ac050d",
+      "label": "Gdpr-popup",
+      "name": "gdpr_popup",
+      "type": "group",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "sub_fields": [
+        {
+          "key": "field_5bd187bfc050e",
+          "label": "Gdpr popup text",
+          "name": "gdpr_popup_text",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5bd187e8c050f",
+          "label": "Gdpr popup button text",
+          "name": "gdpr_popup_button_text",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5bd1884bc0510",
+          "label": "Gdpr popup button text1",
+          "name": "gdpr_popup_button_text1",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5bd188a2c0511",
+          "label": "Gdpr button link",
+          "name": "gdpr_button_link",
+          "type": "page_link",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "post_type": [],
+          "taxonomy": [],
+          "allow_null": 0,
+          "allow_archives": 1,
+          "multiple": 0
+        }
+      ]
+    },
+    {
+      "key": "field_5bd192b5b70cc",
+      "label": "Gdpr popup en",
+      "name": "gdpr_popup_en",
+      "type": "group",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "sub_fields": [
+        {
+          "key": "field_5bd19303b70cd",
+          "label": "Gdpr popup text en",
+          "name": "gdpr_popup_text_en",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5bd1930eb70ce",
+          "label": "Gdpr popup button text en",
+          "name": "gdpr_popup_button_text_en",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5bd19317b70cf",
+          "label": "gdpr popup button text1 en",
+          "name": "gdpr_popup_button_text1_en",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5bd19328b70d0",
+          "label": "gdpr button link en",
+          "name": "gdpr_button_link_en",
+          "type": "page_link",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "post_type": [],
+          "taxonomy": [],
+          "allow_null": 0,
+          "allow_archives": 1,
+          "multiple": 0
+        }
+      ]
+    },
+    {
+      "key": "field_5bd19349666fb",
+      "label": "gdpr popup sv",
+      "name": "gdpr_popup_sv",
+      "type": "group",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "layout": "block",
+      "sub_fields": [
+        {
+          "key": "field_5bd19370666fd",
+          "label": "gdpr popup text sv",
+          "name": "gdpr_popup_text_sv",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5bd193d2666fe",
+          "label": "gdpr popup button text sv",
+          "name": "gdpr_popup_button_text_sv",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5bd193e2666ff",
+          "label": "gdpr popup button text1 sv",
+          "name": "gdpr_popup_button_text1_sv",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5bd193f466700",
+          "label": "gdpr button link sv",
+          "name": "gdpr_button_link_sv",
+          "type": "page_link",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+            "width": "",
+            "class": "",
+            "id": ""
+          },
+          "post_type": [],
+          "taxonomy": [],
+          "allow_null": 0,
+          "allow_archives": 1,
+          "multiple": 0
+        }
+      ]
     }
   ],
   "location": [
@@ -44,5 +323,5 @@
   "hide_on_screen": "",
   "active": 1,
   "description": "",
-  "modified": 1537191180
+  "modified": 1540461579
 }

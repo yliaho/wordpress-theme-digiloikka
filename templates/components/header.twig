@@ -1,12 +1,13 @@
 <header class="header">
   <div class="logo-container">
-    {% include "components/site-logo.twig" with {
+    <a href="{{site.url}}">
+      {% include "components/site-logo.twig" with {
       home_link: site.url,
       logo_size_width: 200,
       logo_size_height: 38
     } %}
+    </a>
   </div>
-  <a href="{{site.url}}"></a>
 
   <div class="nav-container ">
     {% if site.language == "fi" %}
@@ -27,7 +28,9 @@
     {% endif %}
     <div class="hamburger-container">
       <i class="fa fa-bars"></i>
-
+    </div>
+    <div class="social-container-mobile">
+      {% include "components/social-icons.twig" %}
     </div>
 
   </div>

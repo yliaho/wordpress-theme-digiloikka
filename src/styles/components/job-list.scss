@@ -1,12 +1,18 @@
 .job-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 4rem;
+  grid-template-columns: 35% 35%;
+  grid-column-gap: 2rem;
   grid-column-start: 2;
   padding-top: 80px;
   padding-bottom: 40px;
+  justify-content: center;
+  grid-row-gap: 1rem;
   @include breakpoint(md) {
     grid-gap: 1rem;
+    grid-template-columns: 40% 40%;
+  }
+  @include breakpoint(sm) {
+    grid-template-columns: 40% 40%;
   }
   @include breakpoint(xs) {
     grid-template-columns: 1fr;
@@ -17,7 +23,6 @@
 .job-container {
   display: grid;
   grid-column-start: 2;
-  grid-template-columns: 1fr 20%;
   padding-top: 100px;
   h3 {
     margin-left: 10px;
@@ -32,23 +37,34 @@
     grid-column-start: 1;
     grid-template-columns: 1fr;
   }
-  .osaamo-logo {
-    justify-content: center;
-    width: 60%;
-    margin: auto;
-    @include breakpoint(xs) {
-      grid-column-start: 1;
-    }
-  }
+}
+
+.job-list-heading {
+  text-align: center;
+  padding-top: 70px;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 3.4rem;
 }
 
 .job-blocks {
   padding-top: 10px;
   padding-bottom: 10px;
   width: 100%;
+  text-transform: uppercase;
   @include breakpoint(md) {
     padding-right: 1rem;
     padding-left: 1rem;
+  }
+  .job-cube {
+    width: 15px;
+    height: 15px;
+    background-color: $color-darkgray;
+    transform: rotate(45deg);
+    display: inline-block;
+    position: absolute;
+    margin-left: -1.8rem;
+    margin-top: 0.5rem;
   }
 }
 

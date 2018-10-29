@@ -1,0 +1,12 @@
+{% extends "base.twig" %}
+
+{% block hero %}
+    {% include "components/mainhero.twig" with { text: post.get_field('hero_description') }%}
+{% endblock %}
+
+{% block content %}
+    <div class="privacy-policy">
+        <h1 class="privacy-heading">{{post.get_field('privacy_heading')}}</h1>
+        <p>{{post.get_field('privacy_text')}}</p>
+    </div>
+{% endblock %}

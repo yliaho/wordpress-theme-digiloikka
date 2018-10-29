@@ -18,6 +18,7 @@ class Digiloikka extends Timber\Site {
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
 
 		add_action( 'wp_enqueue_scripts', [ $this, 'theme_scripts']);
+
 	
 		// ACF Pro
 		
@@ -105,6 +106,7 @@ class Digiloikka extends Timber\Site {
 		$context['footer_menu'] = new TimberMenu("nav-footer");
 		$context['footer_menu_en'] = new TimberMenu("nav-footer-en");
 		$context['footer_menu_sv'] = new TimberMenu("nav-footer-sv");
+		$context['mobile-menu'] = new TimberMenu("mobile-menu");
 		$context['site'] = $this;
 
 		return $context;

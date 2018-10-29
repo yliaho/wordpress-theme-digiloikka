@@ -1,17 +1,16 @@
 {% block html_head_container %}
 
   {% include 'html-header.twig' %}
-  {% block head %}{% endblock %}
+  {% block head %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+  {% endblock %}
 </head>
 {% endblock %}
-<div id="close" class="gdpr-pop">
-<p class="gdpr-text">We take your information and sell it, fuck you</p>
-<button class="gdpr-button" onclick="document.getElementById('close').style.display='none'">
-  We cool
-</button>
-</div>
 
-<body class="{{body_class}} {{more_body_class}} {{site.language == 'fi' ? 'fi-FI' : site.language}}" data-template="base.twig">
+<body class="{{body_class}} {{more_body_class}} {{site.language == 'fi' ? 'fi_FI' : site.language}}" data-template="base.twig">
+
+{% include "components/consent-pop-up.twig" %}
 {% block header %}
   {% include "components/header.twig" with {
     page_title : block('page_title')

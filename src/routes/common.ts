@@ -1,4 +1,5 @@
 import DtHeader from '../components/DtHeader'
+import Gdpr from '../components/Gdpr'
 
 /**
  * Since the header position is absolute, we will calculate the main
@@ -28,6 +29,8 @@ function calcMainSectionPadding() {
 export const common: Route = {
   init() {
     calcMainSectionPadding()
+    const popupEl = document.querySelector('.gdpr-pop') as HTMLElement
+    new Gdpr(popupEl)
   },
 
   finalize() {}
