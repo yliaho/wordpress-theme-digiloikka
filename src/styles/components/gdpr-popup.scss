@@ -15,8 +15,9 @@
     margin-top: 2rem;
   }
   .gdpr-button {
+    display: inline-block;
     width: 10%;
-    height: auto;
+    height: 2.5rem;
     font-size: 1rem;
     margin-top: 0.4rem;
     padding: 10px;
@@ -29,20 +30,19 @@
     }
   }
   .gdpr-button1 {
+    display: inline-block;
     width: 10%;
-    height: auto;
+    height: 2.5rem;
     font-size: 1rem;
-    margin-top: 0.4rem;
+    margin-top: 0.5rem;
     padding: 10px;
     background-color: $color-lightgray;
+    color: $color-black;
     @include breakpoint(sm) {
       width: 15%;
     }
     @include breakpoint(xs) {
       width: 40%;
-    }
-    a {
-      color: $color-black;
     }
   }
 }
