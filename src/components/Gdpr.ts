@@ -4,10 +4,8 @@ export default class Gdpr {
   constructor(public element: HTMLElement) {
     this.hasCookie = !!document.cookie.match(this.gaCookieMatch)
     if (this.hasCookie) {
-      console.log('asdasd')
       this.hidePopup()
     } else if (!this.hasCookie) {
-      console.log('bbbb')
       this.showPopup()
     }
   }
