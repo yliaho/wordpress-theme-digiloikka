@@ -1,0 +1,48 @@
+.gdpr-pop {
+  width: 100%;
+  height: 150px;
+  background-color: $color-darkgray;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  display: none;
+  text-align: center;
+  z-index: 200;
+  .gdpr-text {
+    color: white;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+  }
+  .gdpr-button {
+    width: 10%;
+    height: auto;
+    font-size: 1rem;
+    margin-top: 0.4rem;
+    padding: 10px;
+    background-color: $color-lightgray;
+    @include breakpoint(sm) {
+      width: 15%;
+    }
+    @include breakpoint(xs) {
+      width: 40%;
+    }
+  }
+  .gdpr-button1 {
+    width: 10%;
+    height: auto;
+    font-size: 1rem;
+    margin-top: 0.4rem;
+    padding: 10px;
+    background-color: $color-lightgray;
+    @include breakpoint(sm) {
+      width: 15%;
+    }
+    @include breakpoint(xs) {
+      width: 40%;
+    }
+    a {
+      color: $color-black;
+    }
+  }
+}
