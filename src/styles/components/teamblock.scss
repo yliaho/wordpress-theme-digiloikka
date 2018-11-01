@@ -15,7 +15,7 @@
   @include breakpoint(xs) {
   }
   @include breakpoint(sm) {
-    display: block;
+    display: flex;
     margin: 5%;
     padding-left: 0.3rem;
     padding-right: 0.3rem;
@@ -34,6 +34,10 @@
     transform: rotate(45deg);
     overflow: hidden;
     @include breakpoint(md) {
+      margin: auto;
+      width: 8rem;
+      height: 8rem;
+      text-align: center;
     }
     @include breakpoint(sm) {
       margin: auto;
