@@ -29,6 +29,7 @@
     </div>
 
     <div class="block team-cta-container">
+
         <a class="team-btn-a" href="{{post.get_field('team_button').team_button_link}}">
             <i class="fa fa-angle-right"></i>
             {{post.get_field("team_button").team_button_text}}
@@ -42,6 +43,7 @@
 
     <div class="full-width-block gray no-margin">
         <div class="full-width-block-wrapper osaamo">
+
             {{post.get_field("info").infotext}}
 
             <div class="button-container">
@@ -56,12 +58,10 @@
                 </a>
             </div>
 
-            {# <p>
-                <i class="fa fa-angle-down"></i>
-            </p> #}
         </div>
 
     </div>
+
     <div id="leaders"></div>
     {% embed "components/stripeblock-end.twig" with { style: "lightgray-to-gray" } %}{% endembed %}
     {# end of osaamo stripeblock #}
@@ -88,7 +88,7 @@
     {# address box #}
     <h1 class="address">
         <p>
-            Lapinlahdenkatu 16 00180 HELSINKI
+            Lapinlahdenkatu 16, 00180 HELSINKI
             <br>
             PL 18402, 00099 Helsingin kaupunki
         </p>

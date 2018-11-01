@@ -27,6 +27,9 @@
     margin-top: 0.4rem;
     padding: 10px;
     background-color: $color-lightgray;
+    @include breakpoint(sm) {
+      width: 15%;
+    }
     @include breakpoint(xs) {
       width: 40%;
     }
@@ -38,6 +41,9 @@
     margin-top: 0.4rem;
     padding: 10px;
     background-color: $color-lightgray;
+    @include breakpoint(sm) {
+      width: 15%;
+    }
     @include breakpoint(xs) {
       width: 40%;
     }
