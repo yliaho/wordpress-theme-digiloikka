@@ -81,7 +81,7 @@
           "key": "field_5bc461f7c07d1",
           "label": "Phone Number",
           "name": "phone_number",
-          "type": "number",
+          "type": "text",
           "instructions": "",
           "required": 0,
           "conditional_logic": 0,
@@ -94,9 +94,7 @@
           "placeholder": "",
           "prepend": "",
           "append": "",
-          "min": "",
-          "max": "",
-          "step": ""
+          "maxlength": ""
         },
         {
           "key": "field_5bc46203c07d2",
@@ -197,5 +195,5 @@
   "hide_on_screen": "",
   "active": 1,
   "description": "",
-  "modified": 1539674739
+  "modified": 1540974450
 }
