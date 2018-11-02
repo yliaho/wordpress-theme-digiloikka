@@ -4,13 +4,19 @@
         <div class="leader-cube"></div>
         <h3>{{leader.leader_title}}</h3>
         <span class="job-title">{{leader.job_title}}</span>
-        <span class="email">
-            <a href="mailto:{{leader.email}}">{{leader.email}}</a>
-        </span>
-        <span class="phone-number">{{leader.phone_number}}</span>
-        <a class="vcard" href="{{leader.vcard}}">
-    
-            <span >vCard</span>
-        </a>
+        {% if leader.email %}
+            <span class="email">
+                <a href="mailto:{{leader.email}}">{{leader.email}}</a>
+            </span>
+        {% endif %}
+        {% if leader.phone_number %}
+            <span class="phone-number">{{leader.phone_number}}</span>
+        {% endif %}
+        {% if leader.vcard %}
+            <a class="vcard" href="{{leader.vcard}}">
+
+                <span >vCard</span>
+            </a>
+        {% endif %}
     </div>
 </div>
