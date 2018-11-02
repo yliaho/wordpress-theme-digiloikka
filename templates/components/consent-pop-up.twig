@@ -1,33 +1,45 @@
 {% if (site.language == "fi") %}
     <div id="close" class="gdpr-pop">
         <p class="gdpr-text">{{gdpr_popup.gdpr_popup_text}}</p>
-        <button class="gdpr-button" onclick="document.getElementById('close').style.display='none'">
-            {{gdpr_popup.gdpr_popup_button_text}}
-        </button>
-        <a class="gdpr-button1" href="{{gdpr_popup.gdpr_button_link}}">
+        {% if gdpr_popup.gdpr_popup_button_text %}
+            <button class="gdpr-button" onclick="document.getElementById('close').style.display='none'">
+                {{gdpr_popup.gdpr_popup_button_text}}
+            </button>
+        {% endif %}
+        {% if gdpr_popup.gdpr_popup_button_text1 %}
+            <a class="gdpr-button1" href="{{gdpr_popup.gdpr_button_link}}">
 
-            {{gdpr_popup.gdpr_popup_button_text1}}
+                {{gdpr_popup.gdpr_popup_button_text1}}
 
-        </a>
+            </a>
+        {% endif %}
     </div>
 {% elseif (site.language) == "en-US" %}
     <div id="close" class="gdpr-pop">
         <p class="gdpr-text">{{gdpr_popup_en.gdpr_popup_text_en}}</p>
-        <button class="gdpr-button" onclick="document.getElementById('close').style.display='none'">
-            {{gdpr_popup_en.gdpr_popup_button_text_en}}
-        </button>
-        <button class="gdpr-button1">
-            <a href="{{gdpr_popup_en.gdpr_button_link_en}}">{{gdpr_popup_en.gdpr_popup_button_text1_en}}</a>
-        </button>
+        {% if gdpr_popup_en.gdpr_popup_button_text_en %}
+            <button class="gdpr-button" onclick="document.getElementById('close').style.display='none'">
+                {{gdpr_popup_en.gdpr_popup_button_text_en}}
+            </button>
+        {% endif %}
+        {% if gdpr_popup_en.gdpr_popup_button_text1_en %}
+            <a class="gdpr-button1" href="{{gdpr_popup_en.gdpr_button_link_en}}">
+                {{gdpr_popup_en.gdpr_popup_button_text1_en}}
+            </a>
+        {% endif %}
     </div>
 {% else %}
     <div id="close" class="gdpr-pop">
         <p class="gdpr-text">{{gdpr_popup_sv.gdpr_popup_text_sv}}</p>
-        <button class="gdpr-button" onclick="document.getElementById('close').style.display='none'">
-            {{gdpr_popup_sv.gdpr_popup_button_text_sv}}
-        </button>
-        <button class="gdpr-button1">
-            <a href="{{gdpr_popup_sv.gdpr_button_link_sv}}">{{gdpr_popup_sv.gdpr_popup_button_text1_sv}}</a>
-        </button>
+        {% if gdpr_popup_sv.gdpr_popup_button_text_sv %}
+            <button class="gdpr-button" onclick="document.getElementById('close').style.display='none'">
+                {{gdpr_popup_sv.gdpr_popup_button_text_sv}}
+            </button>
+        {% endif %}
+        {% if gdpr_popup_sv.gdpr_popup_button_text1_sv %}
+            <a class="gdpr-button1" href="{{gdpr_popup_sv.gdpr_button_link_sv}}">
+                {{gdpr_popup_sv.gdpr_popup_button_text1_sv}}
+            </a>
+        {% endif %}
     </div>
 {% endif %}
