@@ -10,7 +10,9 @@ header {
   z-index: 200;
   .menu-item-has-children {
     a:after {
-      content: '\25BC';
+      content: '\2304';
+      bottom: 4px;
+      position: relative;
     }
     a:only-child:after {
       content: '';
