@@ -8,6 +8,14 @@ header {
   display: flex;
   align-items: center;
   z-index: 200;
+  .menu-item-has-children {
+    a:after {
+      content: '\25BC';
+    }
+    a:only-child:after {
+      content: '';
+    }
+  }
   &.above {
     background-color: transparent;
     padding: 1rem 2rem;
@@ -41,9 +49,6 @@ header {
           padding: 0.5rem;
           font-size: 1.4rem;
           line-height: 0.9rem;
-        }
-        .services:after {
-          content: 'v';
         }
       }
     }

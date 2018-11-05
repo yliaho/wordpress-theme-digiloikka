@@ -71,14 +71,17 @@ $hero-height: 100vh;
       @include breakpoint(md) {
         position: absolute;
         margin-bottom: 3.3rem;
+        font-size: 3rem;
+        margin-left: 3.5rem;
       }
       @include breakpoint(sm) {
         position: absolute;
         margin-top: 5rem;
       }
       @include breakpoint(xs) {
-        margin-left: 2.5rem;
+        margin-left: 1.5rem;
         margin-top: 25rem;
+        font-size: 1.5rem;
       }
       h1,
       h3 {
