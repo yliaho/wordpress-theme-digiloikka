@@ -18,7 +18,7 @@ export default class MobileNav {
       'click',
       this.hamburgerClickListener.bind(this)
     )
-
+    // this.preventE(element)
     this.socialContainer()
   }
 
@@ -28,6 +28,10 @@ export default class MobileNav {
       this.openNav()
     }
   }
+  // private preventE(e) {
+  //   e.preventDefault();
+
+  // }
 
   private openNav() {
     this.navEl.classList.add('active')
@@ -41,6 +45,9 @@ export default class MobileNav {
       ],
       easing: 'easeOutCubic',
       duration: 400
+    })
+    this.navEl.addEventListener('touchmove', e => {
+      e.preventDefault()
     })
   }
 

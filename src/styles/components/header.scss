@@ -11,8 +11,9 @@ header {
   .menu-item-has-children {
     a:after {
       content: '\2304';
-      bottom: 4px;
+      bottom: 3px;
       position: relative;
+      font-size: 36px;
     }
     a:only-child:after {
       content: '';
@@ -275,11 +276,13 @@ body {
       display: flex;
       position: fixed;
       top: 0;
-      bottom: 0;
+      bottom: 0; // bottom: -80px; quick fix for overlapping issue on iphone 5/SE
       background-color: rgba($color-darkgray, 0.74);
       flex-direction: column;
       justify-content: center;
       align-items: flex-end;
+      padding-top: 40px;
+      overflow: hidden;
       .close-button {
         display: block;
         color: $color-white;
@@ -289,6 +292,9 @@ body {
         font-size: 2rem;
         @include breakpoint(md) {
           right: 49px;
+        }
+        @include breakpoint(xs) {
+          right: 31px;
         }
       }
       .social-container-mobile {
