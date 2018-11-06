@@ -28,6 +28,9 @@ header {
     background-color: $color-black;
     padding: 1rem 2rem;
     transition: padding 0.15s ease-out;
+    @include breakpoint(xs) {
+      padding: 1rem 0.4rem;
+    }
   }
   @include breakpoint(sm) {
     padding: 0.5rem 1rem;
@@ -291,14 +294,8 @@ body {
         color: $color-white;
         position: absolute;
         top: 17px;
-        right: 31px;
+        right: 14px;
         font-size: 2rem;
-        @include breakpoint(md) {
-          right: 49px;
-        }
-        @include breakpoint(xs) {
-          right: 31px;
-        }
       }
       .social-container-mobile {
         display: block !important;
