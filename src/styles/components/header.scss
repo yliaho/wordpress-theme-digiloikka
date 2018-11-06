@@ -21,12 +21,12 @@ header {
   }
   &.above {
     background-color: transparent;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     transition: padding 0.3s ease-out;
   }
   &.below {
     background-color: $color-black;
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
     transition: padding 0.15s ease-out;
   }
   @include breakpoint(sm) {
@@ -35,6 +35,9 @@ header {
   //   display: none;
   // }
   .logo-container {
+    @include breakpoint(xs) {
+      transform: scale(0.99);
+    }
     g.logo-group {
       fill: white;
     }
