@@ -99,6 +99,9 @@
   &.lightgray-to-gray {
     background-color: dt-color('primary');
     z-index: -1;
+    @include breakpoint(md) {
+      margin: -1px;
+    }
     .stripe-block-stripe {
       background-color: dt-color('foreground');
     }

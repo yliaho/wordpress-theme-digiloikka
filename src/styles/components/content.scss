@@ -23,6 +23,9 @@
     margin: 4rem 0;
     &.no-margin {
       margin: 0;
+      @include breakpoint(md) {
+        margin: -1px;
+      }
     }
     &.whitesmoke {
       background-color: dt-color('foreground');
