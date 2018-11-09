@@ -24,7 +24,19 @@ const config = {
   stats: 'minimal',
   module: {
     rules: [
-      { test: /\.tsx?$/, loader: 'ts-loader' },
+      {
+        test: /\.tsx?$/,
+        exclude: /(node_modules|bower_components)/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env', '@babel/preset-typescript']
+            }
+          },
+          'ts-loader'
+        ]
+      },
       {
         test: /\.(ttf|otf|woff|woff2)$/,
         use: [
